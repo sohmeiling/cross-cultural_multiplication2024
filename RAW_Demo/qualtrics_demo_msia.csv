@@ -1,0 +1,559 @@
+﻿StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,consent,participantID,email,nationality,nationality_2_TEXT,timer1_First Click,timer1_Last Click,timer1_Page Submit,timer1_Click Count,dob_1,dob_2,dob_3,gender,maritalstatus,ethnicity_1,ethnicity_2,ethnicity_3,ethnicity_4,ethnicity_5,ethnicity_6,ethnicity_7,ethnicity_4_TEXT,ethnicity_5_TEXT,ethnicity_6_TEXT,ethnicity_7_TEXT,eduLevel,employment,major,handedness,Medicalhistory,medicalHistory2,developmentHist,developmentHist2,nativelanguage,nativelanguage_19_TEXT,lingualAbility,multilingual_1,multilingual_1_TEXT,multilingual_2,multilingual_2_TEXT,multilingual_3,multilingual_3_TEXT,multilingual_4,multilingual_4_TEXT,multilingual_5,multilingual_5_TEXT,multilingual_6,multilingual_6_TEXT,multilingual_7,multilingual_7_TEXT,multilingual_8,multilingual_8_TEXT,multilingual_9,multilingual_9_TEXT,multilingual_10,multilingual_10_TEXT,mathlanguage_1,mathlanguage_2,mathlanguage_3,multiplylanguage,schooltype_1,schooltype_2,schooltype_3,difficultiesmath,learnmultiplytable,peercomparison,peercomparison2,rateownfluency_1,dyslexia,mathanxious,examanxious,memory,otherDifficulty,otherDifficulty_1_TEXT,ParentsEdu,income,SC0,id,group
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,"I confirm that I agree to participate in the research study titled: Cognitive Functions Underlying the Multiplication Fluency
+
+ 
+
+‚òëÔ∏è I confirm that I have read and understood the participant information sheet and have been given the opportunity to ask questions and discuss this study. I have received satisfactory answers to my questions.
+
+‚òëÔ∏è I understand that my participation is voluntary and that I am free to withdraw at any time without giving a reason and without my medical care or legal rights being affected
+
+‚òëÔ∏è I understand that even if I withdraw from the above study, the data collected from me will be used in analysing the results of the trial, unless I specifically withdraw consent for this.
+
+‚òëÔ∏è In case of withdrawn consent, no new information will be collected or added to existing data, and I can request that all previously retained samples to be destroyed to prevent further analysis.
+
+‚òëÔ∏è I consent to the storage, including electronic, of personal information for the purposes of this study. I understand that any information that could identify me will be kept strictly confidential and that no personal information will be included in the study report or other publication.
+
+‚òëÔ∏è By participating in this study, you are agreeing that the contact information provided may be entered into a directory for future contact. However, all response data are anonymous; we will merely contact you to ask if you are interested in future follow-up studies. 
+
+‚òëÔ∏èI have read, understood the above information, and have the desire of my own free will to participate in this study.",Your student ID (For UNM psychology students ONLY),Your email address,Nationality - Selected Choice,Nationality - Non-Malaysian - Text,Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,Date of Birth - Month,Date of Birth - Day,Date of Birth - Year,What is your gender?,What is your marital status?,How would you describe yourself? Please select all that apply. - Selected Choice - Malay,How would you describe yourself? Please select all that apply. - Selected Choice - Chinese,How would you describe yourself? Please select all that apply. - Selected Choice - Indian,How would you describe yourself? Please select all that apply. - Selected Choice - Aboriginal (Orang Asli),How would you describe yourself? Please select all that apply. - Selected Choice - Iban,How would you describe yourself? Please select all that apply. - Selected Choice - Kadazandusun,How would you describe yourself? Please select all that apply. - Selected Choice - Others,How would you describe yourself? Please select all that apply. - Aboriginal (Orang Asli) - Text,How would you describe yourself? Please select all that apply. - Iban - Text,How would you describe yourself? Please select all that apply. - Kadazandusun - Text,How would you describe yourself? Please select all that apply. - Others - Text,What is the highest degree or level of school you have completed?,What is your current employment status?,"If you are still studying, please describe your current major/anticipated major. You may indicate more than one if necessary.",Handedness (Dominant Hand),"Do you have any medical, psychiatric or neurological diagnosis?","Please indicate the medical, psychiatric or neurological diagnosis that you have received.",Have you ever experience any developmental impairment in childbirth or childhood?,Please indicate any developmental condition that has an impact on your brain development.,What is your native language? Pick one. - Selected Choice,What is your native language? Pick one. - Others - Text,"Do you speak, write, read, or listen in another
+language?","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 1","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 1 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 2","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 2 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 3","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 3 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 4","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 4 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 5","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 5 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 6","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 6 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 7","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 7 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 8","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 8 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 9","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 9 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 10","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 10 - Text","Please indicate the language that you used when you
+learn Mathematics in school - Primary School (Grade 1-6)","Please indicate the language that you used when you
+learn Mathematics in school - Lower Secondary School (Grade 7-9)","Please indicate the language that you used when you
+learn Mathematics in school - Upper Secondary School (Grade 10-12)","What was the language used
+when you learnt multiplication tables (times tables)?","What type of school did you
+attend?
+E.g.: National School (Sekolah Kebangsaan), Private (International) School, Homeschooling, Religious School (Sekolah Agama), Vernacular School (Chinese, Tamil), Boarding School (Sekolah Berasrama Penuh) - Primary School (Grade 1-6)","What type of school did you
+attend?
+E.g.: National School (Sekolah Kebangsaan), Private (International) School, Homeschooling, Religious School (Sekolah Agama), Vernacular School (Chinese, Tamil), Boarding School (Sekolah Berasrama Penuh) - Lower Secondary School (Grade 7-9)","What type of school did you
+attend?
+E.g.: National School (Sekolah Kebangsaan), Private (International) School, Homeschooling, Religious School (Sekolah Agama), Vernacular School (Chinese, Tamil), Boarding School (Sekolah Berasrama Penuh) - Upper Secondary School (Grade 10-12)","Have you ever experienced
+any difficulties learning mathematics in school?",Do you consider that your process of learning multiplication tables (times table) as normal?,"Compared to your same age
+peers, do you think that you spent more time on learning the multiplication
+table (times table)?","Do you think that your same
+age peers know/master the multiplication table better than you?","On a scale of 0-10, with 0
+equals to no proficiency to 10 being highly proficient, where would you rate
+yourself on the level of mastery for multiplication table? - 0","Have you ever had any reading
+problem (e.g., dyslexia)?","Have you ever feel anxious
+when learning mathematics?","Have you ever feel anxious
+during examinations?","Do you consider yourself to
+spend more time in memorizing information literally (e.g., songs, sayings, and
+poetry) in comparison to others?","Apart of Mathematics
+learning difficulties, do you have difficulties in other area (e.g., face
+recognition, memory, etc.)? If yes, please indicate the type of difficulty. - Selected Choice","Apart of Mathematics
+learning difficulties, do you have difficulties in other area (e.g., face
+recognition, memory, etc.)? If yes, please indicate the type of difficulty. - Yes - Text",Did either of your parents graduate from college?,"What is your household monthly income (i.e., parental total income)?
+ 
+
+We understand that income is a sensitive information that are not meant for sharing. As such, we are only asking you a rough estimate of the monthly income. 
+
+
+
+Why this is important? Studies conducted overseas have shown that poverty is one of the factors that influence the cognitive functioning, and we hope that you can help us by answering this question as accurate as possible.",Score,id,group
+"{""ImportId"":""startDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""endDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID124772036""}","{""ImportId"":""QID124772008_TEXT""}","{""ImportId"":""QID60_TEXT""}","{""ImportId"":""QID124772031""}","{""ImportId"":""QID124772031_2_TEXT""}","{""ImportId"":""QID124772040_FIRST_CLICK""}","{""ImportId"":""QID124772040_LAST_CLICK""}","{""ImportId"":""QID124772040_PAGE_SUBMIT""}","{""ImportId"":""QID124772040_CLICK_COUNT""}","{""ImportId"":""QID124772009_1""}","{""ImportId"":""QID124772009_2""}","{""ImportId"":""QID124772009_3""}","{""ImportId"":""QID124772035""}","{""ImportId"":""QID124772039""}","{""ImportId"":""QID124772033"",""choiceId"":""1""}","{""ImportId"":""QID124772033"",""choiceId"":""2""}","{""ImportId"":""QID124772033"",""choiceId"":""3""}","{""ImportId"":""QID124772033"",""choiceId"":""4""}","{""ImportId"":""QID124772033"",""choiceId"":""5""}","{""ImportId"":""QID124772033"",""choiceId"":""6""}","{""ImportId"":""QID124772033"",""choiceId"":""7""}","{""ImportId"":""QID124772033_4_TEXT""}","{""ImportId"":""QID124772033_5_TEXT""}","{""ImportId"":""QID124772033_6_TEXT""}","{""ImportId"":""QID124772033_7_TEXT""}","{""ImportId"":""QID124772037""}","{""ImportId"":""QID124772038""}","{""ImportId"":""QID124772032_TEXT""}","{""ImportId"":""QID124772010""}","{""ImportId"":""QID124772011""}","{""ImportId"":""QID124772012_TEXT""}","{""ImportId"":""QID124772013""}","{""ImportId"":""QID124772014_TEXT""}","{""ImportId"":""QID124772015""}","{""ImportId"":""QID124772015_19_TEXT""}","{""ImportId"":""QID124772016""}","{""ImportId"":""QID124772017_1""}","{""ImportId"":""QID124772017_1_TEXT""}","{""ImportId"":""QID124772017_2""}","{""ImportId"":""QID124772017_2_TEXT""}","{""ImportId"":""QID124772017_3""}","{""ImportId"":""QID124772017_3_TEXT""}","{""ImportId"":""QID124772017_4""}","{""ImportId"":""QID124772017_4_TEXT""}","{""ImportId"":""QID124772017_5""}","{""ImportId"":""QID124772017_5_TEXT""}","{""ImportId"":""QID124772017_6""}","{""ImportId"":""QID124772017_6_TEXT""}","{""ImportId"":""QID124772017_7""}","{""ImportId"":""QID124772017_7_TEXT""}","{""ImportId"":""QID124772017_8""}","{""ImportId"":""QID124772017_8_TEXT""}","{""ImportId"":""QID124772017_9""}","{""ImportId"":""QID124772017_9_TEXT""}","{""ImportId"":""QID124772017_10""}","{""ImportId"":""QID124772017_10_TEXT""}","{""ImportId"":""QID124772018_1""}","{""ImportId"":""QID124772018_2""}","{""ImportId"":""QID124772018_3""}","{""ImportId"":""QID124772019_TEXT""}","{""ImportId"":""QID124772020_1""}","{""ImportId"":""QID124772020_2""}","{""ImportId"":""QID124772020_3""}","{""ImportId"":""QID124772021""}","{""ImportId"":""QID124772022""}","{""ImportId"":""QID124772023""}","{""ImportId"":""QID124772024""}","{""ImportId"":""QID124772025_1""}","{""ImportId"":""QID124772026""}","{""ImportId"":""QID124772027""}","{""ImportId"":""QID124772028""}","{""ImportId"":""QID124772029""}","{""ImportId"":""QID124772030""}","{""ImportId"":""QID124772030_1_TEXT""}","{""ImportId"":""QID124772034""}","{""ImportId"":""QID124772041""}","{""ImportId"":""SC_bOwVwmU4oT4PmrX""}","{""ImportId"":""id""}","{""ImportId"":""group""}"
+15/03/2023 17:45,15/03/2023 17:50,IP Address,203.217.131.185,100,344,TRUE,15/03/2023 17:50,R_2fH7oWVXwhvEy5r,,,,,2.9957,101.8012,anonymous,EN,Yes,,efykt12@nottingham.edu.my,Malaysian,,1.435,21.053,25.264,3,September,27,2002,Male,Single (never married),,Chinese,,,,,,,,,,Less than a high school diploma,Student,MEng in Chemical Engineering,Right,No,,No,,Mandarin,,Yes,70,English,70,Malay,20,Cantonese,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Sekolah Kebangsaan Jenis Cina,Sekolah Kebangsaan,Sekolah Kebangsaan,No,Yes,No,No,10,No,No,Yes,No,No,,"Yes, father only","RM 7,110 - RM 8,699",8,458214205270,CAB
+15/03/2023 17:50,15/03/2023 20:25,IP Address,210.186.92.60,100,9285,TRUE,15/03/2023 20:25,R_PIh0nLUG8F3s70R,,,,,3.0081,101.7719,anonymous,EN,Yes,,hemshiaz@gmail.com,Malaysian,,3.651,3.651,8.65,1,December,3,2000,Female,Single (never married),,,Indian,,,,,,,,,"Some college, no degree",Student,"Finance, Accounting and Management",Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Private,Private,Private,No,No,No,No,10,No,No,Yes,No,No,,"Yes, both parents","RM 10,960 - RM 15,039",9,119238710566,CAB
+18/03/2023 12:29,18/03/2023 12:35,IP Address,203.217.131.188,100,344,TRUE,18/03/2023 12:35,R_6xv2ezwtS2Ka44F,,,,,2.9957,101.8012,anonymous,EN,Yes,20306689,efyjc14@nottingham.edu.my,Malaysian,,0.792,13.217,15.447,2,August,26,2002,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Chemical Engineering,Right,No,,No,,English,,Yes,80,English,80,Mandarin,80,Malay,70,Cantonese,80,Hakka,10,Tamil,,,,,,,,,Mandarin,Malay,English,Mandarin,Vernacular school(Chinese),National SChool,National School,No,Yes,Yes,Yes,8,No,No,Yes,Yes,No,,"Yes, mother only",,12,8740,ACB
+21/03/2023 16:09,21/03/2023 16:17,IP Address,203.217.129.142,100,476,TRUE,21/03/2023 16:17,R_2rkMOT1EueDIyUC,,,,,2.9957,101.8012,anonymous,EN,Yes,20404148,sayat6@nottingham.edu.my,Malaysian,,2.404,7.697,35.472,4,March,31,2002,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology Year One,Right,No,,No,,Mandarin,,Yes,85,Chinese,70,English,40,Malay,,,,,,,,,,,,,,,Mandarin,Mandarin,English,Mandarin,Sekolah kebangsaan,Chinese Private School,International,No,Yes,No,Yes,8.5,No,No,Yes,Yes,No,,"Yes, both parents","RM 7,110 - RM 8,699",10,8488,CBA
+21/03/2023 16:54,21/03/2023 17:02,IP Address,203.217.131.24,100,481,TRUE,21/03/2023 17:02,R_3DpaQMVFpS2T4eW,,,,,2.9957,101.8012,anonymous,EN,Yes,20410999,sfyal5@nottingham.edu.my,Malaysian,,2.116,59.124,72.664,5,May,5,2005,Male,Single (never married),,Chinese,,,,,,,,,,Less than a high school diploma,Student,BSC Hons Psychology,Right,No,,No,,English,,Yes,80,French,100,English,,Malay,45,,,,,,,,,,,,,,English,English,English,English,International Schgool,International School,International School,No,Yes,No,Yes,5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 5,880 - RM 7,099",10,8509,BAC
+21/03/2023 16:39,21/03/2023 17:15,IP Address,113.23.202.21,100,2161,TRUE,21/03/2023 17:15,R_7UI7sMZYN0ayRbP,,,,,2.9957,101.8012,anonymous,EN,Yes,20501665,hpydj1@nottingham.edu.my,Non-Malaysian,Indian,7.828,11.56,30.803,2,September,10,2003,Female,Single (never married),,,Indian,,,,,,,,,"Some college, no degree",Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Others,Marathi,Yes,80,Marathi,75,Hindi,100,English,5,French ,,,,,,,,,,,,,English,English,English,English,Private School,Private School,Private School,Yes,Yes,Yes,No,7.5,No,Yes,Yes,Yes,Yes,Short term/working memory difficulties,"Yes, both parents","RM 15,039 or more",15,8644,BCA
+15/03/2023 17:42,15/03/2023 17:44,IP Address,203.217.131.47,7,100,FALSE,22/03/2023 17:44,R_2ctSnkEuf9C0hAe,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,361430051596,ACB
+22/03/2023 19:22,22/03/2023 19:32,IP Address,203.217.129.80,100,573,TRUE,22/03/2023 19:32,R_3mIZ7ck4WP2EdKF,,,,,2.9957,101.8012,anonymous,EN,Yes,20219386,sdysn1@nottingham.edu.my,Malaysian,,11.392,15.455,21.676,2,April,15,2000,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,International Relations with French,Right,No,,No,,Mandarin,,Yes,85,Mandarin,90,English,60,Cantonese,50,Bahasa Malaysia,50,French,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School,Homeschooling,Homeschooling,Yes,Yes,No,Yes,9,No,Yes,Yes,Yes,No,,No,"RM 10,960 - RM 15,039",11,604128320491,ABC
+22/03/2023 21:03,22/03/2023 21:11,IP Address,118.100.233.97,100,479,TRUE,22/03/2023 21:11,R_2AXoSFYZr2QJqiM,,,,,1.4594,103.7549,anonymous,EN,Yes,,yuzziheng@gmail.com,Malaysian,,7.567,16.659,18.061,3,June,14,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Computer Science with Intelligent Systems,Right,No,,No,,Mandarin,,Yes,100,Mandarin,85,English,85,Malay,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,National School,Private School,Private School,No,Yes,No,No,10,No,No,Yes,No,No,,No,"RM 4,850 - RM 5,879",7,134423588053,CBA
+23/03/2023 11:03,23/03/2023 11:10,IP Address,203.217.129.129,100,449,TRUE,23/03/2023 11:10,R_2wb1cOZuqnoxFqL,,,,,2.9957,101.8012,anonymous,EN,Yes,20514838,anushkadnyate@gmail.com,Non-Malaysian,Indian,2.92,12.639,20.91,3,March,20,2005,Female,Single (never married),,,Indian,,,,,,,,,High school degree or equivalent (e.g. GED),Student,BSc Psychology,Right,No,,No,,Others,Marathi,Yes,95,English,80,Marathi,80,Hindi,,,,,,,,,,,,,,,English,English,English,English,Private,Private,Private,Yes,Yes,No,No,7,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 15,039 or more",13,8617,ACB
+23/03/2023 17:16,23/03/2023 17:23,IP Address,113.23.202.20,100,417,TRUE,23/03/2023 17:23,R_1OWh4USr4yIITM2,,,,,2.9957,101.8012,anonymous,EN,Yes,20402112,polarehare@gmail.com,Non-Malaysian,Indonesians,9.254,21.789,29.433,3,May,24,2004,Male,Single (never married),,,,,,,Others,,,,Indonesian,High school degree or equivalent (e.g. GED),Student,Psychology,Right,No,,No,,Others,Bahasa Indonesia,Yes,100,English,,,,,,,,,,,,,,,,,,,English,English,English,English,Private (International) School,Private (International) School,Private (International) School,Yes,Yes,Yes,Yes,7.5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 10,960 - RM 15,039",12,8668,CAB
+24/03/2023 7:02,24/03/2023 7:03,Survey Preview,,100,77,TRUE,24/03/2023 7:03,R_3fvH75ZlfAzOqui,,,,,3.1413,101.685,preview,EN,Yes,,,Non-Malaysian,,0,0,3.331,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Enter the language here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,943158462271,CBA
+24/03/2023 7:04,24/03/2023 7:05,Survey Preview,,100,75,TRUE,24/03/2023 7:05,R_2pS3BSl5EGrEk7q,,,,,3.1413,101.685,preview,EN,Yes,,,Non-Malaysian,,0,0,2.157,0,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Enter the language here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,135906167142,ACB
+24/03/2023 7:15,24/03/2023 7:15,Survey Preview,,100,18,TRUE,24/03/2023 7:15,R_qUSHADqUcc51nCF,,,,,3.1413,101.685,preview,EN,Yes,,,Non-Malaysian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,531212757807,
+25/03/2023 16:20,25/03/2023 16:21,IP Address,113.23.202.22,100,77,TRUE,25/03/2023 16:22,R_SNPeVPAEJdmKg6Z,,,,,2.9957,101.8012,anonymous,EN,Yes,20393679,reachshosho92@gmail.com,Non-Malaysian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8647,
+26/03/2023 16:43,26/03/2023 16:45,IP Address,203.217.129.87,100,119,TRUE,26/03/2023 16:45,R_1IE0a1KqXjGtIaA,,,,,2.9957,101.8012,anonymous,EN,Yes,20481014,hpyaa4@nottingham.edu.my,Non-Malaysian,Indonesian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8623,
+26/03/2023 19:02,26/03/2023 19:03,IP Address,203.217.131.46,100,48,TRUE,26/03/2023 19:03,R_1dbqrggtZVJiYIP,,,,,2.9957,101.8012,anonymous,EN,Yes,20507155,hpymv2@nottingham.edu.my,Non-Malaysian,Tanzanian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8698,
+30/03/2023 9:47,30/03/2023 9:48,IP Address,203.217.129.125,100,78,TRUE,30/03/2023 9:48,R_1nPkVJhvfH6B5Wg,,,,,2.9957,101.8012,anonymous,EN,Yes,20408077,hfynp1@nottingham.edu.my,Non-Malaysian,Indonesian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8704,
+30/03/2023 15:38,30/03/2023 15:47,IP Address,113.23.202.20,100,538,TRUE,30/03/2023 15:47,R_1rBXgAB7lb6fADU,,,,,2.9957,101.8012,anonymous,EN,Yes,20402244,hfyhs4@nottinghan.edu.my,Malaysian,,,,,,December,30,2003,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,psychology,Right,No,,No,,Mandarin,,Yes,45,chinese,70,English ,35,Malay,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Sekolah Jenis Kebangsaan (Cina),International School,International School,Yes,Yes,Yes,Yes,4.5,No,Yes,Yes,No,Yes,memorising,No,"RM 8,700 - RM 10,959",12,8485,BAC
+25/03/2023 19:30,25/03/2023 19:31,IP Address,203.217.131.176,7,24,FALSE,01/04/2023 19:31,R_1mvYyOkNdwLQyiy,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8698,
+01/04/2023 20:38,01/04/2023 20:40,IP Address,113.23.202.22,100,124,TRUE,01/04/2023 20:40,R_XRmfKPpvzx1sSm5,,,,,2.9957,101.8012,anonymous,EN,Yes,20494355,hpyma3@nottingham.edu.my,Non-Malaysian,Saudi Arabian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8659,
+03/04/2023 9:43,03/04/2023 9:52,IP Address,203.217.129.136,100,553,TRUE,03/04/2023 9:52,R_qKRsumdhtILwFfb,,,,,2.9957,101.8012,anonymous,EN,Yes,18015107,khpy4wsn@nottingham.edu.my,Malaysian,,,,,,October,1,1996,Female,Single (never married),,Chinese,,,,,,,,,,"Master's degree (e.g. MA, MS, MEd)",Employed part time (up to 39 hours per week),Psychology,Right,No,,No,,Mandarin,,Yes,90,English,65,Malay,55,Hokkien,,,,,,,,,,,,,,,Chinese,Chinese,Chinese,Chinese,Vernacular School,Chinese Independent School,Chinese Independent School,Yes,Yes,No,No,10,No,Yes,Yes,No,No,,"Yes, both parents","RM 15,039 or more",10,318020814820,ABC
+03/04/2023 10:05,03/04/2023 10:10,IP Address,113.23.202.19,100,327,TRUE,03/04/2023 10:10,R_3RmVuLOgEhKhiXz,,,,,2.9957,101.8012,anonymous,EN,Yes,,abelteh09@gmail.com,Malaysian,,,,,,June,19,2001,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Biotechnology ,Right,No,,No,,English,,Yes,85,Chinese,65,Malay,,,,,,,,,,,,,,,,,Chinese,Chinese ,English,Chinese,National School ,Private Chinese School ,Private Chinese School,No,Yes,No,No,10,No,No,Yes,Yes,No,,"Yes, both parents","RM 8,700 - RM 10,959",8,230068048695,CAB
+03/04/2023 9:41,03/04/2023 11:05,IP Address,203.217.131.27,100,5023,TRUE,03/04/2023 11:05,R_21oCHWyOiMD4EF3,,,,,2.9957,101.8012,anonymous,EN,Yes,20493972,sfydc2@nottingham.edu.my,Malaysian,,,,,,December,30,2004,Female,Single (never married),,,Indian,,,,Others,,,,Mixed,High school degree or equivalent (e.g. GED),Student,Foundation in Arts and Education,Right,No,,No,,English,,Yes,40,Malay,5,French,55,English,,,,,,,,,,,,,,,English/Malay,English,English,English/Malay,Private International and governmental ,Private International ,Private International ,Yes,No,Yes,Yes,2,No,Yes,Yes,Yes,Yes,"Hard to remember faces, I oddly remember people by their shoes instead‚Ä¶","Yes, both parents","Less than RM 2,500",16,939257332379,CAB
+03/04/2023 11:09,03/04/2023 11:15,IP Address,203.217.129.160,100,359,TRUE,03/04/2023 11:15,R_6x9ryYU4FnbO0Bb,,,,,2.9957,101.8012,anonymous,EN,Yes,,foojiawei1999@yahoo.com,Malaysian,,,,,,November,14,1999,Male,Single (never married),,Chinese,,,,,,,,,,"Master's degree (e.g. MA, MS, MEd)",Employed part time (up to 39 hours per week),,Right,No,,No,,Mandarin,,Yes,100,English,100,Bahasa,30,Korean,,,,,,,,,,,,,,,Chinese,Chinese and English,English,Chinese,Vernacular School,Chinese Independent School,Chinese Independent School,No,Yes,No,Yes,10,No,No,No,No,No,,No,"RM 2,500 - RM 3,169",6,484025127976,BAC
+03/04/2023 13:49,03/04/2023 13:57,IP Address,203.217.131.190,100,533,TRUE,03/04/2023 13:57,R_3s4SgMoWFOf2p18,,,,,2.9957,101.8012,anonymous,EN,Yes,,sayal3@nottingham.edu.my,Malaysian,,,,,,June,25,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Applied Psychology,Right,No,,No,,Mandarin,,Yes,75,Chinese,95,English,60,Malay,15,Hokkien,30,Japanese,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular School (Chinese),National School ,National School,Yes,No,Yes,Yes,3.5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 7,110 - RM 8,699",14,294874663208,CAB
+03/04/2023 18:24,03/04/2023 18:28,IP Address,203.217.131.190,100,232,TRUE,03/04/2023 18:28,R_3n2D78IM6E4BD7E,,,,,2.9957,101.8012,anonymous,EN,Yes,,hfyiw1@nottingham.edu.my,Malaysian,,,,,,September,9,2002,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Computer Science,Right,No,,No,,Mandarin,,Yes,85,English,65,Malay,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,National School,Private School,Private School,No,Yes,No,Yes,8,No,No,Yes,No,No,,"Yes, both parents","RM 7,110 - RM 8,699",8,692323212348,CBA
+03/04/2023 10:03,03/04/2023 18:56,IP Address,203.217.131.181,100,31990,TRUE,03/04/2023 18:56,R_2v7KgQ93JkyeL0w,,,,,2.9957,101.8012,anonymous,EN,Yes,,,Malaysian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Enter the language here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,778924688277,CAB
+03/04/2023 21:32,03/04/2023 22:37,IP Address,203.217.131.164,100,3917,TRUE,03/04/2023 22:37,R_3MyuxMl0t8Flsn5,,,,,2.9957,101.8012,anonymous,EN,Yes,,efyzk1@nottingham.edu.my,Malaysian,,,,,,May,5,2001,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Mechatronics engineering,Right,No,,No,,Mandarin,,Yes,75,English,75,Malay,,,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular school,National School,National School,No,Yes,No,Yes,9,No,No,Yes,Yes,No,,"Yes, both parents","RM 7,110 - RM 8,699",9,857677498017,CBA
+03/04/2023 23:33,03/04/2023 23:51,IP Address,60.49.119.199,100,1127,TRUE,03/04/2023 23:51,R_1rcXgwN7K3QHPLL,,,,,3.1069,101.7136,anonymous,EN,Yes,,efywc9@nottingham.edu.my,Malaysian,,,,,,July,19,2003,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Mechatronics Engineering,Right,No,,No,,Mandarin,,Yes,90,English,30,Malay,,,,,,,,,,,,,,,,,Mandarin,"Mandarin (Grade 7-8), English (Grade 9)",English,Mandarin,Chinese National School,"Chinese Independent School (Grade 7-8), International School (Grade 9)",International School,No,Yes,No,No,9,No,No,Yes,Yes,Yes,Memorizing poems/literature,"Yes, father only","RM 10,960 - RM 15,039",10,560520040965,CAB
+04/04/2023 1:56,04/04/2023 2:03,IP Address,203.217.131.48,100,410,TRUE,04/04/2023 2:03,R_BEp7XtFNGnCbX1L,,,,,2.9957,101.8012,anonymous,EN,Yes,,ebyyl2@nottingham.edu.my,Malaysian,,,,,,June,21,2000,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Chemical Engineering,Right,No,,No,,Mandarin,,Yes,85,English,75,Malay,,,,,,,,,,,,,,,,,Mandarin and English,English,English,Mandarin,Chinese Vernacular,National School,National School,No,Yes,Yes,Yes,8,No,Yes,Yes,No,No,,No,"RM 3,970 - RM 4,849",10,392002593306,BCA
+04/04/2023 15:37,04/04/2023 15:43,IP Address,203.217.129.150,100,401,TRUE,04/04/2023 15:43,R_XuM6NjeaCbFVF3X,,,,,2.9957,101.8012,anonymous,EN,Yes,20297445,hfyel6@nottingham.edu.my,Malaysian,,,,,,December,30,2002,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Bachelors study in Psychology ,Left,No,,No,,English,,Yes,60,Chinese,80,Malay,,,,,,,,,,,,,,,,,English,English,English,English,Private School,Private School,Private School,Yes,No,Yes,No,8,No,No,Yes,No,No,,"Yes, mother only","RM 3,970 - RM 4,849",11,8626,BCA
+04/04/2023 22:25,04/04/2023 22:29,IP Address,203.217.131.174,100,233,TRUE,04/04/2023 22:29,R_1IXHlgCJnt8Mr9D,,,,,2.9957,101.8012,anonymous,EN,Yes,,efyjc14@nottingham.edu.my,Malaysian,,,,,,August,26,2002,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,80,English ,80,Malay,80,Mandarin ,,,,,,,,,,,,,,,Mandarin ,English ,English ,Mandarin ,Vernacular ,National ,National ,No,Yes,Yes,Yes,8,No,Yes,Yes,No,No,,"Yes, mother only","Less than RM 2,500",12,531380324205,ACB
+05/04/2023 13:38,05/04/2023 13:39,IP Address,203.217.129.110,100,60,TRUE,05/04/2023 13:39,R_2EuCAUjpIt9gnIq,,,,,2.9957,101.8012,anonymous,EN,Yes,20371809,sfyme1@nottingham.edu.my,Non-Malaysian,Egyptian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8650,
+05/04/2023 18:14,06/04/2023 0:44,IP Address,203.217.131.163,100,23433,TRUE,06/04/2023 0:44,R_3qCmIkQUGonn2mf,,,,,2.9957,101.8012,anonymous,EN,Yes,,hfyzc2@gmail.com,Malaysian,,,,,,June,19,2001,Male,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Computer Science with AI,Left,No,,No,,Mandarin,,Yes,50,English,50,Malay,,,,,,,,,,,,,,,,,Chinese,Malay,Malay,Chinese,National School,National School,National School,Yes,Yes,No,Yes,8,No,No,No,Yes,No,,"Yes, mother only","RM 4,850 - RM 5,879",10,848199286335,CAB
+06/04/2023 2:17,06/04/2023 2:18,IP Address,203.217.129.117,100,59,TRUE,06/04/2023 2:18,R_2uE5KHc4NHEOzSP,,,,,2.9957,101.8012,anonymous,EN,Yes,20388485,sfyad3@nottingham.edu.my,Non-Malaysian,kenyan,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8605,
+06/04/2023 2:27,06/04/2023 2:33,IP Address,203.217.129.160,100,355,TRUE,06/04/2023 2:33,R_3Hj1jUdNvo5wdiw,,,,,2.9957,101.8012,anonymous,EN,Yes,20513713,falisha.esmail2005@gmail.com,Non-Malaysian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8746,
+06/04/2023 10:29,06/04/2023 10:32,IP Address,175.140.34.56,100,197,TRUE,06/04/2023 10:32,R_bCKPTyzzqgWCuHL,,,,,3.0431,101.579,anonymous,EN,Yes,,kayrinlee@gmail.com,Malaysian,,,,,,February,4,2003,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,,Right,No,,No,,English,,Yes,85,English,55,Mandarin ,,,,,,,,,,,,,,,,,English,English,English,English,International School,International School,International School,No,Yes,Yes,No,8,No,No,No,No,No,,"Yes, both parents","RM 15,039 or more",8,782138326927,ACB
+07/04/2023 16:58,07/04/2023 17:09,IP Address,203.217.131.44,100,637,TRUE,07/04/2023 17:09,R_2Qm9zWdJxnEe2ng,,,,,2.9957,101.8012,anonymous,EN,Yes,20477272,hpxlh1@nottingham.edu.my,Malaysian,,,,,,December,22,1999,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,psychology & meditation,Right,No,,No,,Mandarin,,Yes,85,Mandarin,75,English,40,Malay,35,Cantonese,10,Japanese,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School (Chinese),Private (International) School,Private (International) School,No,Yes,No,No,7.5,No,No,Yes,No,No,,"Yes, father only","RM 3,970 - RM 4,849",9,582545690541,BAC
+08/04/2023 0:24,08/04/2023 1:16,IP Address,203.217.129.104,100,3150,TRUE,08/04/2023 1:16,R_Rt0QZuPRyar90dP,,,,,2.9957,101.8012,anonymous,EN,Yes,20309202,hfyjt6@nottingham.edu.my,Malaysian,,,,,,October,18,2002,Male,Single (never married),,Chinese,,,,,,,,,,"Associate degree (e.g. AA, AS)",Student,Bsc Psychology and Cognitive Neuroscience,Right,No,,No,,Mandarin,,Yes,70,English,60,Malay,60,Hokkien,,,,,,,,,,,,,,,English,English,English,English,Vernacular School (Chinese),Vernacular School (Chinese),Vernavular School (Chinese),No,Yes,No,No,8,No,No,No,Yes,No,,"Yes, both parents","RM 5,880 - RM 7,099",7,8233,ABC
+08/04/2023 12:29,08/04/2023 12:36,IP Address,203.106.97.170,100,404,TRUE,08/04/2023 12:36,R_1i3w5rnzasJ5EDm,,,,,3.1413,101.685,anonymous,EN,Yes,,ebyho1@nottingham.edu.my,Malaysian,,,,,,March,21,2001,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Chemical and Environmental Engineering,Right,No,,No,,Mandarin,,Yes,85,English,60,Malay,20,Japanese,,,,,,,,,,,,,,,Mandarin & English,English,English,Mandarin,Vernacular School (Chinese),SMK,SMK,Yes,Yes,No,Yes,10,No,Yes,Yes,No,No,,No,"RM 7,110 - RM 8,699",9,181625310168,BCA
+08/04/2023 17:29,08/04/2023 17:36,IP Address,113.23.202.20,100,417,TRUE,08/04/2023 17:36,R_AySXVTN9aELH2sp,,,,,2.9957,101.8012,anonymous,EN,Yes,20403771,zehra.abbas.2002@gmail.com,Non-Malaysian,Pakistani,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8641,
+09/04/2023 16:40,09/04/2023 17:05,IP Address,124.13.192.144,100,1491,TRUE,09/04/2023 17:05,R_1C7uvQd0tlRrH9k,,,,,1.4991,103.7446,anonymous,EN,Yes,,saymc6@nottingham.edu.my,Malaysian,,,,,,October,5,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,"Finance, Accounting and Management",Right,No,,No,,Mandarin,,Yes,85,English,65,Mandarin,60,Bahasa Melayu,35,Hokkien,20,Cantonese,50,Korean,,,,,,,,,Mandarin,English & Bahasa Melayu,English,Mandarin,Vernacular School,National School,National School,No,Yes,Yes,No,10,No,No,Yes,Yes,Yes,Forgot person's name after first meet,"Yes, both parents","RM 15,039 or more",11,678536750213,BCA
+03/04/2023 10:30,03/04/2023 10:32,IP Address,203.217.129.150,5,107,FALSE,10/04/2023 10:32,R_rptTzajaFaQfiH7,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,269961658376,
+10/04/2023 15:54,10/04/2023 15:57,IP Address,118.101.49.156,100,140,TRUE,10/04/2023 15:57,R_6lOuL0HxJyo1wRP,,,,,3.0353,101.5871,anonymous,EN,Yes,20297439,kayrinlee@gmail.com,Malaysian,,,,,,February,4,2003,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,,Right,No,,No,,English,,Yes,80,English,65,Mandarin,,,,,,,,,,,,,,,,,English,English,English ,English,Private School ,Private School ,Private School,No,Yes,No,No,9,No,No,No,No,No,,"Yes, both parents","RM 15,039 or more",7,432842227956,ACB
+03/04/2023 18:06,03/04/2023 18:14,IP Address,203.217.129.214,98,477,FALSE,10/04/2023 18:14,R_3po3yr665rOcPnF,,,,,,,anonymous,EN,Yes,20508031,falisha.malik@gmail.com,Malaysian,,,,,,December,8,2004,Female,Single (never married),Malay,,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,psychology and cognitive neuroscience ,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,100,english,65,malay,75,french,,,,,,,,,,,,,,,english,english,english,english,private ,private,private,No,Yes,No,No,9.5,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",7,8596,BCA
+10/04/2023 20:59,10/04/2023 21:07,IP Address,58.71.159.251,100,486,TRUE,10/04/2023 21:07,R_DAYyUQwoc8uHIdz,,,,,3.1685,101.7034,anonymous,EN,Yes,20481882,hpyjk3@nottingham.edu.my,Malaysian,,,,,,February,17,2002,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Mandarin,,Yes,95,Mandarin,85,English,75,Malay,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular School,National School,National School,No,Yes,Yes,No,8,No,No,Yes,No,Yes,memory,"Yes, father only","RM 15,039 or more",10,8506,CBA
+04/04/2023 0:19,04/04/2023 0:19,IP Address,60.49.119.199,7,15,FALSE,11/04/2023 0:19,R_2qso8ptNtqtb7uh,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,351104397652,
+11/04/2023 1:13,11/04/2023 1:23,IP Address,203.217.129.218,100,552,TRUE,11/04/2023 1:23,R_2bKaxLCrcNsOgeR,,,,,2.9957,101.8012,anonymous,EN,Yes,,hfywg2@nottingham.edu.my,Malaysian,,,,,,October,7,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Associate degree (e.g. AA, AS)",Student,bioscience nutrition,Right,No,,No,,Mandarin,,Yes,70,English,50,Malay,,,,,,,,,,,,,,,,,mandarin,english,english,mandarin,National School,International School,International School,Yes,Yes,No,Yes,7.5,No,Yes,Yes,No,No,,"Yes, both parents","RM 15,039 or more",11,771719516720,BCA
+11/04/2023 17:43,11/04/2023 17:51,IP Address,203.217.129.161,100,453,TRUE,11/04/2023 17:51,R_xsBcfTtp2ozcry9,,,,,2.9957,101.8012,anonymous,EN,Yes,20297460,hfyns4@nottingham.edu.my,Malaysian,,,,,,December,11,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,BSc (Hons) Psychology and Cognitive Neuroscience,Right,No,,No,,Cantonese,,Yes,60,Cantonese,70,Chinese,85,English,60,Malay,,,,,,,,,,,,,"English, Mandarin","English, Mandarin","English, Mandarin",Mandarin,Vernacular School,Private school ,Private school,No,Yes,No,No,7.5,No,Yes,Yes,Yes,No,,"Yes, mother only","RM 8,700 - RM 10,959",12,8251,CBA
+13/04/2023 0:35,13/04/2023 0:42,IP Address,203.217.129.122,100,428,TRUE,13/04/2023 0:42,R_1GE79qUxcTdIyOo,,,,,2.9957,101.8012,anonymous,EN,,,hfysc7@nottingham.edu.my,Malaysian,,,,,,November,9,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Pharmacy,Right,No,,No,,Mandarin,,Yes,70,Chinese,70,English,65,Malay,30,Cantonse,,,,,,,,,,,,,English,English,English,English,International,International,International,Yes,Yes,Yes,Yes,5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 8,700 - RM 10,959",12,231023528450,ACB
+10/04/2023 12:52,10/04/2023 12:54,IP Address,203.217.129.65,2,157,FALSE,17/04/2023 12:55,R_DH9XWNBt2aWJpK1,,,,,,,anonymous,EN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,299719349807,
+17/04/2023 18:16,17/04/2023 21:43,IP Address,81.110.68.77,100,12452,TRUE,17/04/2023 21:43,R_1Hcrky9UV4qeUXd,,,,,52.9292,-1.1065,anonymous,EN,Yes,,hfyct2@nottingham.edu.my,Malaysian,,,,,,April,24,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,BSc Hons Computer Science with AI,Right,No,,No,,Mandarin,,Yes,85,English,10,Bahasa Mealy,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,National School,Private School,Private School,No,Yes,No,Yes,6,No,No,Yes,Yes,No,,"Yes, both parents","RM 8,700 - RM 10,959",10,660707651334,CBA
+17/04/2023 21:53,17/04/2023 21:56,IP Address,81.110.68.77,100,122,TRUE,17/04/2023 21:56,R_2OJyf0Wy5Tt0UP7,,,,,52.9292,-1.1065,anonymous,EN,Yes,,hfyct2@nottingham.edu.my,Malaysian,,,,,,April,24,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,BSc Hons Computer Science with AI,Right,No,,No,,Mandarin,,Yes,85,English,10,BM,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,National School,Private School,Private School,No,Yes,No,Yes,6,No,No,Yes,Yes,No,,"Yes, both parents","RM 8,700 - RM 10,959",10,191352558881,BCA
+18/04/2023 0:12,18/04/2023 1:28,IP Address,113.23.202.21,100,4564,TRUE,18/04/2023 1:28,R_1PdG0Fku5rpAE4d,,,,,2.9957,101.8012,anonymous,EN,Yes,,scyfw3@nottingham.edu.my,Malaysian,,,,,,June,16,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Ba International Communication Studies,Right,No,,No,,English,,Yes,15,Malay,30,Japanese,,,,,,,,,,,,,,,,,English,English,English,English,Private International School,Private International School,Private International School,Yes,Yes,No,Yes,8,No,Yes,Yes,No,Yes,Remembering names,"Yes, both parents","RM 15,039 or more",12,483748594322,ACB
+18/04/2023 12:42,18/04/2023 16:37,IP Address,203.217.131.160,100,14139,TRUE,18/04/2023 16:37,R_3iU0AqXM33ippyW,,,,,2.9957,101.8012,anonymous,EN,Yes,,edyst3@nottingham.edu.my,Malaysian,,,,,,December,24,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Mechanical engineering,Right,No,,No,,Mandarin,,Yes,75,English,85,Cantonese,55,Malay,25,Korean,,,,,,,,,,,,,Mandarin,English,English,Mandarin,SJK(C),International School,International School,No,Yes,No,No,10,No,No,No,Yes,Yes,Face recognition,"Yes, both parents","RM 10,960 - RM 15,039",9,798938289447,BCA
+19/04/2023 5:44,19/04/2023 5:51,IP Address,31.205.86.127,100,424,TRUE,19/04/2023 5:51,R_2SJMjNIu8YyhP6O,,,,,52.7377,-1.2025,anonymous,EN,Yes,,hfyst2@nottingham.edu.my,Malaysian,,,,,,October,5,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Nutrition,Right,No,,No,,Mandarin,,Yes,80,English,90,Chinese,70,Malay,80,Hokkien,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,Private School,Private School,No,Yes,No,No,6,No,No,Yes,Yes,No,,"Yes, mother only","RM 8,700 - RM 10,959",11,957558488938,CAB
+19/04/2023 21:22,19/04/2023 21:28,IP Address,203.217.129.124,100,352,TRUE,19/04/2023 21:28,R_2roLTDelHfBSppw,,,,,2.9957,101.8012,anonymous,EN,Yes,20508031,falisha.malik@gmail.com,Malaysian,,,,,,December,8,2004,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,psychology and cognitive neuroscience,Right,No,,No,,English,,Yes,100,english,75,bahasa melayu,55,french,25,german,,,,,,,,,,,,,english,english,english,english,international ,international,international,No,Yes,No,No,10,No,No,Yes,Yes,No,,"Yes, both parents","RM 3,170 - RM 3,969",8,8596,ABC
+19/04/2023 22:17,19/04/2023 22:23,IP Address,203.217.129.245,100,344,TRUE,19/04/2023 22:23,R_Tc37OX2hdpHcqK5,,,,,2.9957,101.8012,anonymous,EN,Yes,20508031,falisha.malik@gmail.com,Malaysian,,,,,,December,8,2004,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,psychology and cognitive neuroscience,Right,No,,No,,English,,Yes,100,english,80,malay,50,french,35,german,,,,,,,,,,,,,english,english,english,english,international,international,international,No,Yes,No,No,10,No,No,Yes,No,No,,"Yes, both parents","RM 8,700 - RM 10,959",7,8596,ABC
+20/04/2023 8:04,20/04/2023 8:05,IP Address,203.217.131.189,100,64,TRUE,20/04/2023 8:05,R_AEUSMCuL0Ia1XB7,,,,,2.9957,101.8012,anonymous,EN,Yes,20472420,hpysc5@nottingham.edu.my,Non-Malaysian,british,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8752,
+20/04/2023 13:38,20/04/2023 13:42,IP Address,203.217.131.178,100,245,TRUE,20/04/2023 13:42,R_1OrZtrN3Lq04j2Q,,,,,2.9957,101.8012,anonymous,EN,Yes,20402599,jiayee2654@gmail.com,Malaysian,,,,,,June,20,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology,Right,No,,No,,Mandarin,,Yes,80,English,70,Malay,,,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Chinese,Chinese,Chinese,No,Yes,Yes,Yes,10,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 7,110 - RM 8,699",12,8242,CBA
+17/04/2023 12:14,17/04/2023 12:23,IP Address,203.217.129.153,93,512,FALSE,24/04/2023 12:23,R_29hsGc0D2CxLtLm,,,,,,,anonymous,EN,Yes,,hgynm2@nottingham.edu.my,Malaysian,,,,,,April,22,2000,Female,Single (never married),Malay,,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Biology and Biochemistry (PhD),Right,No,,No,,English,,Yes,60,Malay,45,Spanish,10,Chinese (Mandarin),,,,,,,,,,,,,,,English,English,English,English,Private (International) School,Public School (in U.S.A.),Public School (in U.S.A.),No,Yes,No,Yes,7,No,No,Yes,No,No,,"Yes, both parents","RM 10,960 - RM 15,039",8,680926629039,CAB
+17/04/2023 12:38,17/04/2023 12:38,IP Address,203.217.129.79,7,10,FALSE,24/04/2023 12:38,R_20ZpWRyJnrbHODN,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,566331117623,
+17/04/2023 13:43,17/04/2023 13:46,IP Address,203.217.129.84,55,156,FALSE,24/04/2023 13:46,R_1BWMuHXETCifuFO,,,,,,,anonymous,EN,Yes,,saymc6@nottingham.edu.my,Malaysian,,,,,,October,5,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,"BSc Finance, Accounting and Management",Right,No,,No,,Mandarin,,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,6,182406220026,ABC
+17/04/2023 14:48,17/04/2023 14:51,IP Address,61.6.41.222,5,196,FALSE,24/04/2023 14:51,R_Rt48RWi68k4DqY9,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,212472992041,
+08/05/2023 16:16,08/05/2023 16:17,IP Address,60.51.32.24,100,75,TRUE,08/05/2023 16:17,R_31aUT1z6CubAiyp,,,,,2.8078,101.9126,anonymous,EN,Yes,20388035,taarruztayan@gmail.com,Non-Malaysian,Bangladeshi,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8491,
+12/05/2023 17:59,12/05/2023 18:08,IP Address,203.217.129.249,100,581,TRUE,12/05/2023 18:08,R_2f9gY6nc7YeXrLd,,,,,2.9957,101.8012,anonymous,EN,Yes,20517870,hpymk3@nottingham.edu.my,Malaysian,,,,,,March,7,2003,Male,Single (never married),Malay,,,,,,,,,,,"Associate degree (e.g. AA, AS)",Student,Psychology ,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,100,English ,,,,,,,,,,,,,,,,,,,Malay,English ,English ,Malay,National School,International School,International School ,Yes,Yes,No,Yes,6.5,No,Yes,Yes,No,No,,"Yes, both parents","RM 15,039 or more",9,8497,CBA
+07/05/2023 18:57,07/05/2023 19:00,IP Address,203.106.115.220,21,154,FALSE,14/05/2023 19:00,R_2xFqujXrHxHdpHi,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,413226175215,ABC
+25/05/2023 18:19,25/05/2023 18:25,IP Address,203.217.129.147,100,378,TRUE,25/05/2023 18:26,R_28HeraRcAraBgsQ,,,,,2.9957,101.8012,anonymous,EN,Yes,20515577,hpyef1@nottingham.edu.my,Malaysian,,,,,,May,13,2003,Non-binary/ third gender,Single (never married),Malay,,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,95,english,,,,,,,,,,,,,,,,,,,malay/english,malay/english,English,malay/english,National School,National School,Private (International) School,Yes,Yes,No,Yes,7,No,Yes,Yes,No,No,,"Yes, both parents","RM 4,850 - RM 5,879",9,8665,BAC
+31/05/2023 14:24,31/05/2023 14:40,IP Address,113.211.210.183,100,1001,TRUE,31/05/2023 14:40,R_3sp6EXocmwK0TxX,,,,,3.1413,101.685,anonymous,EN,Yes,20415805,hpyjl5@nottingham.edu.my,Malaysian,,,,,,April,15,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology & Cognitive Neuroscience,Right,Yes,Dyspraxia,Yes,"coordination issues (from dyspraxia), not sure if it counts as having an impact on my brain dev tho?",Mandarin,,Yes,85,English,45,Malay,,,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,Private (International school),Private (International school),No,Yes,No,No,8.5,No,Yes,Yes,No,Yes,face recognition & coordination,"Yes, both parents","RM 8,700 - RM 10,959",12,277529272856,CAB
+22/09/2023 22:53,22/09/2023 22:55,IP Address,202.187.20.243,100,101,TRUE,22/09/2023 22:55,R_12GqdHGNAis0xSU,,,,,3.1408,101.6852,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,Enter the language here,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8023,ABC
+24/09/2023 18:01,24/09/2023 18:11,IP Address,203.217.131.57,100,625,TRUE,24/09/2023 18:11,R_3KCjTp2cpCrbBYm,,,,,2.9957,101.8012,anonymous,EN,Yes,20618609,hpyah3@nottingham.edu.my,Malaysian,,,,,,January,22,2005,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,BSc Psychology and Cognitive Neuroscience,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,80,English,25,Arabic,55,Indonesian,,,,,,,,,,,,,,,Malay,Malay,Malay,Malay,Private School (1-3) National School (4-6),Boarding School,Boarding School,Yes,No,No,Yes,7.5,No,No,Yes,Yes,No,,"Yes, both parents","RM 15,039 or more",11,8875,CBA
+24/09/2023 17:07,24/09/2023 20:53,IP Address,203.217.131.53,100,13545,TRUE,24/09/2023 20:53,R_Wchf8qVJUJts8aB,,,,,2.9957,101.8012,anonymous,EN,Yes,20610620,ooiseamus@gmail.com,Malaysian,,,,,,July,6,2005,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Private (International) School,Private (International) School,Private (International) School,Yes,Yes,No,Yes,9,No,Yes,Yes,No,Yes,"Face recognition, rote memorization","Yes, both parents","RM 10,960 - RM 15,039",10,8803,CBA
+25/09/2023 20:40,25/09/2023 21:06,IP Address,203.217.131.208,100,1555,TRUE,25/09/2023 21:06,R_ZE7hJiec7jO1hEl,,,,,2.9957,101.8012,anonymous,EN,Yes,20491520,hfyws2@nottingham.edu.my,Malaysian,,,,,,April,20,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology,Right,No,,No,,Mandarin,,Yes,80,English,50,Malay,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,chinese vernacular school,private school,private school,No,Yes,No,Yes,9,No,Yes,Yes,No,No,,"Yes, both parents","RM 5,880 - RM 7,099",10,8863,CAB
+25/09/2023 23:10,25/09/2023 23:20,IP Address,203.217.131.201,100,564,TRUE,25/09/2023 23:20,R_8igS75GrjULgFOh,,,,,2.9957,101.8012,anonymous,EN,Yes,20620683,hpywh2@nottingham.edu.my,Malaysian,,,,,,May,21,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology,Right,No,,No,,English,,Yes,85,chinese,50,malay,,,,,,,,,,,,,,,,,chinese,english,english,chinese,national(chinese)school,international school,international school,No,Yes,No,Yes,7,No,No,Yes,No,No,,No,"RM 7,110 - RM 8,699",8,8935,CAB
+26/09/2023 16:31,26/09/2023 16:42,IP Address,203.217.131.201,100,623,TRUE,26/09/2023 16:42,R_1LtdMuSQ0QdsmKm,,,,,2.9957,101.8012,anonymous,EN,Yes,20512236,hfyst8@nottingham.edu.my,Malaysian,,,,,,August,21,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Unemployed not currently looking for work,Psychology BSc,Right,No,,No,,English,,Yes,65,mandarin,70,malay,35,hokkien,,,,,,,,,,,,,,,mandarin,english,english,mandarin,Vernacular School,National School ,National School ,Yes,Yes,No,No,8,No,No,Yes,Yes,No,,"Yes, both parents","RM 10,960 - RM 15,039",10,8815,ACB
+26/09/2023 16:57,26/09/2023 17:05,IP Address,210.187.144.114,100,516,TRUE,26/09/2023 17:05,R_2cuRwgEWrp4hKX2,,,,,3.1408,101.6852,anonymous,EN,Yes,20517626,hfykl15@nottingham.edu.my,Malaysian,,,,,,July,22,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,No,,No,,Mandarin,,Yes,90,English,70,Bahasa Melayu,80,Cantonese,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Sekolah Kebangsaan,Private (International) School,Private (International) School,Yes,Yes,No,No,9.5,No,Yes,Yes,No,No,,"Yes, both parents","RM 8,700 - RM 10,959",10,8812,ABC
+26/09/2023 17:17,26/09/2023 17:29,IP Address,203.217.131.197,100,739,TRUE,26/09/2023 17:29,R_2c6Plvu9y4vyOhL,,,,,2.9957,101.8012,anonymous,EN,Yes,20510391,hfydm3@nottingham.edu.my,Malaysian,,,,,,May,20,2004,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,100,Malay,90,English,,,,,,,,,,,,,,,,,Malay,English,English,English,Private School,Boarding School,Boarding School,Yes,Yes,No,Yes,6,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 15,039 or more",11,8767,CAB
+27/09/2023 12:20,27/09/2023 12:48,IP Address,203.217.131.191,100,1696,TRUE,27/09/2023 12:48,R_3RsiFuyipb1sCKS,,,,,2.9957,101.8012,anonymous,EN,Yes,20516383,hfyat7@nottingham.edu.my,Malaysian,,,,,,December,31,2005,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology and Cognitive Neuroscience,Right,No,,No,,English,,Yes,85,English,30,Chinese (Mandarin),30,Cantonese,40,Bahasa Melayu,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular School (Chinese),Private (International) School,Private (International) School,Yes,Yes,Yes,Yes,7,No,Yes,Yes,Yes,No,,"Yes, mother only","RM 15,039 or more",15,8857,CAB
+27/09/2023 15:15,27/09/2023 15:28,IP Address,203.217.129.159,100,773,TRUE,27/09/2023 15:28,R_1mlPcmIbixNv3JM,,,,,2.9957,101.8012,anonymous,EN,Yes,20509906,sfyag2@nottingham.edu.my,Malaysian,,,,,,December,30,2004,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Year 1 Psychology!,Right,No,,No,,English,,Yes,100,English,100,Bahasa Melayu,100,Mandarin,,,,,,,,,,,,,,,Mandarin,Bahasa Melayu,Bahasa Melayu,Mandarin,Vernacular School,Sekolah Kebangsaan,Sekolah Kebangsaan,Yes,Yes,Yes,Yes,8,No,Yes,Yes,Yes,No,,"Yes, father only","RM 10,960 - RM 15,039",14,8791,CAB
+27/09/2023 21:46,27/09/2023 21:52,IP Address,203.217.131.202,100,337,TRUE,27/09/2023 21:52,R_1NFIXVeCV4B04EO,,,,,2.9957,101.8012,anonymous,EN,Yes,20403956,hfyjk7@nottingham.edu.my,Malaysian,,,,,,July,6,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology,Right,No,,No,,Mandarin,,Yes,50,English ,40,Malay ,,,,,,,,,,,,,,,,,Chinese ,Malay ,English ,Chinese,National School,National School,National School,Yes,Yes,No,Yes,8,No,Yes,Yes,Yes,No,,No,"RM 5,880 - RM 7,099",11,8515,ABC
+28/09/2023 12:42,28/09/2023 12:51,IP Address,113.211.210.58,100,557,TRUE,28/09/2023 12:51,R_2EETQ8X94MwIXRf,,,,,3.1408,101.6852,anonymous,EN,Yes,,hong000613@gmail.com,Malaysian,,,,,,June,13,2000,Male,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Employed full time (40 or more hours per week),,Left,No,,No,,English,,Yes,75,English,65,Mandarin,70,Malay,,,,,,,,,,,,,,,Mandarin,English,English,6,Vernacular School,National School,National School,No,Yes,No,No,6,No,No,Yes,No,No,,No,"RM 7,110 - RM 8,699",5,675296385237,ACB
+28/09/2023 12:45,28/09/2023 13:01,IP Address,202.187.20.243,100,914,TRUE,28/09/2023 13:01,R_OkwXoBXbhK0X6tX,,,,,3.1408,101.6852,anonymous,EN,Yes,,s.hui419@hotmail.com,Malaysian,,,,,,April,19,1999,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Software Engineering,Left,No,,No,,Mandarin,,Yes,75,English,50,Malay,25,Cantonese,50,Teochew,50,Hokkien,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School,National School,National School,Yes,Yes,Yes,Yes,8,No,Yes,Yes,Yes,Yes,"face recognition, memory in words.",,"RM 3,170 - RM 3,969",16,414654074748,CAB
+28/09/2023 12:41,28/09/2023 13:01,IP Address,113.211.210.58,100,1168,TRUE,28/09/2023 13:01,R_1IufDKpXSfcRvAq,,,,,3.1408,101.6852,anonymous,EN,Yes,,yue9003@hotmail.com,Malaysian,,,,,,March,18,1999,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Employed full time (40 or more hours per week),,Right,No,,No,,Mandarin,,Yes,90,Mandarin,75,English,20,Bahasa Malaysia,50,Hokkien,50,Teochew,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School,National School,National School ,No,Yes,No,No,9.5,No,No,No,Yes,Yes,"Theory memory, face recognition",No,"RM 7,110 - RM 8,699",8,730858445772,CBA
+28/09/2023 12:56,28/09/2023 13:04,IP Address,115.135.91.236,100,497,TRUE,28/09/2023 13:04,R_3itjeVmrsEKtQ6J,,,,,5.4243,100.333,anonymous,EN,Yes,,tangshihui271540@gmail.com,Malaysian,,,,,,April,2,1999,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Employed full time (40 or more hours per week),,Right,No,,No,,Mandarin,,Yes,80,English,65,Bahasa Malaysia,50,Japanese,,,,,,,,,,,,,,,Chinese,English and Bahasa Malaysia,English and Malaysia,Chinese,National School,National School,National School,Yes,Yes,No,No,9,No,Yes,Yes,No,Yes,face recognition,"Yes, both parents","RM 8,700 - RM 10,959",11,501104472111,BCA
+28/09/2023 15:32,28/09/2023 15:42,IP Address,180.75.242.34,100,563,TRUE,28/09/2023 15:42,R_qXvyhuGfXumnmRH,,,,,5.4244,100.333,anonymous,EN,Yes,,tys20231@gmail.com,Malaysian,,,,,,April,26,1999,Male,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Unemployed and currently looking for work,,Right,No,,No,,Mandarin,,Yes,60,English,70,Malay,20,Japanese,20,Hokkien,25,Teo Chew,,,,,,,,,,,English,English,English,English,Vernacular School,National School,National School,No,Yes,Yes,Yes,9,No,No,Yes,Yes,Yes,face recognition and memory,No,"RM 8,700 - RM 10,959",10,697608015709,BCA
+28/09/2023 22:35,28/09/2023 22:39,IP Address,121.121.56.130,100,223,TRUE,28/09/2023 22:39,R_DwVazvUg3FC81fr,,,,,3.1408,101.6852,anonymous,EN,Yes,20610462,hpys1@nottingham.edu.my,Non-Malaysian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8809,
+29/09/2023 13:37,29/09/2023 13:55,IP Address,203.217.129.160,100,1046,TRUE,29/09/2023 13:55,R_2YzFitCKF1wMedR,,,,,2.9957,101.8012,anonymous,EN,Yes,20592264,hpyyt4@nottingham.edu.my,Malaysian,,,,,,August,12,2004,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Mandarin,,Yes,95,Mandarin,65,English,40,Malay,,,,,,,,,,,,,,,Mandarin,Mandarin,English,Mandarin,Vernacular School,Independent School,Independent School,No,Yes,Yes,No,9.5,No,No,Yes,No,No,,"Yes, father only","RM 5,880 - RM 7,099",9,8833,BAC
+29/09/2023 20:09,29/09/2023 20:29,IP Address,203.217.131.208,100,1247,TRUE,29/09/2023 20:29,R_vHRIF7hJettj4wp,,,,,2.9957,101.8012,anonymous,EN,Yes,20596443,hpyzl3@nottingham.edu.my,Malaysian,,,,,,July,5,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,PSYCHOLOGY,Right,No,,No,,Mandarin,,Yes,60,ENGLISH,60,BAHASA MALAYSIA,,,,,,,,,,,,,,,,,CHINESE,ENGLISH,ENGLISH,CHINESE,VERNACULAR SCHOOL,NATIONAL SCHOOL,NATIONAL SCHOOL,No,Yes,No,No,6,No,No,Yes,Yes,No,,"Yes, both parents","RM 2,500 - RM 3,169",9,8866,BCA
+30/09/2023 23:37,30/09/2023 23:40,IP Address,175.140.229.55,100,182,TRUE,30/09/2023 23:40,R_1reKqfbrxuAYDuR,,,,,3.1408,101.6852,anonymous,EN,Yes,20606742,hpyjw3@nottingham.edu.my,Non-Malaysian,Indonesian,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8950,
+01/10/2023 13:24,01/10/2023 13:36,IP Address,121.123.67.228,100,704,TRUE,01/10/2023 13:36,R_3jYYUWPtcuyhiQJ,,,,,3.0081,101.7719,anonymous,EN,Yes,20478432,sayst18@nottingham.edu.my,Malaysian,,,,,,July,20,2004,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,BSc Psychology,Right,No,,No,,Mandarin,,Yes,100,English,50,Malay,55,Korean,45,Hokkien,50,Cantonese,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School,International School,International School,Yes,Yes,No,Yes,8,No,No,Yes,No,Yes,Science,,"RM 15,039 or more",14,8800,ACB
+02/10/2023 9:49,02/10/2023 9:58,IP Address,203.217.129.210,100,530,TRUE,02/10/2023 9:58,R_74fg6cpYfWIYX0R,,,,,2.9957,101.8012,anonymous,EN,Yes,20515912,m-3889538@moe-dl.edu.my,Malaysian,,,,,,August,5,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology in cognitive and neuroscience ,Right,No,,No,,Mandarin,,Yes,100,Mandarin,100,English,100,Bahasa melayu ,25,Cantonese ,,,,,,,,,,,,,Mandarin ,Bahasa melayu,Bahasa melayu,Mandarin,SJKC,SMK,SMK,No,Yes,No,No,7,No,No,Yes,Yes,No,,"Yes, father only","RM 15,039 or more",10,8827,CBA
+02/10/2023 10:21,02/10/2023 10:36,IP Address,203.217.129.127,100,890,TRUE,02/10/2023 10:36,R_2uI0H8NHEyCT7M3,,,,,2.9957,101.8012,anonymous,EN,Yes,20516488,hfyjt14@nottingham.edu.my,Malaysian,,,,,,July,23,2006,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,BSc Hons Psychology Cognitive and Neuroscience,Left,No,,No,,Mandarin,,Yes,100,English,60,Bahasa Malaysia,30,Thai,20,Korean,0,,,,,,,,,,,,English,English,English,Mandarin,Private ,Private,Private,No,Yes,No,No,10,No,No,Yes,Yes,Yes,face recognition,"Yes, father only","RM 15,039 or more",9,8887,BCA
+02/10/2023 10:39,02/10/2023 10:43,IP Address,203.217.129.67,100,223,TRUE,02/10/2023 10:43,R_1IWMexv4tuXlJOl,,,,,2.9957,101.8012,anonymous,EN,Yes,20516488,hfyjt14@nottingham.edu.my,Malaysian,,,,,,July,23,2006,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,BSc Hons Psychology Cognitive and Neuroscience,Left,No,,No,,Mandarin,,Yes,100,English ,60,Bahasa Melayu,40,Thai,20,Korean,100,Cantonese,,,,,,,,,,,english,english,english,mandarin,private,private,private,No,Yes,No,No,10,No,No,Yes,Yes,Yes,face recognition,"Yes, father only","RM 15,039 or more",9,8887,BAC
+26/09/2023 16:25,26/09/2023 16:25,IP Address,203.217.131.195,5,30,FALSE,03/10/2023 16:25,R_3gUHjqGOsi6heDa,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8815,
+26/09/2023 19:31,26/09/2023 19:32,IP Address,27.125.250.225,5,28,FALSE,03/10/2023 19:32,R_1lxDAf3XKxTUN20,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8899,
+28/09/2023 12:18,28/09/2023 12:19,IP Address,202.187.20.243,7,24,FALSE,05/10/2023 12:19,R_1dzgskxgGUjnWOm,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8023,
+28/09/2023 11:58,28/09/2023 12:28,Spam,202.187.20.243,7,1804,FALSE,05/10/2023 12:28,R_2UYtrEG3tRlzSF5,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,246397075871,
+28/09/2023 12:46,28/09/2023 12:47,IP Address,183.171.95.232,5,23,FALSE,05/10/2023 12:47,R_8HZbG0O5ObZ2mw9,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,655600343993,
+06/10/2023 20:25,06/10/2023 20:52,IP Address,203.217.131.22,100,1637,TRUE,06/10/2023 20:52,R_2aJ3xjRg0AhxjJ1,,,,,2.9957,101.8012,anonymous,EN,Yes,20620237,hpyys1@nottingham.edu.my,Malaysian,,,,,,May,22,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Bachelor of Psychology (Hons),Right,No,,No,,Mandarin,,Yes,90,English,60,Malay,30,Cantonese,,,,,,,,,,,,,,,Mandarin,Mandarin,English,Mandarin,National school,Vernacular school,Vernacular school,No,Yes,Yes,Yes,8,No,Yes,Yes,No,No,,No,"RM 7,110 - RM 8,699",10,8845,BCA
+07/10/2023 14:57,07/10/2023 15:12,IP Address,203.217.131.146,100,887,TRUE,07/10/2023 15:12,R_OriSIRPiR9SZOh3,,,,,2.9957,101.8012,anonymous,EN,Yes,20517464,hfycc11@nottingham.edu.my,Malaysian,,,,,,February,26,2006,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Bsc Psychology and Cognitive Neuroscience ,Right,No,,No,,English,,Yes,80,English,70,Chinese,80,Cantonese,45,Bahasa Melayu,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular School (Chinese),Private (International),Private (International),Yes,Yes,Yes,Yes,4.5,No,Yes,Yes,Yes,Yes,Memory,"Yes, father only","RM 3,170 - RM 3,969",15,8770,ABC
+11/10/2023 14:05,11/10/2023 14:14,IP Address,103.219.236.9,100,532,TRUE,11/10/2023 14:14,R_3L7RgSaYuhbq550,,,,,3.0081,101.7719,anonymous,EN,Yes,,sallehuddinafrina@gmail.com,Malaysian,,,,,,December,11,1997,Female,Single (never married),Malay,,,,,,,,,,,"Master's degree (e.g. MA, MS, MEd)",Employed full time (40 or more hours per week),Masters in Health Sciences (Diagnostic Imaging and Radiotherapy),Right,No,,No,,English,,Yes,100,English,90,Bahasa Malaysia,,,,,,,,,,,,,,,,,English,English,English,English,National School ,Boarding School ,Boarding School ,Yes,Yes,Yes,Yes,7.5,No,Yes,Yes,No,Yes,Recalling Names (Memory),"Yes, father only","RM 15,039 or more",13,916438355576,CBA
+12/10/2023 0:40,12/10/2023 0:45,IP Address,203.217.131.162,100,274,TRUE,12/10/2023 0:45,R_pN9D9DhYG98gQ1j,,,,,2.9957,101.8012,anonymous,EN,Yes,20614650,hpyka4@nottingham.edu.my,Malaysian,,,,,,May,26,2006,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,Bachelor of Science in Psychology and Cognitive Neuroscience,Right,No,,No,,English,,Yes,100,English ,80,Malay,,,,,,,,,,,,,,,,,Malay,English,English,English,National School,Private School,Private School,Yes,Yes,Yes,Yes,7,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 5,880 - RM 7,099",12,8971,CBA
+12/10/2023 13:45,12/10/2023 13:55,IP Address,203.217.129.69,100,558,TRUE,12/10/2023 13:55,R_Atf9qzRaOZrERP3,,,,,2.9957,101.8012,anonymous,EN,Yes,20616028,hcyyt2@nottingham.edu.my,Malaysian,,,,,,March,7,2004,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology ,Right,No,,No,,English,,Yes,30,Chinese ,30,Malay ,,,,,,,,,,,,,,,,,English ,English ,English ,English ,International ,Private,International ,Yes,Yes,No,No,7.5,No,Yes,Yes,No,No,,"Yes, father only","RM 15,039 or more",11,8953,CBA
+17/10/2023 15:30,17/10/2023 15:36,IP Address,203.217.131.179,100,328,TRUE,17/10/2023 15:36,R_1Qroml628s8L0qW,,,,,2.9957,101.8012,anonymous,EN,Yes,20614441,hpyha1@nottingham.edu.my,Malaysian,,,,,,February,26,2004,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,Yes,skin eczema,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,75,english,50,korean,10,arabic,,,,,,,,,,,,,,,malay,malay,malay,malay,private,religious school,religious school,No,No,No,No,8.5,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",9,8917,BCA
+17/10/2023 16:03,17/10/2023 16:09,IP Address,203.217.129.78,100,365,TRUE,17/10/2023 16:09,R_3kMUf5VYF5reKKg,,,,,2.9957,101.8012,anonymous,EN,Yes,20510125,hfyql2@nottingham.edu.my,Malaysian,,,,,,February,9,2004,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology and Cognitive Neuroscience,Left,No,,No,,Mandarin,,Yes,85,Malay,90,English,70,Hokkien,75,Cantonese,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular School,National School,National School,No,Yes,No,No,10,No,No,Yes,No,No,,No,"RM 10,960 - RM 15,039",5,8899,BCA
+11/10/2023 15:55,11/10/2023 15:56,IP Address,175.136.85.156,2,25,FALSE,18/10/2023 15:56,R_3Do8l1ciNv0EU0T,,,,,,,anonymous,EN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,105053500761,
+12/10/2023 0:40,12/10/2023 0:40,IP Address,203.217.131.188,5,16,FALSE,19/10/2023 0:40,R_1hPS44J1pj0FqnK,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8971,
+19/10/2023 12:10,19/10/2023 12:14,IP Address,203.217.129.250,100,215,TRUE,19/10/2023 12:14,R_1TzItM3pFvfD8Ep,,,,,2.9957,101.8012,anonymous,EN,Yes,20516488,hfyjt14@nottingham.edu.my,Malaysian,,,,,,July,23,2006,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology ,Left,No,,No,,English,,Yes,100,Mandarin,100,Cantonese,60,Bahasa Melayu,15,Korean,15,Thai,,,,,,,,,,,English,English,English,Mandarin,Private School,Private School,Private School,No,Yes,No,No,10,No,No,No,Yes,Yes,face recognition,"Yes, father only","RM 15,039 or more",8,8887,ACB
+19/10/2023 19:15,19/10/2023 19:21,IP Address,175.143.209.180,100,357,TRUE,19/10/2023 19:21,R_3fOuHHYzqhiVLSU,,,,,3.0732,101.6219,anonymous,EN,Yes,,jsoniasri@gmail.com,Malaysian,,,,,,February,2,1998,Female,Single (never married),,,Indian,,,,,,,,,"Some college, no degree",Student,Arts,Right,No,,No,,Tamil,,Yes,100,English,85,Malay,50,Tamil,30,Japanese,,,,,,,,,,,,,english,english,english,english,National School,National School,National School,No,Yes,No,No,8.5,No,No,Yes,Yes,No,,"Yes, father only","RM 10,960 - RM 15,039",11,517308643925,BCA
+17/10/2023 15:22,17/10/2023 15:29,IP Address,113.210.90.124,93,427,FALSE,24/10/2023 15:29,R_1QLQLJB7GzBNDJQ,,,,,,,anonymous,EN,Yes,20614441,hpyha1@nottingham.edu.my,Malaysian,,,,,,February,26,2004,Female,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,70,English,50,Korean,10,Arabic,,,,,,,,,,,,,,,Malay,malay,malay,malay,private,religious school,religious school,No,Yes,No,Yes,8.5,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",8,8917,BAC
+25/10/2023 12:03,25/10/2023 12:12,IP Address,113.211.210.26,100,529,TRUE,25/10/2023 12:12,R_2uOFhLeiN44zZds,,,,,3.0995,101.6054,anonymous,EN,Yes,,natalieteys@gmail.com,Malaysian,,,,,,April,11,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,No,,No,,English,,Yes,100,English,50,Malay,30,Chinese ,40,Cantonese,,,,,,,,,,,,,English,English,English,English,National School,National School,National School,No,Yes,Yes,Yes,5,No,Yes,Yes,No,No,,"Yes, mother only","RM 15,039 or more",13,838440669607,CBA
+25/10/2023 16:44,25/10/2023 16:53,IP Address,175.141.96.210,100,574,TRUE,25/10/2023 16:53,R_6rFNwlmvdJmNpK1,,,,,3.0081,101.7719,anonymous,EN,Yes,,21047931@imail.sunway.edu.my,Malaysian,,,,,,July,15,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,psychology,Right,No,,No,,Cantonese,,Yes,90,Mandarin,65,English,55,Malay,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular (Chinese),National School (Sekolah Kebangsaan),National School (Sekolah Kebangsaan),Yes,Yes,No,No,9,No,No,Yes,No,No,,No,"RM 15,039 or more",8,933126141410,CAB
+25/10/2023 17:25,25/10/2023 17:33,IP Address,60.53.18.94,100,506,TRUE,25/10/2023 17:33,R_9zCA8LXYD739ypz,,,,,3.0838,101.5326,anonymous,EN,Yes,,ameerashaikh2004@gmail.com,Malaysian,,,,,,April,20,2004,Female,Single (never married),,,,,,,Others,,,,Mixed,"Some college, no degree",Student,psychology,Right,No,,No,,English,,Yes,95,english,30,urdu,50,bahasa melayu,,,,,,,,,,,,,,,english,english,english,english,private school,private school,private school,No,Yes,Yes,No,6.5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 15,039 or more",10,651964771235,ACB
+23/10/2023 13:13,23/10/2023 13:15,IP Address,203.217.129.242,17,115,FALSE,30/10/2023 13:15,R_2YPOJqr3giE1QLb,,,,,,,anonymous,EN,Yes,20406973,maisanasr@gmail.com,Non-Malaysian,Maldives ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,8869,
+25/10/2023 11:07,25/10/2023 11:11,IP Address,113.211.210.18,2,232,FALSE,01/11/2023 11:11,R_RDkfFi9fePu67NT,,,,,,,anonymous,EN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,723968846374,
+25/10/2023 17:04,25/10/2023 17:14,IP Address,113.23.129.82,29,649,FALSE,01/11/2023 17:15,R_2thV4GDeQ0hr7Iy,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,882121276995,ABC
+01/11/2023 17:19,01/11/2023 17:27,IP Address,203.217.131.174,100,464,TRUE,01/11/2023 17:27,R_1F5o6xOhitUQaf4,,,,,2.9957,101.8012,anonymous,EN,Yes,20620217,hpyjl7@nottingham.edu.my,Malaysian,,,,,,November,29,1996,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Unemployed not currently looking for work,Bsc Psychology and Cognitive Neuroscience,Right,No,,No,,English,,Yes,30,Mandarin,60,Bahasa Malaysia,10,Japanese,,,,,,,,,,,,,,,English,English,English,Mandarin,Private School,International school,International school,No,Yes,No,No,8.5,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",7,8932,CBA
+01/11/2023 18:30,01/11/2023 21:57,IP Address,115.134.216.72,100,12375,TRUE,01/11/2023 21:57,R_1JQOzutGzHQwAoe,,,,,3.0838,101.5326,anonymous,EN,Yes,,yfmak0009@gmail.com,Malaysian,,,,,,October,14,2001,Non-binary/ third gender,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,No,,Yes,"None; my developmental condition was a heart defect called valvular pulmonary stenosis, which was fixed not long after birth. Subsequent visits to cardiologists cleared me of any issues.",English,,Yes,95,Malay,25,Chinese,10,Cantonese,,,,,,,,,,,,,,,English,English,English,English,National School,National School,National School,Yes,Yes,No,No,9.5,No,Yes,Yes,No,No,,"Yes, mother only","RM 3,970 - RM 4,849",12,176876591960,ABC
+26/10/2023 10:18,26/10/2023 10:27,IP Address,113.23.129.82,40,499,FALSE,02/11/2023 10:27,R_3qEigdHP49pgdkm,,,,,,,anonymous,EN,Yes,,isabellaliow@gmail.com,Malaysian,,,,,,November,3,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5,961552420957,CAB
+27/10/2023 20:23,27/10/2023 20:29,IP Address,113.211.210.18,29,359,FALSE,03/11/2023 20:29,R_3Jw5VZottN0TXpb,,,,,,,anonymous,EN,Yes,,milidi3031@zamaneta.com,Malaysian,,,,,,September,7,2003,Prefer not to say,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,779161098599,BCA
+27/10/2023 20:29,27/10/2023 20:32,IP Address,113.211.210.18,7,213,FALSE,03/11/2023 20:32,R_339M1APFvOWzG8f,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,160552911809,
+16/11/2023 15:46,16/11/2023 15:53,IP Address,210.187.235.91,100,368,TRUE,16/11/2023 15:53,R_2V8wQZA9VVMWe8m,,,,,3.1408,101.6852,anonymous,EN,Yes,20515912,leeyean0001@gmail.com,Malaysian,,,,,,August,5,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology in cognitive and neuroscience,Right,No,,No,,Mandarin,,Yes,95,english,85,bahasa melayu,25,cantonese,,,,,,,,,,,,,,,mandarin,bahasa melayu,bahasa melayu,mandarin,sjkc,smk,smk,No,Yes,Yes,Yes,6.5,No,No,Yes,Yes,No,,"Yes, father only","RM 15,039 or more",12,8827,ACB
+20/11/2023 0:24,20/11/2023 0:35,IP Address,113.23.202.20,100,700,TRUE,20/11/2023 0:35,R_PAmBgzEptD7GhKp,,,,,2.9957,101.8012,anonymous,EN,Yes,20509992,hfyzy6@nottingham.edu.my,Malaysian,,,,,,April,6,2004,Male,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology and Cognitive Neuroscience,Right,No,,No,,English,,Yes,75,Chinese,85,Bahasa Malaysia,,,,,,,,,,,,,,,,,Chinese,English,English,Chinese,Chinese Vernacular School,National Secondary School,National Secondary School,Yes,Yes,No,Yes,8,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",9,8929,CBA
+21/11/2023 23:58,22/11/2023 0:14,IP Address,60.48.168.193,100,956,TRUE,22/11/2023 0:14,R_2vicMrsXpjmcPb6,,,,,3.1408,101.6852,anonymous,EN,Yes,,puamemjun@gmail.com,Malaysian,,,,,,July,22,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology ,Right,No,,No,,English,,Yes,90,English,90,Mandarin,60,Bahasa Malaysia,70,Cantonese,10,French,,,,,,,,,,,Chinese,English,English,Chinese,SJKC,International school,International school,No,Yes,Yes,No,8,No,No,Yes,Yes,No,,"Yes, both parents","RM 10,960 - RM 15,039",10,822385097411,BAC
+01/12/2023 13:26,01/12/2023 13:35,IP Address,175.138.155.199,100,567,TRUE,01/12/2023 13:36,R_3kKVR9DofSboGYb,,,,,3.0081,101.7719,anonymous,EN,Yes,20415574,hfykl14@nottingham.edu.my,Malaysian,,,,,,February,5,2005,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,psychology,Right,No,,No,,Mandarin,,Yes,70,English,60,Chinese,25,Hokkien,25,Malay,50,Cantonese,,,,,,,,,,,Chinese,English,English,Chinese,Vernacular ,Private (International),Private (International),Yes,Yes,No,Yes,7.5,No,Yes,Yes,Yes,Yes,Remembering Specific details,"Yes, mother only","RM 15,039 or more",14,8986,BAC
+02/12/2023 9:50,02/12/2023 10:01,IP Address,175.137.222.27,100,625,TRUE,02/12/2023 10:01,R_1KfHU3muvBExwzc,,,,,3.0081,101.7719,anonymous,EN,Yes,20512301,sfylw1@nottingham.edu.my,Malaysian,,,,,,June,30,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology and cognitive neuroscience ,Right,No,,No,,Mandarin,,Yes,100,English,80,Malay,55,Hokkien,55,Cantonese,,,,,,,,,,,,,Chinese,Malay,Malay,Chinese,Vernacular school,National school,National school,Yes,Yes,No,Yes,7.5,No,No,Yes,No,No,,"Yes, both parents","RM 8,700 - RM 10,959",10,8902,CAB
+02/12/2023 10:08,02/12/2023 10:13,IP Address,175.137.222.27,100,288,TRUE,02/12/2023 10:13,R_2EmdueOyNek63Z3,,,,,3.0081,101.7719,anonymous,EN,Yes,20512301,sfylw1@nottingham.edu.my,Malaysian,,,,,,June,30,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology and cognitive neuroscience,Right,No,,No,,Mandarin,,Yes,95,english,85,malay,,,,,,,,,,,,,,,,,chinese,malay,malay,chinese,vernacular school,national school,national school,Yes,Yes,No,Yes,7.5,No,No,Yes,No,No,,"Yes, both parents","RM 8,700 - RM 10,959",10,8902,CAB
+03/12/2023 16:32,03/12/2023 16:38,IP Address,113.211.208.174,100,349,TRUE,03/12/2023 16:38,R_Z2Ume8nSn5SjilX,,,,,3.1408,101.6852,anonymous,EN,Yes,20509992,hfyzy6@nottingham.edu.my,Malaysian,,,,,,April,6,2004,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Mandarin,,Yes,90,English,80,Bahasa Melayu,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,Chinese Vernacular School,National Secondary School,National Secondary School,No,Yes,No,Yes,8,No,No,Yes,No,No,,"Yes, both parents","RM 15,039 or more",8,8929,BAC
+27/11/2023 14:30,27/11/2023 14:30,IP Address,121.121.166.58,2,21,FALSE,04/12/2023 14:31,R_1cU0hXLOFO4x8jV,,,,,,,anonymous,EN,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,8884,
+08/12/2023 14:17,08/12/2023 14:26,IP Address,60.50.102.136,100,546,TRUE,08/12/2023 14:26,R_3h4kq2sbNftwru5,,,,,3.0081,101.7719,anonymous,EN,Yes,20504369,hfytl7@nottingham.edu.my,Malaysian,,,,,,December,31,2004,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology,Right,No,,No,,Mandarin,,Yes,100,English,60,Bahasa Melayu,80,Korean,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,Private School,Private School,Yes,No,Yes,No,9.5,No,No,No,No,No,,"Yes, father only","RM 3,970 - RM 4,849",11,8824,CBA
+13/12/2023 14:04,13/12/2023 14:15,IP Address,203.217.131.31,100,638,TRUE,13/12/2023 14:15,R_2EhpskZRreRopRr,,,,,2.9957,101.8012,anonymous,EN,Yes,20516429,hpyjl6@nottingham.edu.my,Malaysian,,,,,,January,8,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology,Right,No,,No,,Mandarin,,Yes,80,Malay,70,English,95,Fuchow,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,National School,National School,Yes,Yes,No,Yes,8,No,Yes,Yes,No,Yes,Presentation difficulties,"Yes, father only","RM 7,110 - RM 8,699",13,8533,ABC
+08/12/2023 16:25,08/12/2023 16:26,IP Address,203.217.131.172,5,19,FALSE,15/12/2023 16:26,R_3FIsi6R3ZhXbJAp,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,8848,
+17/12/2023 14:26,17/12/2023 14:30,IP Address,219.92.40.104,100,228,TRUE,17/12/2023 14:30,R_4AsR2yjx9cAr1MR,,,,,3.0609,101.7524,anonymous,EN,Yes,20512276,janetnyt04@gmail.com,Malaysian,,,,,,December,1,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Psychology Year 1,Right,No,,No,,Mandarin,,Yes,100,English,100,Malay,100,Chinese,,,,,,,,,,,,,,,Malay,Malay,English,Chinese,national school,national school,national school,No,No,No,No,10,No,Yes,Yes,No,No,,,"Less than RM 2,500",13,8761,BAC
+23/12/2023 11:07,23/12/2023 13:23,IP Address,183.171.191.201,100,8161,TRUE,23/12/2023 13:23,R_4e3GwajMjXr7N1f,,,,,3.1408,101.6852,anonymous,EN,Yes,20515345,hfyjl26@nottingham.edu.my,Malaysian,,,,,,June,4,2004,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology,Right,No,,No,,Mandarin,,Yes,85,mandarin,70,bahasa melayu,70,english,50,hokkien,45,cantonnese,,,,,,,,,,,mandarin,english,english,mandarin,chinese vernacular school,Private school,private school,Yes,No,Yes,Yes,4.5,No,Yes,Yes,No,No,,,"RM 5,880 - RM 7,099",16,8872,ABC
+31/12/2023 20:36,31/12/2023 20:56,IP Address,113.210.83.232,100,1180,TRUE,31/12/2023 20:56,R_40hFFKmkDsgZFl8,,,,,3.0847,101.6018,anonymous,EN,Yes,20620680,kaiyangfolder4@gmail.com,Malaysian,,,,,,December,7,2004,Male,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,,Right,No,,No,,English,,Yes,90,English,15,Chinese,,,,,,,,,,,,,,,0,,English ,English,English,English,International/private school,International/private school,International/private school,No,Yes,Yes,Yes,6,No,Yes,Yes,No,No,,"Yes, both parents","Less than RM 2,500",10,8920,ABC
+19/04/2024 16:27,19/04/2024 16:38,IP Address,219.92.233.182,100,703,TRUE,19/04/2024 16:38,R_4czR7bnQNiHAVgJ,,,,,3.0081,101.7719,anonymous,EN,Yes,,myue0103@gmail.com,Malaysian,,,,,,January,3,2002,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Bachelor of Communication (Honours) Broadcasting,Right,No,,No,,Mandarin,,Yes,70,English,70,Bahasa Malaysia,25,Japanese,,,,,,,,,,,,,,,Chinese,Chinese,Chinese,Chinese,Sekolah Jenis Kebangsaan,Chinese Independent High School,Chinese Independent High School,No,Yes,No,Yes,8,No,No,Yes,No,No,,No,"RM 2,500 - RM 3,169",8,10011,BCA
+19/04/2024 16:00,19/04/2024 16:48,IP Address,161.142.151.50,100,2903,TRUE,19/04/2024 16:48,R_4Lb7SeqQhndPKUG,,,,,3.1247,101.6829,anonymous,EN,Yes,,laiyyn2001@gmail.com,Malaysian,,,,,,May,25,2001,Female,Single (never married),,,,,,Kadazandusun,,,,,,"Some college, no degree",Student,Broadcasting,Right,No,,No,,Mandarin,,Yes,60,Chinese,65,English,55,Malay,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,National School,National School,Yes,Yes,No,Yes,7,No,No,Yes,No,No,,No,"RM 15,039 or more",8,10012,CAB
+19/04/2024 17:05,19/04/2024 17:19,IP Address,183.171.64.219,100,882,TRUE,19/04/2024 17:19,R_4jUJAHK2cQOcOVr,,,,,3.0978,101.5044,anonymous,EN,Yes,220059,jarveljamol00@gmail.com,Malaysian,,,,,,May,5,2004,Male,Single (never married),,,,,,Kadazandusun,,,,,,"Some college, no degree",Student,law enforcement,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,80,Enter the language here,100,kadazandusun,70,,,,,,,,,,95,,,,,,bahasa melayu,bahasa melayu,bahasa melayu,bahasa melayu,sekolah kebangsaan ulu Ansuan,sekolah menegah kebangsaan Telupid,sekolah menegah kebangsaan Telupid,Yes,No,No,Yes,5,Yes,Yes,Yes,Yes,No,,,"Less than RM 2,500",15,10014,CAB
+19/04/2024 17:35,19/04/2024 17:48,IP Address,183.171.64.219,100,774,TRUE,19/04/2024 17:48,R_4rJGL2BJXFKRKup,,,,,3.0978,101.5044,anonymous,EN,Yes,220059,jarveljamol00@gmail.com,Malaysian,,,,,,May,5,2004,Male,Single (never married),Malay,,,,,Kadazandusun,,,,,,"Some college, no degree",Student,law enforcement,Right,No,,,nothing,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,95,bahasa melayu,100,dusun,50,english,,,,,,,,,,,,,,,bahasa melayu,bahasa melayu,bahasa melayu,bahasa melayu,sekolah kebangsaan ulu ansuan,sekolah menengah kebangsaan telupid,sekolah kebangsaan telupid,Yes,No,No,Yes,5.5,No,Yes,Yes,Yes,No,,,"Less than RM 2,500",14,10014,BCA
+19/04/2024 20:18,19/04/2024 20:45,IP Address,183.171.95.133,100,1645,TRUE,19/04/2024 20:45,R_4IXjI4CFsMmHAIg,,,,,3.1419,101.695,anonymous,EN,Yes,10015,andrewkerrymark1@gmail.com,Malaysian,,,,,,October,11,2004,Male,Single (never married),,,,,,Kadazandusun,,,,,,"Some college, no degree",Student,Diploma Enforcement and Compliance,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,80,English,,,,,,,,,,,,,,,,,,,Malay,Malay,Malay,Malay,Sekolah Kebangsaan,Sekolah Kebangsaan,Sekolah Kebangsaan,Yes,Yes,No,Yes,5,Yes,Yes,Yes,Yes,No,,"Yes, both parents","Less than RM 2,500",11,10015,ACB
+19/04/2024 22:56,19/04/2024 23:04,IP Address,115.164.73.100,100,477,TRUE,19/04/2024 23:04,R_4rG6Xe3h8lXHVeu,,,,,3.1408,101.6852,anonymous,EN,Yes,10013,qairulbariyah50@gmail.com,Malaysian,,,,,,February,19,2003,Female,Single (never married),Malay,,,,,,,,,,,Less than a high school diploma,Student,,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,50,english,15,korea,,,,,,,,,,,,,,,,,english,english,bahasa melayu,bahasa melayu,sekolah kebangsaan,sekolah kebangsaan ,sekolah kebangsaan,Yes,Yes,Yes,No,5.5,No,No,No,Yes,No,,No,"Less than RM 2,500",8,10013,BCA
+20/04/2024 12:24,20/04/2024 12:33,IP Address,113.211.208.141,100,512,TRUE,20/04/2024 12:33,R_4391NUz3ZOvj7iN,,,,,3.0999,101.5965,anonymous,EN,Yes,,peisze666@gmail.com,Malaysian,,,,,,November,16,2002,Female,"Married, or in a domestic partnership",,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,currently studying in Broadcasting Communication ,Right,No,,No,,Mandarin,,No,,,,,,,,,,,,,,,,,,,,,Chinese,Chinese and English,Chinese and English,Chinese,Sekolah Jenis Kebangsaan Cina,Private school,Private school,Yes,Yes,No,Yes,8,No,Yes,Yes,No,No,,No,"Less than RM 2,500",9,10010,CAB
+20/04/2024 13:48,20/04/2024 13:55,IP Address,113.211.210.95,100,406,TRUE,20/04/2024 13:55,R_41EDxNpDntCZZvO,,,,,3.0999,101.5965,anonymous,EN,Yes,,meganyong2003@gmail.com,Malaysian,,,,,,December,13,2003,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,Advertising & Design,Right,No,,No,,Mandarin,,Yes,85,English,40,Malay,40,Cantonese,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular - Chinese,Private,Private,Yes,Yes,No,Yes,7,No,Yes,No,No,No,,"Yes, father only","RM 5,880 - RM 7,099",11,10019,ACB
+20/04/2024 14:23,20/04/2024 14:29,IP Address,180.74.64.217,100,369,TRUE,20/04/2024 14:29,R_4k0tfHwh8ZOYbYd,,,,,3.191,101.662,anonymous,EN,Yes,,jiachi818drcgccxw@gmail.com,Malaysian,,,,,,August,18,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology,Right,No,,No,,Mandarin,,Yes,85,Mandarin,70,Malay,70,English,20,German,,,,,,,,,,,,,Mandarin,Malay,English,Mandarin,Vernacular School,National School,National School,No,Yes,No,No,9,No,Yes,Yes,No,No,,No,"Less than RM 2,500",8,10021,ACB
+20/04/2024 14:49,20/04/2024 14:52,IP Address,180.74.64.217,100,167,TRUE,20/04/2024 14:52,R_4LOJcd75VL56QlI,,,,,3.191,101.662,anonymous,EN,Yes,,jiachi818drcgccxw@gmail.com,Malaysian,,,,,,August,18,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology,Right,No,,No,,Mandarin,,Yes,85,Mandarin,75,Malay,75,English,20,German,,,,,,,,,,,,,Mandarin,Malay,English,Mandarin,Vernacular School,National School,National School,No,Yes,No,No,9,No,Yes,Yes,No,No,,No,"Less than RM 2,500",8,10021,BCA
+20/04/2024 14:56,20/04/2024 14:59,IP Address,180.74.64.217,100,169,TRUE,20/04/2024 14:59,R_4e981YYdbEjpUxg,,,,,3.191,101.662,anonymous,EN,Yes,,jiachi818drcgccxw@gmail.com,Malaysian,,,,,,August,18,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Psychology,Right,No,,No,,Mandarin,,Yes,85,Mandarin,75,Malay,75,English,20,German,,,,,,,,,,,,,Mandarin,Malay,English,Mandarin,Vernacular School,National School,National School,No,Yes,No,No,9.5,No,Yes,Yes,No,No,,No,"Less than RM 2,500",8,10021,ABC
+20/04/2024 14:50,20/04/2024 15:02,IP Address,113.211.210.20,100,711,TRUE,20/04/2024 15:02,R_4VnUHVoz99vbdJL,,,,,3.0999,101.5965,anonymous,EN,Yes,,xuejinggg168@gmail.com,Malaysian,,,,,,October,24,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Employed full time (40 or more hours per week),broadcasting communication,Right,No,,No,,Mandarin,,Yes,85,mandarin ,60,cantonese ,65,english,55,bahasa malaysia,,,,,,,,,,,,,mandarin,mandarin,english,mandarin,sjkc,smk,smk,Yes,Yes,Yes,Yes,4,Yes,Yes,Yes,Yes,Yes,face language,No,"RM 4,850 - RM 5,879",14,10020,BCA
+20/04/2024 20:00,20/04/2024 20:10,IP Address,42.189.159.85,100,596,TRUE,20/04/2024 20:10,R_4ZV9jYU6RfxIXUQ,,,,,5.329,100.292,anonymous,EN,Yes,,allycheah2@gmail.com,Malaysian,,,,,,November,16,2002,Male,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,-,Right,No,,No,,Mandarin,,Yes,90,CN,80,Eng,60,BM,,,,,,,,,,,,,,,CN,Eng,Eng,CN,SJK,SMK,SMK,Yes,Yes,No,Yes,9.5,No,Yes,Yes,Yes,Yes,,"Yes, both parents","RM 3,170 - RM 3,969",12,10022,BCA
+20/04/2024 20:40,20/04/2024 20:47,IP Address,175.137.15.219,100,469,TRUE,20/04/2024 20:47,R_4Bzb8kk84ailFlE,,,,,3.1412,101.685,anonymous,EN,Yes,,yingyingpoon11@gmail.com,Malaysian,,,,,,November,11,1999,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Employed part time (up to 39 hours per week),,Right,No,,No,,Mandarin,,Yes,80,English,35,Malay,20,Cantonese,,,,,,,,,,,,,,,English and Chinese,English,English and Bahasa,chinese,Vernacular school,National school,National school,No,Yes,Yes,No,8,No,No,Yes,No,No,,"Yes, both parents","RM 4,850 - RM 5,879",9,10024,BAC
+20/04/2024 21:12,20/04/2024 21:21,IP Address,42.189.159.85,100,549,TRUE,20/04/2024 21:21,R_4f2DeDas1nXDinu,,,,,5.329,100.292,anonymous,EN,Yes,,rozalynlee@gmail.com,Malaysian,,,,,,January,17,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Administration,Right,No,,No,,English,,Yes,100,Eng,50,CN,100,bm,,,,,,,,,,,,,,,BM,BM,BM,BM,SK,SMK,SMK,Yes,Yes,No,No,9.5,No,No,Yes,Yes,Yes,,"Yes, both parents","RM 3,170 - RM 3,969",11,10021,CBA
+20/04/2024 22:16,20/04/2024 22:23,IP Address,202.186.52.74,100,439,TRUE,20/04/2024 22:23,R_4TYrH9cM4NARKud,,,,,3.0999,101.5965,anonymous,EN,Yes,,p120243@siswa.ukm.edu.my,Malaysian,,,,,,August,2,2000,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Master of Social Science (Industrial and Organizational Psychology),Right,No,,No,,Mandarin,,Yes,70,English,65,Malay,50,Hokkien,,,,,,,,,,,,,,,Mandarin,Malay/English,Malay/English,Mandarin,SJK(C),SMK,SMK,No,Yes,Yes,Yes,8,No,No,Yes,Yes,Yes,Memory,No,"RM 8,700 - RM 10,959",11,10025,ABC
+20/04/2024 22:44,20/04/2024 23:04,IP Address,27.125.240.95,100,1155,TRUE,20/04/2024 23:04,R_4NVEldJx9ocUEBn,,,,,3.1408,101.6852,anonymous,EN,Yes,,jasminekwa2001@gmail.com,Malaysian,,,,,,July,18,2001,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Broadcasting,Right,No,,No,,Mandarin,,Yes,80,Malay,70,English,,,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,National School,National School,Yes,Yes,Yes,No,8,No,Yes,Yes,Yes,Yes,memory ,No,"RM 2,500 - RM 3,169",12,10017,CBA
+21/04/2024 12:13,21/04/2024 12:33,IP Address,14.192.214.216,100,1154,TRUE,21/04/2024 12:33,R_4fjcWq0onxQOBuj,,,,,3.1671,101.6708,anonymous,EN,Yes,,minholymin0309@gmail.com,Malaysian,,,,,,August,14,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Broadcasting,Right,No,,No,,Mandarin,,Yes,100,Chinese,70,English,60,Malay,,,,,,,,,,,,,,,Chinese,English,Englsih,Englsih,Vernacular School (Chinese),Vernacular School (Chinese),Vernacular School (Chinese),Yes,Yes,No,No,9,No,No,Yes,No,No,,"Yes, both parents","RM 2,500 - RM 3,169",9,10016,BAC
+21/04/2024 14:33,21/04/2024 14:45,IP Address,180.75.237.200,100,707,TRUE,21/04/2024 14:45,R_42sGMtUQvpdgsGa,,,,,3.0732,101.6219,anonymous,EN,Yes,,,Malaysian,,,,,,August,20,2002,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,creativity,Right,No,,No,,Mandarin,,Yes,80,Bahasa Melayu,70,Bahasa Inggeris,80,Hokkien,60,Cantonese,,,,,,,,,,,,,Bahasa Cina,Bahasa Melayu,Bahasa Melayu,Bahasa Cina,Sekolah Kebangsaan,Sekolah Kebangsaan,Sekolah Kebangsaan,Yes,Yes,Yes,Yes,8.5,No,No,Yes,No,No,,No,"RM 2,500 - RM 3,169",10,10028,CAB
+21/04/2024 23:49,21/04/2024 23:57,IP Address,113.211.210.95,100,443,TRUE,21/04/2024 23:57,R_4Myxf8QklYJ1J9n,,,,,3.0999,101.5965,anonymous,EN,Yes,,kaijet01@gmail.com,Malaysian,,,,,,July,9,2005,Male,Single (never married),,Chinese,,,,,,,,,,Less than a high school diploma,Student,likely to be IT or CS related,Left,No,,No,,Mandarin,,Yes,80,English,80,Chinese,50,Malay,,,,,,,,,,,,,,,Chinese,English,English,Chinese,National School,Private School,Private School,No,Yes,No,Yes,7,No,No,No,Yes,Yes,memory,"Yes, both parents","RM 3,970 - RM 4,849",8,10029,CBA
+22/04/2024 8:26,22/04/2024 8:33,IP Address,210.195.109.252,100,384,TRUE,22/04/2024 8:33,R_4qldmiecEXMCMUB,,,,,3.0431,101.579,anonymous,EN,Yes,,syarashazanna@gmail.com,Malaysian,,,,,,August,15,1995,Female,"Married, or in a domestic partnership",Malay,,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Master in Science (Psychology),Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,100,English,,,,,,,,,,,,,,,,,,,English,English,English,English,National school,National school,National school,No,Yes,No,Yes,9,No,No,Yes,Yes,No,,"Yes, both parents","RM 5,880 - RM 7,099",9,10026,BCA
+22/04/2024 11:08,22/04/2024 11:22,IP Address,60.53.5.47,100,793,TRUE,22/04/2024 11:22,R_4nT9xmtrl3GANL0,,,,,3.1671,101.6708,anonymous,EN,Yes,,yonghanboi@gmail.com,Malaysian,,,,,,September,27,2002,Male,Single (never married),,Chinese,,,,,,,,,,Less than a high school diploma,Student,Broadcasting,Right,Yes,Epilepsy,No,,English,,Yes,40,Mandarin,65,Malay,,,,,,,,,,,,,,,,,English,English,English,English,Private School,Private School,Private School,Yes,Yes,No,Yes,5,No,No,No,Yes,Yes,"Memory, Names, Lessons",No,"RM 3,170 - RM 3,969",10,10027,CAB
+22/04/2024 14:10,22/04/2024 14:18,IP Address,96.9.164.21,100,527,TRUE,22/04/2024 14:18,R_4FFbhynqPNpmniN,,,,,3.1191,101.6747,anonymous,EN,Yes,,peien3218563@gmail.com,Malaysian,,,,,,November,22,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Communication in broadcasting,Right,No,,No,,Mandarin,,Yes,75,Bahasa Melayu,90,English,70,Cantonese,30,French,30,Korean,,,,,,,,,,,Chinese and English,English,English,Chinese,Sekolah Jenis Kebangsaan Cina,Sekolah Menengah Kebangsaan,Sekolah Menengah Kebangsaan,Yes,Yes,No,No,8.5,No,No,Yes,No,No,,"Yes, both parents","RM 8,700 - RM 10,959",9,10018,BAC
+25/04/2024 15:27,25/04/2024 15:34,IP Address,202.170.60.236,100,364,TRUE,25/04/2024 15:34,R_4gOUDoTbT8l7nUZ,,,,,5.4103,100.3386,anonymous,EN,Yes,,meisze304@gmail.com,Malaysian,,,,,,June,17,2001,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Pharmacy,Right,No,,No,,Mandarin,,Yes,70,English,55,Malay,,,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,Vernacular School (Chinese),"National School (Sekolah Kebangsaan),","National School (Sekolah Kebangsaan),",Yes,Yes,Yes,Yes,8.5,No,Yes,Yes,Yes,Yes,Face recognition,No,"RM 3,970 - RM 4,849",13,10030,BAC
+02/05/2024 0:21,02/05/2024 0:31,IP Address,27.125.248.75,100,614,TRUE,02/05/2024 0:31,R_4QxJR7puYKFOwnv,,,,,3.1419,101.695,anonymous,EN,Yes,,farahyusoff39@gmail.com,Malaysian,,,,,,June,8,1996,Female,Single (never married),Malay,,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Student,Master in Social Science (Industrial and Organizational Psychology),Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,90,English,15,Arabic,,,,,,,,,,,,,,,,,English,English,English,Malay,National School,National School,Boarding School (MRSM),No,Yes,Yes,Yes,5.5,No,No,Yes,Yes,Yes,memory,,"Less than RM 2,500",14,10032,BCA
+03/05/2024 14:12,03/05/2024 14:27,IP Address,203.217.131.167,100,933,TRUE,03/05/2024 14:27,R_4RfToBLkFTekFXl,,,,,2.9957,101.8012,anonymous,EN,Yes,20508770,sfymn1@nottingham.edu.my,Malaysian,,,,,,February,2,2003,Female,Single (never married),,Chinese,,,,,,,,,,High school degree or equivalent (e.g. GED),Student,Psychology and Cognitive Neuroscience,Right,No,,No,,Mandarin,,Yes,75,Malay,85,English,70,Foochow,50,Hokkien,,,,,,,,,,,,,Mandarin and English,English,English,Mandarin,Vernacular School,National School,National School,Yes,Yes,No,No,8,No,Yes,Yes,No,No,,"Yes, mother only","RM 15,039 or more",12,8896,ACB
+03/05/2024 21:47,03/05/2024 21:54,IP Address,14.192.212.161,100,449,TRUE,03/05/2024 21:54,R_4Pt8vAxijZrhW9Q,,,,,3.1671,101.6708,anonymous,EN,Yes,20597203,hpycl3@nottingham.edu.my,Malaysian,,,,,,August,4,2005,Female,Single (never married),,Chinese,,,,,,,,,,"Associate degree (e.g. AA, AS)",Student,Bsc Hons in Psychology,Right,No,,No,,English,,Yes,75,mandarin,45,malay,50,cantonese,40,hakka,30,hokkien,,,,,,,,,,,Chinese,English,English,chinese,vernacular school,private international school,private international school,No,Yes,No,Yes,8.5,No,Yes,Yes,Yes,No,,"Yes, both parents","RM 15,039 or more",11,8842,CAB
+08/05/2024 12:33,08/05/2024 12:59,IP Address,202.186.156.29,100,1573,TRUE,08/05/2024 12:59,R_4kTWSc1iOH25jOq,,,,,3.0999,101.5965,anonymous,EN,Yes,,christieykx@gmail.com,Malaysian,,,,,,May,9,2000,Female,Single (never married),,Chinese,,,,,,,,,,"Bachelor's degree (e.g. BA, BS)",Unemployed and currently looking for work,Psychology,Left,No,,No,,English,,Yes,75,Bahasa Melayu,50,Mandarin ,80,Hokkien,,,,,,,,,,,,,,,Mandarin,Bahasa Melayu,Bahasa Melayu,Mandarin,Vernacular School,National School,National School,Yes,Yes,No,Yes,7,No,Yes,Yes,No,No,,No,"RM 8,700 - RM 10,959",9,10031,BAC
+11/05/2024 1:16,11/05/2024 1:22,IP Address,113.211.209.27,100,344,TRUE,11/05/2024 1:22,R_4BzLHfsYiI43BuT,,,,,3.1071,101.6139,anonymous,EN,Yes,20509992,hfyzy6@nottingham.edu.my,Malaysian,,,,,,April,6,2004,Male,Single (never married),,Chinese,,,,,,,,,,"Some college, no degree",Student,psychology and cognitive neuroscience,Right,No,,No,,Mandarin,,Yes,80,Mandarin,90,English,70,Bahasa Malaysia,,,,,,,,,,,,,,,Mandarin,English,English,Mandarin,Chinese Vernacular School,National Secondary School,National Secondary School,No,Yes,No,Yes,8,No,Yes,Yes,No,No,,"Yes, both parents","RM 10,960 - RM 15,039",9,8929,CAB
+13/05/2024 13:07,13/05/2024 13:23,IP Address,113.23.202.20,100,951,TRUE,13/05/2024 13:23,R_4WBRKGIC5TfgBjw,,,,,2.9957,101.8012,anonymous,EN,Yes,20509102,hfyaa25@nottingham.edu.my,Malaysian,,,,,,April,13,2004,Male,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,psychology,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,85,english,50,japanese,,,,,,,,,,,,,,,,,malay,malay,english,english,national school,national school,national school,Yes,Yes,Yes,Yes,7,No,Yes,Yes,No,Yes,memorization ,"Yes, both parents","RM 10,960 - RM 15,039",11,8926,ACB
+13/05/2024 13:24,13/05/2024 13:28,IP Address,113.23.202.20,100,208,TRUE,13/05/2024 13:28,R_4ZOAu81SpwbzKjm,,,,,2.9957,101.8012,anonymous,EN,Yes,20509102,hfyaa25@nottingham.edu.my,Malaysian,,,,,,April,13,2004,Male,Single (never married),Malay,,,,,,,,,,,"Some college, no degree",Student,psychology,Right,No,,No,,Bahasa Malaysia (Northern/Central/Southern accent),,Yes,85,english,45,japanese,,,,,,,,,,,,,,,,,malay,malay,english,english,national school,national school,national school,Yes,Yes,Yes,Yes,7,No,Yes,Yes,No,Yes,memorization ,"Yes, both parents","RM 10,960 - RM 15,039",11,8926,CAB

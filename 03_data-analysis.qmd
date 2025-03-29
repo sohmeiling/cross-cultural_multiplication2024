@@ -1,0 +1,596 @@
+---
+title: "data-analysis"
+format: html
+editor: visual
+---
+
+## Main analysis
+
+The following are the codes for the data analysis. Data exploration are in the previous doc.
+
+## Packages
+
+```{r}
+#| label: libs-packages
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(lubridate)
+library(skimr)
+library(rstatix)
+library(rio)
+library(ggstatsplot)
+library(gridExtra)
+library(ggpubr)
+library(stats)
+library(ggdist)
+library(introdataviz)
+
+library(tidyverse)
+library(afex)
+library(emmeans)
+```
+
+### Data
+
+Typing, fluency, verbal stm, visual stm
+
+```{r}
+
+tasks_df <- read_csv("derivative/combined_summary_ALL.csv", show_col_types = FALSE) |>
+  mutate(verbal_stm = (max_egner + max_wais)/2) |>
+  dplyr::select(participant, median_typing, n_fluency, verbal_stm, mean_vpt)|>
+  mutate(participant = as.character(participant))
+
+```
+
+Stroop comparison and multiplication verification
+
+```{r}
+#| message: false
+
+mag_summary <- read_csv("derivative/merged_stroop_trials.csv") |>
+  dplyr::filter(stroopCond == "magnitude") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()|>
+  select(participant, country, numDistance, Dims, mean_rt_correct) |>
+  pivot_wider(names_from = Dims,
+              values_from = mean_rt_correct)|>
+  mutate(facilitation = neutral - congruent,
+         interference = neutral - incongruent,
+         stroop = incongruent - congruent)|>
+  group_by(participant) %>%
+  summarize(mean_facilitation = mean(facilitation, na.rm = TRUE),
+            mean_interference = mean(interference, na.rm = TRUE),
+            mean_stroop = mean(stroop, na.rm = TRUE))|>
+  mutate(participant = as.character(participant))
+
+phy_summary <- read_csv("derivative/merged_stroop_trials.csv") |>
+  dplyr::filter(stroopCond == "physical") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  dplyr::filter(Dims != "neutral") |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()|>
+  select(participant, country, numDistance, Dims, mean_rt_correct) |>
+  pivot_wider(names_from = Dims,
+              values_from = mean_rt_correct)|>
+  mutate(stroop = incongruent - congruent)|>
+  group_by(participant) %>%
+  summarize(mean_stroop = mean(stroop, na.rm = TRUE))|>
+  mutate(participant = as.character(participant))
+```
+
+The data for multiplication verification task
+
+```{r}
+#| label: import-verification
+
+veri_summary <- read_csv("derivative/merged_mult_trials.csv", show_col_types = FALSE) |>
+  dplyr::filter(mult_type == 'lure')|>
+  dplyr::select(participant, country, veriStim_resp.rt, interferenceLevel, problemSize)|>
+  group_by(participant, country, interferenceLevel, problemSize)|>
+  summarize(mean_rt = mean(veriStim_resp.rt), .groups = 'drop')
+
+mult_summary_scores <- veri_summary %>%
+  pivot_wider(names_from = c(interferenceLevel, problemSize), 
+              values_from = mean_rt,
+              names_glue = "{interferenceLevel}_{problemSize}") %>%
+  mutate(
+    interference_effect = (`high_large-sized` + `high_small-sized`) / 2 - 
+      (`low_large-sized` + `low_small-sized`) / 2,
+    size_effect = (`high_large-sized` + `low_large-sized`) / 2 - 
+      (`high_small-sized` + `low_small-sized`) / 2
+  ) %>%
+  select(participant, country, interference_effect, size_effect)|>
+  mutate(participant = as.character(participant))
+
+```
+
+### Correlation
+
+Correlations between typing, fluency, verbal stm, visual stm, stroop comparison (facilitation, interference, and stoop effects), multiplication verification (problem size effects, interference effects).
+
+```{r}
+library(Hmisc)
+
+corr_df <- tasks_df %>%
+  left_join(mag_summary, by = "participant") %>%
+  left_join(phy_summary, by = "participant") %>%
+  left_join(mult_summary_scores, by = "participant")|>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country))
+  
+# Handle missing values (remove rows with NAs)
+corr_df_clean <- na.omit(corr_df)
+
+# Compute correlation matrix for numeric variables
+correlation_matrix <- rcorr(as.matrix(corr_df_clean %>% 
+                                        select(where(is.numeric))), type = "pearson")
+
+# Extract the correlation coefficients
+corr_coefficients <- correlation_matrix$r
+corr_p <- correlation_matrix$P
+
+# Convert to data frame for saving
+corr_coefficients_df <- as.data.frame(corr_coefficients)
+corr_pvalues_df <- as.data.frame(corr_coefficients)
+# Save the correlation coefficients to a CSV file
+write_excel_csv(corr_coefficients_df, "Results/correlation-table_coef.csv")
+write_excel_csv(corr_pvalues_df, "Results/correlation-table_p.csv")
+write_excel_csv(correlation_matrix, "Results/correlation-table.csv")
+
+
+correlation_matrix
+```
+
+#### Mixed regression model
+
+```{r}
+lm_1 <- lm(n_fluency ~ median_typing + verbal_stm + mean_vpt + country , 
+              data = corr_df)
+
+lm_2 <- lm(n_fluency ~ median_typing + verbal_stm + mean_vpt + mean_facilitation + 
+                       mean_interference + mean_stroop.x + mean_stroop.y + 
+                       interference_effect + size_effect + country , 
+              data = corr_df)
+
+mixed_3 <- lmer(n_fluency ~ median_typing + verbal_stm + mean_vpt + mean_facilitation + 
+                       mean_interference + mean_stroop.x + mean_stroop.y + 
+                       interference_effect + size_effect + country +
+                  (1 | participant), 
+              data = corr_df)
+
+summary(lm_1)
+summary(lm_2)
+summary(mixed_3)
+```
+
+## Cross-cultural Differences
+
+-   Typing Task - No difference
+
+-   Multiplication Fluency - Sig
+
+-   Digit Span - Sig
+
+-   Visual Pattern Span - Sig
+
+-   Stroop Comparison Task - Sig
+
+-   Multiplication Verification
+
+### Typing
+
+```{r}
+#| label: typing_df
+#| echo: false
+
+t.test(median_typing ~ country, data = merged_df)
+```
+
+### Multiplication Fluency
+
+```{r}
+#| label: fluency_df
+#| echo: false
+
+t.test(n_fluency ~ country, data = merged_df)
+```
+
+### Digit Span
+
+```{r}
+#| label: digitspan_df
+#| echo: false
+
+## Egner stimuli
+t.test(max_egner ~ country, data = merged_df) 
+
+## WAIS stimuli
+t.test(max_wais ~ country, data = merged_df)
+
+# Correlation between two sets of stimuli
+cor.test(merged_df$max_egner, merged_df$max_wais)
+
+## Average of two set of stimuli
+t.test(avg_digitspan ~ country, data = merged_df)
+
+```
+
+### Visual Span
+
+```{r}
+#| label: visualspan_df
+#| echo: false
+
+t.test(mean_vpt ~ country, data = merged_df) 
+
+```
+
+### Stroop Comparison
+
+#### Data
+
+```{r}
+# Stroop Data
+stroop_df <- read_csv("derivative/merged_stroop_trials.csv", show_col_types = FALSE) |>
+  dplyr::filter(stroopResp.corr == 1,
+                numDistance != 0)|>
+  mutate(participant = as.factor(participant),
+    group = as.factor(group),
+    stroopResp.rt = as.numeric(stroopResp.rt),
+    stroopResp.corr = as.logical(stroopResp.corr),
+    stroopCond = as.factor(stroopCond),
+    displayProblem = as.factor(displayProblem),
+    numDistance = as.factor(numDistance),
+    Dims = as.factor(Dims),
+    country = as.factor(country),
+    log_rt = log10(stroopResp.rt))|>
+  rename(rt = stroopResp.rt,
+         corr = stroopResp.corr,
+         congruency = Dims,
+         task = stroopCond,
+         item = displayProblem,
+         id = participant,
+         distance = numDistance)
+  
+mag_stroop <- stroop_df |>
+  dplyr::filter(task == "magnitude") 
+
+mag_aov_df <- read_csv("derivative/merged_stroop_trials.csv", show_col_types = FALSE) |>
+  dplyr::filter(stroopResp.corr == 1,
+                numDistance != 0)|>
+  dplyr::filter(stroopCond == "magnitude") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup() |>
+  mutate(country = factor(country, levels = c('Malaysia', 'UK')),
+         Dims = factor(Dims, levels = c('Neutral', 'Congruent', 'Incongruent')),
+         numDistance = factor(numDistance, levels = c(1, 2, 5)))
+         
+write_csv("derivative/mag_aov_df.csv", mag_aov_df)
+```
+
+#### Descriptive
+
+```{r}
+#| label: anova-stroop
+
+## Descriptive
+psych::describe(mag_aov_df)
+
+```
+
+#### ANOVA analysis
+
+Anova test with aov-car from afex
+
+```{r}
+# Run the ANOVA
+aov_stroop_result1 <- aov_car(mean_rt_correct ~ country*Dims*numDistance + 
+                               Error(participant/country*Dims*numDistance),
+                             data = mag_aov_df) # generalized eta squared
+
+aov_stroop_result2 <- aov_car(mean_rt_correct ~ country*Dims*numDistance + 
+                               Error(participant/country*Dims*numDistance),
+                             data = mag_aov_df, 
+                             anova_table = list(es = 'pes')) # partial eta square
+
+aov_stroop_result3 <- aov_car(mean_rt_correct ~ country*Dims*numDistance + 
+                               Error(participant/country*Dims*numDistance),
+                             data = mag_aov_df,
+                             return = 'univariate') # univariate results
+
+# Summarize the ANOVA results
+knitr::kable((nice(aov_stroop_result1)))
+knitr::kable((nice(aov_stroop_result2)))
+knitr::kable((nice(aov_stroop_result3)))
+```
+
+#### Follow up tests (Emmeans)
+
+##### Main Effects
+
+```{r}
+
+main_effect_country <- emmeans(aov_stroop_result1, ~ country)
+main_effect_congruency <- emmeans(aov_stroop_result1, ~ Dims)
+main_effect_distance <- emmeans(aov_stroop_result1, ~ numDistance)
+
+```
+
+##### Interaction effects
+
+-   two-level interactions
+
+```{r}
+
+int_country_congruency <- emmeans(aov_stroop_result1, ~ congruency|country)
+int_country_dist <- emmeans(aov_stroop_result1, ~ numDistance|country)
+int_congruency_dist <- emmeans(aov_stroop_result1, ~ numDistance|congruency)
+
+int_country_congruency
+int_country_dist
+int_congruency_dist
+
+pairs(int_country_congruency, adjust = "bon")
+pairs(int_country_dist, adjust = "bon")
+pairs(int_congruency_dist, adjust = "bon")
+```
+
+#### Mixed Effect Modelling
+
+##### Assumption check
+
+Check for the distribution of RT
+
+```{r}
+rt_dist <- stroop_df |>
+  pivot_longer(cols = c(rt,log_rt), names_to = "rt_type", values_to = "rt")
+
+ggplot(rt_dist, aes(x = rt)) +
+  geom_histogram(bins = 10000)+
+  facet_wrap( ~ rt_type) +
+  xlim(-1, 1)
+```
+
+##### Random structures build-up
+
+The following is an analysis of the reaction time for the Stroop Comparison Task
+
+Predictors:
+
+1.  numDistance (1, 2, 5)
+2.  Congruency (neutral, congruent, incongruent)
+3.  country (Malaysia, UK)
+4.  task (physical, magnitude)
+
+We started with maximal model with all interactions.
+
+##### Maximal model (with all interactions)
+
+```{r}
+#| label: stroop_max-model
+#| echo: false
+
+max_model <- lmer(log_rt ~ distance*congruency*country + 
+                     (distance*congruency | id) +
+                     (country | item), stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm1 <- lmer(log_rt ~ distance * congruency * country + 
+                     (distance * congruency || id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm2 <- lmer(log_rt ~ distance * congruency * country + 
+                     ( distance + congruency || id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm3 <- lmer(log_rt ~ distance * congruency * country + 
+                     (congruency || id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm4 <- lmer(log_rt ~ distance * congruency * country + 
+                     ( distance  | id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm5 <- lmer(log_rt ~ distance * congruency * country + 
+                     (congruency | id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+
+mag_mm6 <- lmer(log_rt ~ distance * congruency * country + 
+                     (congruency | id) +
+                     (country || item), data = stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+```
+
+```{r}
+summary(red_lmm_model)$varcor
+```
+
+As the maximal model failed to converge (singularity issue), we removed the interactions from the random structure in the next step.
+
+```{r}
+#| label: max-model-varcor
+
+summary(mod01)$varcor 
+```
+
+##### Simplified model (with interactions removed from the random structure)
+
+A model without interaction at the random effect
+
+```{r}
+#|label: simple-model without interaction
+
+simple_model <- lmer(log_rt ~ distance + congruency + country +
+                     (1 | id) + (1 | item), data = stroop_df,
+                     control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(simple_model)
+
+
+model_with_interactions <- lmer(log_rt ~ distance * congruency * country +
+                                 (1 | id) + (1 | item), data = stroop_df,
+                                 control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(model_with_interactions)
+
+
+model_with_random_slopes <- lmer(log_rt ~ distance * congruency * country +
+                                  (distance + congruency || id) +
+                                  (country || item), data = stroop_df,
+                                  control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(model_with_random_slopes)
+
+
+```
+
+### **Checking for Multicollinearity**
+
+Use the **`car`** package to check VIF values:
+
+```{r}
+library(car)
+vif(simple_model)
+```
+
+Adjusted models:
+
+```{r}
+
+mag_stroop$distance <- factor(mag_stroop$distance)
+mag_stroop$congruency <- factor(mag_stroop$congruency)
+mag_stroop$country <- factor(mag_stroop$country)
+
+mag_mm6 <- lmer(log_rt ~ distance * congruency * country +
+                                  (distance + congruency || id) +
+                                  (country || item), data = mag_stroop,
+                                  control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(mag_mm6)
+vif(mag_mm6)
+summary(mag_mm6)$varcor 
+
+
+mag_mm7 <- lmer(log_rt ~ distance * congruency * country +
+                                  (distance  || id) +
+                                  (country || item), data = mag_stroop,
+                                  control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(mag_mm7)
+
+mag_mm8 <- lmer(log_rt ~ distance * congruency * country +
+                                  (congruency  || id) +
+                                  (country || item), data = mag_stroop,
+                                  control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(mag_mm8)
+
+mag_mm9 <- lmer(log_rt ~ distance * congruency * country +
+                                  (distance + congruency  || id) +
+                                  (1 || item), data = mag_stroop,
+                                  control = lmerControl(optCtrl = list(maxfun = 1e10)))
+summary(mag_mm9)
+```
+
+\
+
+To check for singularity, we looked at the model without correlation at the random effects.
+
+```{r}
+summary(mod01)$varcor 
+summary(mod02)$varcor 
+summary(mod03)$varcor 
+
+```
+
+We removed the three-way-interaction. Next, quadratic.
+
+```{r}
+
+mod04 <- mixed(log_rt ~ task *distance*congruency*country + 
+                     ((task +distance+congruency)^2 || id) +
+                     (country || item), stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)),
+               expand_re = TRUE)
+
+mod05 <- mixed(log_rt ~ task *distance*congruency*country + 
+                     (task + distance + congruency || id) +
+                     (country || item), stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)),
+               expand_re = TRUE)
+```
+
+```{r}
+
+summary(mod05)$varcor 
+```
+
+The distance random effect is redundant (SD = 0). Remove distance.
+
+```{r}
+
+mod06 <- lmer(log_rt ~ task *distance*congruency*country + 
+                     (task + congruency || id) +
+                     (country || item), stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10),
+                                         optimizer = "bobyqa"))
+
+summary(mod06)$varcor 
+```
+
+```{r}
+
+library(RePsychLing)
+pcam1 <- rePCA(max_model)
+summary(pcam1)
+```
+
+```{r}
+
+mod06 <- mixed(log_rt ~ task *distance*congruency*country + 
+                     (task + distance + congruency | id) +
+                     (country | item), stroop_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10)))
+```
+
+### Multiplication Verification
+
+```{r}
+#| label: verification_df
+#| echo: false
+
+
+
+
+```

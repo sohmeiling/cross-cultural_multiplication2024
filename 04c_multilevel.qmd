@@ -1,0 +1,281 @@
+---
+title: "Multilevel - STM "
+format: html
+editor: visual
+---
+
+## Library
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+library(Hmisc)
+library(broom)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(MuMIn)
+library(viridis) 
+```
+
+## Import Data
+
+```{r}
+#| message: false
+#files import
+
+mult_msia <- read_csv("derivative/veri_trials_msia.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'Malaysia',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+mult_uk <- read_csv("derivative/veri_trials_BU.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'UK',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+demo_df <- read_csv("CLEANED_DATA/combined_demo.csv") |>
+  mutate(participant = as.factor(participant),
+         fluency_centered = n_fluency - mean(n_fluency, na.rm = TRUE),
+         verbal_centered = mean_vpt - mean(mean_vpt, na.rm = TRUE),
+         visual_centered = average_ds - mean(average_ds, na.rm = TRUE),
+         size_cong_centered = inhibition_size - mean(inhibition_size, na.rm = TRUE),
+         distance_centered = distance_effect_large - mean(distance_effect_large, 
+                                                          na.rm = TRUE))|>
+  distinct(participant, .keep_all = TRUE)
+
+mult_df <- rbind(mult_msia, mult_uk)|>
+  select(-group:-veriStim_resp.corr, -interferenceLevel, -problemSize, -interferenceScore)|>
+  filter(mult_type == 'lure')|>
+  inner_join(demo_df, by = c("participant", "country"))|>
+  mutate(country = as.factor(country))|>
+  filter(!is.infinite(log_rt))|>
+  filter(correctness == TRUE)
+```
+
+## Data structure
+
+```{r}
+
+str(mult_df)
+```
+
+## Multilevel - STM & problems characteristics
+
+### problem size (small vs large) & interference (low vs. high) + STM
+
+#### Maximal model
+
+We start with maximal model.
+
+```{r}
+# start with max model with log-transformed RT
+
+
+model_mult1 <- lmer(log_rt ~ country * size * interference * verbal_centered * visual_centered +
+                     (1 + size * interference | participant) + (1| problem), 
+                   data = mult_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_mult1)
+
+```
+
+Perfect! No error with singularity/ model failed to converge.
+
+```{r}
+isSingular(model_mult1)
+
+# View the variance-covariance matrix
+VarCorr(model_mult1)
+```
+
+### Model Performance
+
+```{r}
+
+performance::model_performance(model_mult1)
+
+```
+
+#### 
+
+#### EMMs
+
+#### Country × Size × Interference interaction
+
+```{r}
+emm_options(lmerTest.limit = 24696)
+
+# Load emmeans
+library(emmeans)
+
+# For the country × distance × fluency interaction
+emm_country_size_interference <- emmeans(model_mult1,
+  ~ country | size | interference,
+  lmer.df = "satterthwaite")
+
+# Get pairwise comparisons
+pairs(emm_country_size_interference)
+```
+
+#### country × size × interference interaction
+
+```{r}
+
+# To create plots of the interactions
+# Plot country × size × fluency
+plot(emm_country_size_interference, by = "country")
+
+# Save results to a file
+# Install if needed: install.packages("sjPlot")
+library(sjPlot)
+#tab_model(model_mult1, file = "model_results.html")
+```
+
+## Multilevel - numerical processing (Auto & Intentional) & Problem
+
+### problem size (small vs large) & interference (low vs. high) + automatic + intentional
+
+#### Maximal model
+
+We start with maximal model.
+
+```{r}
+
+model_num1 <- lmer(log_rt ~ country * size * interference * size_cong_centered * distance_centered +
+                     (1 + size * interference | participant) + (1| problem), 
+                   data = mult_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_num1)
+```
+
+## EMMs
+
+#### Country × Size × Interference interaction
+
+```{r}
+emm_options(lmerTest.limit = 24696)
+
+# Load emmeans
+library(emmeans)
+
+# For the country × distance × fluency interaction
+emm_country_size_interference <- emmeans(model_num1,
+  ~ country | size | interference,
+  lmer.df = "satterthwaite")
+
+# Get pairwise comparisons
+print(emm_country_size_interference)
+pairs(emm_country_size_interference)
+```
+
+### country x distance
+
+```{r}
+
+# Calculate SD of distance effect for meaningful levels
+sd_distance <- sd(mult_df$distance_centered)
+
+# For the distance effect × country interaction
+emm_dist_country <- emmeans(model_num1, 
+  ~ country | distance_centered, 
+  at = list(distance_centered = c(-sd_distance, 0, sd_distance)),
+  lmer.df = "satterthwaite")
+
+
+# Get pairwise comparisons
+print(emm_dist_country)
+pairs(emm_dist_country)
+```
+
+## Plots
+
+#### country × size × interference interaction
+
+```{r}
+emm_df <- as.data.frame(emm_country_size_interference)
+
+
+country_size_interference <- ggplot(emm_df, aes(x = size, y = emmean, color = factor(interference))) +
+  geom_line(aes(group = interference)) +  # Separate lines for interference
+  geom_point() +  # Add points for emphasis
+  facet_wrap(~ country) +  # Create separate facets for each country
+  labs(x = "Problem Size", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Interference Level") +
+  scale_color_viridis_d(option = "viridis", end = 0.8,  # Use viridis color scale
+                        labels = c("High", "Low")) +  # Custom legend labels
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+country_size_interference
+ 
+ggsave("figures/country_size_interference_mult.png", plot = country_size_interference, width = 10, height = 6, dpi = 300)
+```
+
+### Distance effect x country
+
+```{r}
+emm_df <- as.data.frame(emm_dist_country)
+
+
+dist_country <- ggplot(emm_df, aes(x = country, y = emmean, color = factor(distance_centered))) +
+  geom_line(aes(group = distance_centered)) +  # Separate lines for fluency levels
+  geom_point() +  # Add points for emphasis
+  labs(x = "Country", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Distance Effect (centered)") +
+  scale_color_viridis_d(option = "viridis", end = 0.8,  # Use viridis color scale
+                        labels = c("Strong Distance Effect (Negative Value)", "No Distance Effect (Zero)", "Reverse Distance Effect (Positive Value)")) +  # Custom legend labels
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+dist_country
+
+ggsave("figures/dist_country_num.png", plot = dist_country, width = 11, height = 6, dpi = 300)
+```

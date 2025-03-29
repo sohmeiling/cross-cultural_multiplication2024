@@ -1,0 +1,540 @@
+---
+title: "Multilevel - Multiplication "
+format: html
+editor: visual
+---
+
+## Library
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+library(Hmisc)
+library(broom)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(MuMIn)
+library(viridis) 
+```
+
+## Import Data
+
+```{r}
+#| message: false
+#files import
+
+characteristics <- read_csv("multiplication_stimuli.csv")|>
+  rename(interference = "Interference group")|>
+  rename(order = "Presentation Order")
+
+mult_msia <- read_csv("derivative/veri_trials_msia.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'Malaysia',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+mult_uk <- read_csv("derivative/veri_trials_BU.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'UK',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+demo_df <- read_csv("CLEANED_DATA/combined_demo.csv") |>
+  mutate(participant = as.factor(participant),
+         fluency_centered = n_fluency - mean(n_fluency, na.rm = TRUE),
+         verbal_centered = mean_vpt - mean(mean_vpt, na.rm = TRUE),
+         visual_centered = average_ds - mean(average_ds, na.rm = TRUE),
+         automatic_centered = automatic_Stroop - mean(automatic_Stroop, na.rm = TRUE),
+         distance_centered = distance_effect_large - mean(distance_effect_large, na.rm = TRUE),
+         inhibition_centered = inhibition_size - mean(inhibition_size, na.rm = TRUE)
+         )|>
+  distinct(participant, .keep_all = TRUE)
+
+mult_df <- rbind(mult_msia, mult_uk)|>
+  select(-group:-veriStim_resp.corr, -interferenceLevel, -problemSize, -interferenceScore)|>
+  filter(mult_type == 'lure')|>
+  inner_join(demo_df, by = c("participant", "country"))|>
+  mutate(country = as.factor(country))|>
+  filter(!is.infinite(log_rt))|>
+  filter(correctness == TRUE)|>
+  select(participant, log_rt, country, size, interference, fluency_centered, problem, verbal_centered, visual_centered)
+```
+
+## Data structure
+
+```{r}
+
+str(mult_df)
+```
+
+## Multilevel - problems characteristics
+
+### problem size (small vs large) & interference (low vs. high)
+
+#### Maximal model
+
+We start with maximal model.
+
+```{r}
+# start with max model with log-transformed RT
+
+model_null <- lmer(log_rt ~ country * size * interference * fluency_centered +
+                     (1  | participant) + (1| problem) , 
+                   data = mult_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+
+model_mult1 <- lmer(log_rt ~ country * size * interference * fluency_centered +
+                     (1 + size * interference | participant) + (1| problem) , 
+                   data = mult_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_mult1)
+
+```
+
+Perfect! No error with singularity/ model failed to converge. Next, add in country effect!
+
+#### Model 2 (add country)
+
+Next, include country as predictor.
+
+```{r}
+model_mult2 <- lmer(log_rt ~ country * size * interference * fluency_centered +
+                     (1 + size * interference | participant) + (1| problem) + (1|country), 
+                   data = mult_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_mult2)
+```
+
+```{r}
+anova(model_null, model_mult1)
+
+```
+
+## Likelihood comparison
+
+```{r}
+anova(model_mult1, model_mult2)
+```
+
+### Model 2 - as final model
+
+```{r}
+anova(model_mult1, model_mult2)
+
+performance::model_performance(model_mult1)
+performance::model_performance(model_mult2)
+```
+
+#### EMMs
+
+#### country × size × fluency interaction
+
+```{r}
+emm_options(lmerTest.limit = 24696)
+
+# Load emmeans
+library(emmeans)
+
+# Calculate SD of fluency for meaningful levels
+sd_fluency <- sd(mult_df$fluency_centered)
+
+# For the country × distance × fluency interaction
+emm_country_size_fluency <- emmeans(model_mult1,
+  ~ country | size | fluency_centered,
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+# Get pairwise comparisons
+print(emm_country_size_fluency)
+pairs(emm_country_size_fluency)
+
+
+```
+
+#### country × fluency interaction (not significant)
+
+```{r}
+# Calculate SD of fluency for meaningful levels
+sd_fluency <- sd(mult_df$fluency_centered)
+
+# For the distance × fluency interaction
+emm_country_fluency <- emmeans(model_mult2, 
+  ~ country | fluency_centered, 
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+pairs(emm_country_fluency)
+
+```
+
+#### interference × size × fluency interaction
+
+```{r}
+
+emm_df <- as.data.frame(emm_fluency_size_interference)
+
+# Reorder `size` for consistency (assuming levels are "small-sized" and "large-sized")
+emm_df$size <- factor(emm_df$size, levels = c("small-sized", "large-sized"))
+
+emm_df$fluency_centered <- factor(emm_df$fluency_centered, 
+                                  levels = c(-sd_fluency, 0, sd_fluency), 
+                                  labels = c("Low Fluency", "Average Fluency", "High Fluency"))
+
+# Create the plot
+fluency_size_interference_plot <- ggplot(emm_df, aes(x = interference, y = emmean, 
+                                                     color = size, group = size)) +
+  geom_line() +  # Line plot to show trends for each size
+  geom_point(size = 3) +  # Points for emphasis
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.2) +  # Error bars for SE
+  facet_wrap(~ fluency_centered, labeller = labeller(fluency_centered = fluency_labels)) +  # Facet by fluency levels with custom labels
+  labs(x = "Interference", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Problem Size") +
+  scale_color_viridis_d(option = "viridis", end = 0.8) +  # Viridis color scale for better readability
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+fluency_size_interference_plot
+
+ggsave("figures/fluency_size_interference.png", plot = fluency_size_interference_plot, width = 9, height = 6, dpi = 300)
+
+```
+
+#### EMM - Data Viz
+
+How interaction of fluency x size differ by country?
+
+```{r}
+emm_df <- as.data.frame(emm_country_size_fluency)
+emm_df$size <- factor(emm_df$size, levels = c("small-sized", "large-sized"))
+
+country_size_fluency <- ggplot(emm_df, aes(x = size, y = emmean, 
+                                           color = factor(fluency_centered))) +
+  geom_line(aes(group = fluency_centered)) +  # Separate lines for fluency levels
+  geom_point() +  # Add points for emphasis
+    geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.2) + 
+  facet_wrap(~ country) +  # Create separate facets for each country
+  labs(x = "Problem Size", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Fluency (centered)") +
+  scale_color_viridis_d(option = "viridis", end = 0.8,  # Use viridis color scale
+                        labels = c("Low Fluency", "Mean Fluency", "High Fluency")) +  # Custom legend labels
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+country_size_fluency
+ 
+ggsave("figures/country_size_fluency.png", plot = country_size_fluency, width = 9, height = 6, dpi = 300)
+
+```
+
+EMM - Data Viz
+
+How size x interference differ by each fluency level?
+
+```{r}
+# Convert the emmeans output to a data frame for plotting
+emm_df_cong <- as.data.frame(emm_fluency_size_interference)
+
+# Ensure fluency_centered is treated as a factor for correct labeling
+cong_dist_fluency <- ggplot(emm_df_cong, aes(x = num_distance, y = emmean, color = factor(fluency_centered))) +
+  geom_line(aes(group = fluency_centered)) +  # Separate lines for fluency levels
+  geom_point() +  # Add points for emphasis
+  facet_wrap(~ congruency) +  # Facet by congruency (e.g., congruent, incongruent)
+  labs(x = "Numerical Distance", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Fluency (centered)") +
+  scale_color_viridis_d(option = "viridis", end = 0.8,  # Use viridis color scale
+                        labels = c("Low Fluency", "Mean Fluency", "High Fluency")) +  # Custom legend labels
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+ggsave("figures/cong_dist_fluency.png", plot = cong_dist_fluency, width = 10, height = 6, dpi = 300)
+```
+
+### Effect Size
+
+Calculate the r-squared
+
+```{r}
+library(MuMIn)
+# Calculate marginal and conditional R²
+r_squared <- r.squaredGLMM(model_mag5)
+print(r_squared)
+```
+
+Calculate cohen's f-squared
+
+```{r}
+# Extract marginal R²
+R2_marginal <- r_squared[1]  # The first value is the marginal R²
+
+# Calculate Cohen's f² for the fixed effects
+f2_fixed <- R2_marginal / (1 - R2_marginal)
+print(f2_fixed)
+
+```
+
+## Multilevel - Size
+
+### EDA
+
+```{r}
+
+library(dplyr)
+
+size_summary_df <- size_stroop_df |>
+  group_by(participant, num_distance, congruency)|>
+  summarise(n = n())
+
+size_df_noTie <- size_stroop_df |>
+  filter(num_distance != 0)
+
+```
+
+### RT
+
+#### Maximal model
+
+```{r}
+
+model_size1 <- lmer(log_rt ~ congruency * num_distance * fluency_centered +
+                     (1 + congruency * num_distance | participant) + (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size1)
+summary(model_size1)$varcor
+```
+
+#### Model 2
+
+```{r}
+
+model_size2 <- lmer(log_rt ~ congruency * num_distance * fluency_centered +
+                     (1 + congruency * num_distance || participant) + (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size2)
+summary(model_size2)$varcor
+```
+
+#### Model 3
+
+```{r}
+model_size3 <- lmer(log_rt ~ congruency * num_distance * fluency_centered +
+                     (1 + congruency + num_distance | participant) + (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size3)
+summary(model_size3)$varcor
+performance::check_collinearity(model_size3)
+```
+
+Note.
+
+#### Model 4
+
+```{r}
+
+model_size4 <- lmer(log_rt ~ congruency * num_distance * fluency_centered +
+                     (1 + congruency + num_distance || participant) + (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size4)
+```
+
+#### Model 5
+
+```{r}
+model_size5 <- lmer(log_rt ~ congruency * num_distance + fluency_centered +
+                     (1 + congruency | participant), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size5)
+```
+
+#### Model 6
+
+```{r}
+
+model_size6 <- lmer(log_rt ~ congruency * num_distance * fluency_centered +
+                     (1 + num_distance | participant) + (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size6)
+```
+
+#### Model 7
+
+```{r}
+
+model_size7 <- lmer(log_rt ~ country* congruency * num_distance + fluency_centered +
+                     (1 + congruency | participant), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size7)
+```
+
+#### Model comparison
+
+```{r}
+anova(model_size5, model_size7)
+```
+
+### Estimated Marginal Means
+
+```{r}
+emm_options(pbkrtest.limit = 10000)
+
+# Estimated marginal means for congruency
+emmeans_congruency <- emmeans(model_size5, ~ congruency)
+print(emmeans_congruency)
+pairs(emmeans_congruency)
+
+# Estimated marginal means for numerical distance
+emmeans_num_distance <- emmeans(model_size5, ~ num_distance)
+print(emmeans_num_distance)
+pairs(emmeans_num_distance)
+
+# Interaction effects
+emmeans_congruency_numdist <- emmeans(model_size5, ~ congruency * num_distance)
+print(emmeans_congruency_numdist)
+
+# Pairwise comparisons
+pairs(emmeans_congruency_numdist)
+```
+
+### Data Viz
+
+```{r}
+
+
+emm_df <- as.data.frame(emmeans_congruency_numdist)
+
+# Create the interaction plot
+emm_sizeInteraction <- ggplot(emm_df, aes(x = num_distance, y = emmean, 
+                   color = congruency, group = congruency)) +
+  geom_line() +  # Line plot for trends
+  geom_point(size = 3) +  # Points for each EMM
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.2) +  # Error bars
+  labs(x = "Numerical Distance", 
+       y = "Log-Transformed Response Time (RT)", color = "Congruency") +
+  theme_minimal() +  # Clean and minimal theme
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+
+emm_sizeInteraction
+ggsave("figures/emm_sizeInteraction.png", plot = emm_sizeInteraction, width = 8, height = 6)
+```
+
+bar plot
+
+```{r}
+
+size_interaction <- ggplot(size_df_noTie, aes(x = congruency, y = (10^log_rt) * 1000, fill = factor(num_distance))) +  # Convert to milliseconds
+  stat_summary(fun = mean, geom = "bar", position = position_dodge(), color = "black", width = 0.6) +  # Black outlines for bars
+  stat_summary(fun.data = mean_se, geom = "errorbar", position = position_dodge(width = 0.6), width = 0.2, color = "black") +  # Error bars
+  scale_fill_manual(values = c(  "lightblue", "gray70", "gray30"), 
+                    labels = c("Distance 1", "Distance 2", "Distance 5")) +  # Grayscale colors
+  labs(x = "Congruency", y = "Response Time (ms)", fill = "Numerical Distance") +
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+size_interaction
+
+ggsave("figures/size_interaction.png", plot = size_interaction, height = 6, width = 10)
+```

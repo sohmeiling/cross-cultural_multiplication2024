@@ -1,0 +1,1581 @@
+---
+title: "pre-processing"
+format: html
+editor: visual
+---
+
+## Library
+
+```{r}
+#| label: libs-packages
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(lubridate)
+library(skimr)
+library(rstatix)
+library(rio)
+library(ggstatsplot)
+library(gridExtra)
+library(ggpubr)
+library(stats)
+library(ggdist)
+library(introdataviz)
+library(effectsize)
+library(ppcor)
+library(psych)
+```
+
+## Read files
+
+### UK
+
+```{r}
+#| label: uk-data-import
+#| echo: false
+#| warning: false
+
+demo_uk <- read_csv("derivative/cleaned_demo_UK.csv", show_col_types = FALSE)
+participant_info <- read_csv("derivative/participant_info_uk.csv", show_col_types = FALSE)
+
+typing <- read_csv("derivative/typing_score_BU.csv", show_col_types = FALSE)
+fluency <- read_csv("derivative/fluency_score_BU.csv", show_col_types = FALSE)
+ds <- read_csv("derivative/ds_summary_UK.csv", show_col_types = FALSE)|>
+  mutate(average_ds = (max_egner + max_wais) /2)
+vpt <- read_csv("derivative/vpt_score_BU.csv", show_col_types = FALSE)
+
+# Numerical Stroop (distance effect and congruency effect)
+stroop <- read_csv("derivative/stroop_summary_UK.csv", show_col_types = FALSE)|>
+    mutate(
+    # Automatic processing: RT difference between incongruent and congruent)
+    automatic_Stroop = mean_rt__M_incongruent - mean_rt__M_congruent) |>
+    # Intentional processing (Distance effects from numerical Stroop)
+    mutate(
+      distance_effect_large = mean_rt__M_5 - mean_rt__M_1,  # Large distance vs. small
+      distance_effect_intermediate = mean_rt__M_2 - mean_rt__M_1  # Intermediate distance vs. small
+  ) |>
+    # Step 3: Calculate inhibition (from both numerical and size Stroop)
+    mutate(
+      inhibition_numerical = mean_rt__M_incongruent - mean_rt__M_congruent,  # Inhibition effect from numerical Stroop
+      inhibition_size = mean_rt__P_incongruent - mean_rt__P_congruent  # Inhibition effect from size Stroop
+  )|> 
+  select(participant:group, automatic_Stroop:inhibition_size)|>
+  na.omit()
+
+
+# Multiplication Stroop (Verification)
+# Factors: interferenceLevel
+mult_veri <- read_csv("derivative/veri_trials_BU.csv", show_col_types = FALSE) |>
+  group_by(participant)|>
+  summarise(n_correct = sum(veriStim_resp.corr == 1, na.rm = TRUE),
+            rt_high_I = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & interferenceLevel == 'high'], na.rm = TRUE),
+            rt_low_I = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & interferenceLevel == 'low'], na.rm = TRUE),
+            rt_small_S = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & problemSize == 'small-sized'], na.rm = TRUE),
+            rt_large_S = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & problemSize == 'large-sized'], na.rm = TRUE),
+            rt_correct = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & mult_type == 'correct'], na.rm = TRUE),
+            rt_lure = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & mult_type == 'lure'], na.rm = TRUE),
+            )|>
+  mutate(n_correct = n_correct,
+         interference_effect = rt_high_I - rt_low_I,
+         size_effect = rt_large_S - rt_small_S,
+         distraction_effect = rt_lure - rt_correct)
+
+combined_uk <- participant_info |> 
+  inner_join(typing , by = c("participant", "group"))|>
+  inner_join(fluency, by = c("participant", "group")) |>
+  inner_join(ds, by = c("participant", "group")) |>
+  inner_join(vpt, by = c("participant", "group")) |>
+  inner_join(stroop, by = c("participant", "group")) |>
+  inner_join(mult_veri, by = c("participant"))|>
+  full_join(demo_uk, by = c("participant"))|>
+  mutate(country = "UK")|>
+    select(- c(multilingual_7, multilingual_7_TEXT, 
+             multilingual_8, multilingual_8_TEXT,
+             multilingual_9, multilingual_9_TEXT,
+             multilingual_10, multilingual_10_TEXT)) |>
+  mutate(participant = as.character(participant))|>
+  filter(!is.na(n_typing)) |>
+    select(participant, age, country, gender, ParentsEdu, income, nativelanguage, lingualAbility, 
+         ethnicity_value, major_relabel,acc_typing, n_wrong, inhibition_numerical,
+         n_fluency, median_typing, average_ds, mean_vpt, 
+         automatic_Stroop, distance_effect_large, distance_effect_intermediate, 
+         inhibition_size, 
+         n_correct, interference_effect, size_effect, distraction_effect
+         )|>
+  write_csv("derivative/combined_summary_UK.csv")
+
+```
+
+### Malaysia
+
+```{r}
+#| label: misa-data-import
+#| echo: false
+#| warning: false
+
+demo_msia <- import("derivative/cleaned_demo_msia.csv", show_col_types = FALSE) |>
+  mutate(participant = as.character(participant))
+
+participant_info <- read_csv("derivative/participant_info_msia.csv", show_col_types = FALSE)
+
+typing <- read_csv("derivative/typing_score_msia.csv", show_col_types = FALSE)
+fluency <- read_csv("derivative/fluency_score_msia.csv", show_col_types = FALSE)
+ds <- read_csv("derivative/ds_summary_msia.csv", show_col_types = FALSE)|> mutate(average_ds = (max_egner + max_wais) /2)
+vpt <- read_csv("derivative/vpt_score_msia.csv", show_col_types = FALSE)
+
+
+stroop <- read_csv("derivative/stroop_summary_msia.csv", show_col_types = FALSE)|>
+    mutate(
+    # Automatic processing: RT difference between incongruent and congruent)
+    automatic_Stroop = mean_rt__M_incongruent - mean_rt__M_congruent) |>
+    # Intentional processing (Distance effects from numerical Stroop)
+    mutate(
+      distance_effect_large = mean_rt__M_5 - mean_rt__M_1,  # Large distance vs. small
+      distance_effect_intermediate = mean_rt__M_2 - mean_rt__M_1  # Intermediate distance vs. small
+  ) |>
+    # Step 3: Calculate inhibition (from both numerical and size Stroop)
+    mutate(
+      inhibition_numerical = mean_rt__M_incongruent - mean_rt__M_congruent,  # Inhibition effect from numerical Stroop
+      inhibition_size = mean_rt__P_incongruent - mean_rt__P_congruent  # Inhibition effect from size Stroop
+  )|> 
+  select(participant:group, automatic_Stroop:inhibition_size)|>
+  na.omit()
+
+
+mult_veri <- read_csv("derivative/veri_trials_msia.csv", show_col_types = FALSE)|>
+  group_by(participant)|>
+  summarise(n_correct = sum(veriStim_resp.corr == 1, na.rm = TRUE),
+            rt_high_I = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & interferenceLevel == 'high'], na.rm = TRUE),
+            rt_low_I = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & interferenceLevel == 'low'], na.rm = TRUE),
+            rt_small_S = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & problemSize == 'small-sized'], na.rm = TRUE),
+            rt_large_S = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & problemSize == 'large-sized'], na.rm = TRUE),
+            rt_correct = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & mult_type == 'correct'], na.rm = TRUE),
+            rt_lure = mean(veriStim_resp.rt[veriStim_resp.corr == 1 & mult_type == 'lure'], na.rm = TRUE),
+            )|>
+  mutate(n_correct = n_correct,
+         interference_effect = rt_high_I - rt_low_I,
+         size_effect = rt_large_S - rt_small_S,
+         distraction_effect = rt_lure - rt_correct)
+
+combined_msia <- typing %>%
+  inner_join(participant_info, by = c("participant", "group"))|>
+  inner_join(fluency, by = c("participant", "group")) %>%
+  inner_join(ds, by = c("participant", "group")) %>%
+  inner_join(vpt, by = c("participant", "group")) %>%
+  inner_join(stroop, by = c("participant", "group")) %>%
+  inner_join(mult_veri, by = c("participant"))|>
+  mutate(participant = as.character(participant))|>
+  left_join(demo_msia, by = c("participant"))|>
+  mutate(country = "Malaysia")|>
+  select(- c(multilingual_7, multilingual_7_TEXT, 
+             multilingual_8, multilingual_8_TEXT,
+             multilingual_9, multilingual_9_TEXT,
+             multilingual_10, multilingual_10_TEXT)) |>
+    select(participant, age, country, gender, ParentsEdu, income, nativelanguage, lingualAbility, 
+         ethnicity_value, major_relabel,acc_typing, n_wrong, inhibition_numerical,
+         n_fluency, median_typing, average_ds, mean_vpt, 
+         automatic_Stroop, distance_effect_large, distance_effect_intermediate, 
+         inhibition_size, 
+         n_correct, interference_effect, size_effect, distraction_effect
+         )|>
+  write_csv("derivative/combined_summary_msia.csv") 
+
+export(combined_msia, "derivative/combined_summary_msia.xlsx")
+```
+
+## Merged dataset (UK + Malaysia)
+
+Revised codes
+
+```{r}
+
+
+merged_df <- rbind(combined_msia, combined_uk)
+
+```
+
+Old codes
+
+```{r}
+
+cols_to_factor <- c("nationality", "gender", "maritalstatus", "eduLevel", "ParentsEdu", 
+                    "income", "employment", "handedness", "multiplylanguage", 
+                    "schooltype_1", "ethnicity_value", "country", "major_relabel")
+
+merged_df <- bind_rows(combined_uk, combined_msia) |>
+  mutate(avg_digitspan = (max_egner + max_wais)/2) |>
+  mutate(across(all_of(cols_to_factor), factor)) |>
+  write_csv("derivative/combined_summary_ALL.csv")
+
+
+
+# Age
+sd(merged_df$age, na.rm = TRUE)
+mean(merged_df$age, na.rm = TRUE)
+summary(merged_df$age)
+
+## Chi-square for gender and country
+chisq.test(table(merged_df$gender, merged_df$country))
+  
+```
+
+## Information about the variables
+
+```{r}
+
+skim (merged_df)
+```
+
+## Demographics Tabulation
+
+```{r}
+library(gtsummary)
+
+demo_summary <- merged_df|>
+  select(-participant)
+
+demo_basic <- tbl_summary(
+    demo_summary,
+    by = country, # split table by group
+    missing = "no" # don't list missing data separately
+  ) %>%
+  add_n() %>% # add column with total number of non-missing observations
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% # update the column header
+  bold_labels() 
+
+demo_basic
+
+demo_basic |> 
+  as_gt() |>
+  gt::gtsave(filename = "Figures/Demographics_breakdown.docx")
+
+```
+
+### School Type
+
+```{r}
+
+school_info <- tbl_summary(
+  merged_df,
+  include = c(schooltype_1, multiplylanguage, difficultiesmath, 
+              learnmultiplytable, peercomparison, peercomparison2, 
+              rateownfluency_1, dyslexia, mathanxious,examanxious, memory),
+  by = country, 
+  missing = "no"
+) %>%
+  add_n() %>% # 
+  add_p() %>% # test for a difference between groups
+  modify_header(label = "**Variable**") %>% 
+  bold_labels() 
+
+school_info
+
+school_info|>
+  as_gt() %>%
+  gt::gtsave(filename = "Figures/Demographics_school.docx")
+
+```
+
+### Multiplication Fluency
+
+```{r}
+
+mult <- merged_df|> 
+  group_by(country)|> 
+  summarize(n = n(),
+    mean = mean(n_fluency), 
+            sd = sd(n_fluency), 
+            min = min(n_fluency),
+            max = max(n_fluency),
+            SE = sd(n_fluency) / sqrt(n()),
+            CI_lower = mean - qt(0.975, n() - 1) * SE,
+            CI_upper = mean + qt(0.975, n() - 1) * SE)
+
+mult
+t.test(n_fluency ~ country, data = merged_df)
+cohens_d(n_fluency ~ country, data = merged_df)
+
+```
+
+```{r}
+# Define rain height
+rain_height <- 0.1
+
+# mean
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(mean_n_fluency = mean(n_fluency, na.rm = TRUE))
+
+# Create the raincloud plot
+fluency_plot <- ggplot(merged_df, aes(x = country, y = n_fluency, fill = country)) +
+  introdataviz::geom_flat_violin(trim = FALSE, alpha = 0.4,
+                                 position = position_nudge(x = rain_height)) + 
+  geom_boxplot(width = rain_height, alpha = 0.4, show.legend = FALSE, 
+               outlier.shape = NA,
+               position = position_nudge(x = -rain_height*2)) +
+  geom_point(aes(colour = country), size = 2, alpha = .5, show.legend = FALSE, 
+              position = position_jitter(width = rain_height, height = 0)) +
+  # mean and SE point in the cloud
+  stat_summary(fun.data = mean_cl_normal, mapping = aes(color = country), show.legend = FALSE,
+               position = position_nudge(x = rain_height * -2)) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_n_fluency, 
+           label = sprintf("Mean = %.2f", mean_values$mean_n_fluency), 
+           vjust = 9, size = 3)+
+  coord_flip() +
+  theme_minimal() +
+  labs(x = NULL, y = "Number of Correct Responses") +
+  ggtitle("Distribution of Fluency Responses by Country") +
+  theme(panel.grid.major.y = element_blank(),
+        legend.position = "none")
+
+fluency_plot
+
+ggsave("Figures/multfluency_distribution_plot.png", 
+       fluency_plot, dpi = 300, width = 8, height = 6)
+```
+
+## Correlation
+
+We are going to compute a zero-order correlation, followed by partial correlation.
+
+```{r}
+# Recode 'country' into 0 (Malaysia) and 1 (UK)
+
+correlation_df <- merged_df|>
+  dplyr::select(country, n_fluency:distraction_effect)|>
+  dplyr::mutate(country = ifelse(country == "Malaysia", 0, 1))
+
+corr_results <- corr.test(correlation_df, use = "pairwise")
+
+r_matrix <- corr_results$r
+p_matrix <- corr_results$p
+
+r_matrix
+p_matrix
+```
+
+Next, we control for country effect.
+
+```{r}
+
+# Run partial correlation controlling for 'country'
+partial_corr_results <- pcor(correlation_df, method = "pearson")
+
+# Access the partial correlation coefficients
+partial_corr_matrix <- partial_corr_results$estimate
+
+# Access the p-values
+partial_p_values <- partial_corr_results$p.value
+
+partial_corr_matrix
+partial_p_values
+```
+
+Notable findings:
+
+## Cross-cultural Differences
+
+-   Typing Task - No difference
+
+-   Multiplication Fluency - Sig
+
+-   Digit Span - Sig
+
+-   Visual Pattern Span - Sig
+
+-   Stroop Comparison Task - Sig
+
+-   Multiplication Verification
+
+### Typing
+
+```{r}
+# Perform t-test for country differences
+
+# Typing
+#t.test(mean_typing ~ country, data = merged_df)
+t.test(median_typing ~ country, data = merged_df)
+#t.test(acc_typing ~ country, data = merged_df) # Accuracy
+
+## ------------------------------------
+t_test_result <- t.test(median_typing ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+    mean_median_typing = mean(median_typing, na.rm = TRUE),
+    sd_median_typing = sd(median_typing, na.rm = TRUE),
+            median = median(median_typing))
+
+# Calculate quartiles for median typing speed
+q <- quantile(merged_df$median_typing, c(0.25, 0.75))
+
+# Calculate interquartile range (IQR)
+iqr <- q[2] - q[1]
+
+# Define upper and lower limits excluding outliers
+ylim_min <- max(q[1] - 1.5 * iqr, 0)  # Lower limit, ensure non-negative
+ylim_max <- q[2] + 1.5 * iqr  # Upper limit
+
+tp <- ggplot(merged_df, aes(x = country, y = median_typing, color = country)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = 0.2), size = 2)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_median_typing), 
+             color = "red", size = 3, shape = 19) +
+  labs(title = "Typing Speed Task",
+       x = NULL,
+       y = "Median Typing Speed (RT)") +
+  ylim(ylim_min, ylim_max) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_median_typing, 
+           label = sprintf("Mean = %.2f", mean_values$mean_median_typing), 
+           hjust = 0.5, vjust = 1.2, size = 3) +
+  theme_minimal() + 
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  guides(color = "none")
+
+tp
+
+## Effect size
+cohens_d(median_typing ~ country, data = merged_df)
+mean_values
+```
+
+### Fluency
+
+```{r}
+# Multiplication fluency
+
+#t.test(mean_fluency ~ country, data = merged_df) # Time taken to solve
+t.test(n_fluency ~ country, data = merged_df) # Number of problems solved
+
+## ----------------------------------------------------------------------
+
+t_test_result <- t.test(n_fluency ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+    mean_fluency = mean(n_fluency, na.rm = TRUE),
+            sd_fluency = sd(n_fluency, na.rm = TRUE))
+
+fp <- ggplot(merged_df, aes(x = country, y = n_fluency, color = country)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = 0.2), size = 2)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_fluency), 
+             color = "red", size = 3, shape = 19) +
+  labs(
+    title = "Multiplication Fluency Task",
+    y = "Number of Problems Solved",
+    x = NULL
+  ) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_fluency, 
+           label = sprintf("Mean = %.2f", mean_values$mean_fluency), 
+           hjust = 0.5, vjust = 1.2, size = 3) +
+  theme_minimal() +
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  ylim(0, 60)+
+  guides(color = FALSE)
+
+fp
+
+cohens_d(n_fluency ~ country, data = merged_df)
+mean_values
+```
+
+### Digit Span
+
+```{r}
+
+# Digit span
+## Egner stimuli
+#t.test(max_egner ~ country, data = merged_df) 
+#t.test(mean_egner ~ country, data = merged_df) 
+
+## WAIS stimuli
+#t.test(max_wais ~ country, data = merged_df) 
+#t.test(mean_wais ~ country, data = merged_df)
+
+t.test(average_ds ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_ds = mean(average_ds, na.rm = TRUE),
+            sd_ds = sd(average_ds, na.rm = TRUE))
+
+dp <- ggplot(merged_df, aes(x = country, y = average_ds, color = country)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = 0.2), size = 2)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_ds), 
+             color = "red", size = 3, shape = 19) +
+  labs(
+    title = "Digit Span Task",
+    y = "Average Digit Span Length",
+    x = NULL
+  ) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_ds, 
+           label = sprintf("Mean = %.2f", mean_values$mean_ds), 
+           hjust = 0.2, vjust = 1.5, size = 3) +
+  theme_minimal()+ 
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  scale_y_continuous(limits = c(0, 9),
+                     breaks = seq(0, 9, by = 1)) +
+  guides(color = FALSE)
+
+dp
+
+## cohen
+cohens_d(average_ds ~ country, data = merged_df)
+mean_values
+```
+
+### VPT
+
+```{r}
+# VPT
+
+t.test(mean_vpt ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_vpt = mean(mean_vpt, na.rm = TRUE),
+            sd_vpt = sd(mean_vpt, na.rm = TRUE))
+
+vp <- ggplot(merged_df, aes(x = country, y = mean_vpt, color = country)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = 0.2), size = 2)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_vpt), 
+             color = "red", size = 3, shape = 19) +
+  labs(
+    title = "Visual Pattern Task",
+    y = "Mean of Number of Blocks Recalled",
+    x = NULL
+  ) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_vpt, 
+           label = sprintf("Mean = %.2f", mean_values$mean_vpt), 
+           hjust = 0.5, vjust = 1.5, size = 3) +
+  theme_minimal() +
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  scale_y_continuous(limits = c(0, 12), breaks = seq(0, 12, by = 2)) +
+  guides(color = FALSE)
+
+vp
+
+# Cohen's d
+cohens_d(mean_vpt ~ country, data = merged_df)
+
+mean_values
+
+```
+
+### Automatic Stroop Effect
+
+```{r}
+# Automatic Stroop Effect - magnitude comparison
+
+t.test(automatic_Stroop ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_automatic = mean(automatic_Stroop, na.rm = TRUE),
+            sd_automatic = sd(automatic_Stroop, na.rm = TRUE))
+
+ap <- ggplot(merged_df, aes(x = country, y = automatic_Stroop, color = country)) +
+  geom_boxplot(outlier.size = 1.5) + 
+  geom_point(position = position_jitter(width = 0.2), size = 1)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_automatic), 
+             color = "red", size = 3, shape = 19) +
+  labs(
+    title = "Automatic Stroop Effect",
+    y = "Difference in RT (Incongruent - Congruent)",
+    x = NULL
+  ) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_automatic, 
+           label = sprintf("Mean = %.2f", mean_values$mean_automatic), 
+           hjust = 0.5, vjust = 1.5, size = 3) +
+  theme_minimal() +
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  scale_y_continuous(limits = c(-0.8, 0.8), breaks = seq(-1, 1, by = 0.2)) +
+  guides(color = FALSE)
+
+ap
+
+# Cohen's d
+cohens_d(automatic_Stroop ~ country, data = merged_df)
+
+mean_values
+
+```
+
+### Intentional Processing Effect
+
+#### Distance Effect - large
+
+```{r}
+# Automatic Stroop Effect - magnitude comparison
+
+t.test(distance_effect_large ~ country, data = merged_df)
+
+mean_values <- merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_distance = mean(distance_effect_large, na.rm = TRUE),
+            sd_distance = sd(distance_effect_large, na.rm = TRUE))
+
+distance_lp <- ggplot(merged_df, aes(x = country, y = distance_effect_large, color = country)) +
+  geom_boxplot() +
+  geom_point(position = position_jitter(width = 0.2), size = 2)  + 
+  geom_point(data = mean_values, aes(x = country, y = mean_distance), 
+             color = "red", size = 3, shape = 19) +
+  labs(
+    title = "Distance Effect - Large",
+    y = "Difference in RT (Distance 1 - Distance 5)",
+    x = NULL
+  ) +
+  annotate("text", x = mean_values$country, y = mean_values$mean_distance, 
+           label = sprintf("Mean = %.2f", mean_values$mean_distance), 
+           hjust = 0.5, vjust = 1.5, size = 3) +
+  theme_minimal() +
+  scale_color_manual(values = c("Malaysia" = "steelblue", "UK" = "#C4961A")) +
+  scale_y_continuous(limits = c(-0.6, 0.6), breaks = seq(-1, 1, by = 0.2)) +
+  guides(color = FALSE)
+
+distance_lp
+
+# Cohen's d
+cohens_d(distance_effect_large ~ country, data = merged_df)
+
+mean_values
+
+```
+
+### T-test results
+
+The t-test outputs for the congruency effect, in physical and magnitude stroop tasks
+
+```{r}
+
+t.test(distance_effect_intermediate ~ country, data = merged_df)
+cohens_d(distance_effect_intermediate ~ country, data = merged_df)
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_distance = mean(distance_effect_intermediate, na.rm = TRUE),
+            sd_distance = sd(distance_effect_intermediate, na.rm = TRUE))
+```
+
+Next, these are congruency (inhibition ) measures for numerical stroop task
+
+```{r}
+t.test(inhibition_numerical ~ country, data = merged_df)
+cohens_d(inhibition_numerical ~ country, data = merged_df)
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_cong_mag = mean(inhibition_numerical, na.rm = TRUE),
+            sd_cong_mag = sd(inhibition_numerical, na.rm = TRUE))
+```
+
+Next, these are congruency (inhibition ) measures for physical size stroop task
+
+```{r}
+t.test(inhibition_size ~ country, data = merged_df)
+cohens_d(inhibition_size ~ country, data = merged_df)
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_cong_size = mean(inhibition_size, na.rm = TRUE),
+            sd_cong_size = sd(inhibition_size, na.rm = TRUE))
+```
+
+### Multiplication Verification tasks metrics
+
+```{r}
+
+t.test(n_correct ~ country, data = merged_df)
+cohens_d(n_correct ~ country, data = merged_df)
+
+t.test(interference_effect ~ country, data = merged_df)
+cohens_d(interference_effect ~ country, data = merged_df)
+
+t.test(size_effect ~ country, data = merged_df)
+cohens_d(size_effect ~ country, data = merged_df)
+
+t.test(distraction_effect ~ country, data = merged_df)
+cohens_d(distraction_effect ~ country, data = merged_df)
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_mult_corr = mean(n_correct, na.rm = TRUE),
+            sd_mult_corr = sd(n_correct, na.rm = TRUE))
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_mult_interference = mean(interference_effect, na.rm = TRUE),
+            sd_mult_interference = sd(interference_effect, na.rm = TRUE))
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_mult_size = mean(size_effect, na.rm = TRUE),
+            sd_mult_size = sd(size_effect, na.rm = TRUE))
+
+merged_df %>%
+  group_by(country) %>%
+  summarise(n = n(),
+            mean_mult_lure = mean(distraction_effect, na.rm = TRUE),
+            sd_mult_lure = sd(distraction_effect, na.rm = TRUE))
+```
+
+### All Plots
+
+```{r}
+ 
+## Arrange the plot
+
+all_tasks <- ggarrange(tp, fp, dp, vp, ap, distance_lp + rremove("x.text"), 
+          labels = c("A", "B", "C", "D", "E", "F"),
+          ncol = 2, nrow = 3)
+
+all_tasks
+ggsave("Figures/tasks_plots.png", all_tasks, width = 8, 
+       height = 10, units = "in", dpi = 300)
+
+
+```
+
+### Multiplication Fluency Plot by Country
+
+```{r}
+plot_1 <- ggstatsplot::ggbetweenstats(
+  data = merged_df,
+  x = country,
+  y = n_fluency,
+  type = "violin",
+  title = "Comparison of Multiplication Fluency Between Countries",
+  xlab = "Country",
+  ylab = "Multiplication Fluency Score",
+  caption = "p-value based on independent samples t-test"
+)
+
+plot_1
+
+# Welch test
+t.test(n_fluency ~ country, data = merged_df, var.equal = FALSE)
+library(effsize)
+cohen.d(n_fluency ~ country, data = merged_df, hedges.correction=TRUE)
+
+
+ggsave("Figures/multiplication_fluency_plot.png", plot_1, 
+       width = 6, height = 6, units = "in", dpi = 300)
+```
+
+The hedge's g effect size is large - do assumption checks as the effect size is too large.
+
+## 
+
+### Summary Table
+
+The summary for all tasks
+
+```{r}
+library(rstatix)
+
+merged_df %>% 
+  get_summary_stats(
+    age, mean_typing, acc_typing, mean_fluency, acc_fluency, mean_egner, mean_wais, mean_vpt, 
+    mean_rt__P_0, mean_rt__P_1, mean_rt__P_2, mean_rt__P_5, 
+    acc__P_0, acc__P_1, acc__P_2, acc__P_5,
+    mean_rt__P_congruent, mean_rt__P_incongruent, mean_rt__P_neutral,
+    acc__P_congruent, acc__P_incongruent, acc__P_neutral,
+    mean_rt__M_1, mean_rt__M_2, mean_rt__M_5, 
+    acc__M_1, acc__M_2, acc__M_5,
+    mean_rt__M_congruent, mean_rt__M_incongruent, mean_rt__M_neutral,
+    acc__M_congruent, acc__M_incongruent, acc__M_neutral,
+    type = "common") |>
+  write_csv("Results/Descriptive_task_all.csv")
+
+merged_df %>% 
+  group_by(country)|>
+  get_summary_stats(
+    age, mean_typing, acc_typing, mean_fluency, acc_fluency, mean_egner, mean_wais, mean_vpt, 
+    mean_rt__P_0, mean_rt__P_1, mean_rt__P_2, mean_rt__P_5, 
+    acc__P_0, acc__P_1, acc__P_2, acc__P_5,
+    mean_rt__P_congruent, mean_rt__P_incongruent, mean_rt__P_neutral,
+    acc__P_congruent, acc__P_incongruent, acc__P_neutral,
+    mean_rt__M_1, mean_rt__M_2, mean_rt__M_5, 
+    acc__M_1, acc__M_2, acc__M_5,
+    mean_rt__M_congruent, mean_rt__M_incongruent, mean_rt__M_neutral,
+    acc__M_congruent, acc__M_incongruent, acc__M_neutral,
+    type = "common") |>
+  write_csv("Results/Descriptive_task_by_country.csv")
+```
+
+## Stroop Tasks
+
+### Data
+
+```{r}
+
+# RAW data
+stroop_msia <- read_csv("derivative/stroop_trials_msia.csv")|>
+  mutate(country = "Malaysia")
+
+stroop_bu <- read_csv("derivative/stroop_trials_BU.csv") |>
+  mutate(country = "UK")
+
+# Merged data
+merged_stroop <- bind_rows(stroop_msia, stroop_bu) |>
+  write_csv("derivative/merged_stroop_trials.csv")
+
+levels(merged_stroop$country) <- c("Malaysia", "UK")
+levels(merged_stroop$Dims) <- c("neutral", "congruent", "incongruent")
+levels(merged_stroop$numDistance) <- c("1", "2", "5")
+```
+
+### Magnitude Comparison Task
+
+First, summarize the rt and error rate for each participant by congruency (neutral, congruent, and incongreunt) and distance (1, 2, 5).
+
+```{r}
+
+# Explore the data pattern
+mag_stroop <- merged_stroop |>
+  dplyr::filter(stroopCond == "magnitude") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  group_by(participant, country, numDistance, Dims) |>
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()
+
+library(ggplot2)
+
+# Create the plot
+ggplot(mag_stroop, aes(x = numDistance, y = mean_rt_correct, color = Dims)) +
+  geom_point() +
+  geom_line(aes(group = interaction(participant, Dims))) +
+  facet_wrap(~ country) +
+  labs(title = "Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Mean Reaction Time (Correct Trials)",
+       color = "Congruence") +
+  theme_minimal()
+```
+
+The summary plot for mag comparison
+
+```{r}
+## ------------------------- RT -------------------------
+
+mag_rt_summary <- merged_stroop |>
+  dplyr::filter(stroopCond == "magnitude") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()|>
+  group_by(country, numDistance, Dims)|>
+  summarize(avg_n_correct = mean(n_corr), 
+            avg_error_rate = mean(error_rate, na.rm = TRUE),
+            avg_mean_rt = mean(mean_rt_correct, na.rm = TRUE),
+            sd = sd(mean_rt_correct, na.rm = TRUE))
+```
+
+Summary plot (bar and line)
+
+```{r}
+
+# Create the barplot
+ggplot(mag_rt_summary, aes(x = numDistance, y = avg_mean_rt, fill = Dims)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_errorbar(aes(ymin = avg_mean_rt - sd, ymax = avg_mean_rt + sd),
+                position = position_dodge(0.9), width = 0.25) +
+  facet_wrap(~ country) +
+  labs(title = "Average Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Average Mean Reaction Time (s)",
+       fill = "Congruence") +
+  theme_minimal()
+
+
+# Create the line plot
+# Define colors for each congruence level
+colors <- c("neutral" = "black", "congruent" = "dodgerblue", "incongruent" = "#FF0000")
+shapes <- c("neutral" = 16, "congruent" = 17, "incongruent" = 18)  # Different shapes for congruence levels
+linetypes <- c("neutral" = "solid", "congruent" = "dashed", "incongruent" = "dotted")  # Different line types
+
+# Create the line plot with the specified colors and shapes
+mag_sum_plot <- ggplot(mag_rt_summary, aes(x = numDistance, 
+                                       y = avg_mean_rt, 
+                                       group = Dims, linetype = Dims, shape = Dims, color = Dims)) +
+  geom_line(position = position_dodge(0.2), size = 1) +
+  geom_point(position = position_dodge(0.2), size = 3) +
+  geom_errorbar(aes(ymin = avg_mean_rt - sd, ymax = avg_mean_rt + sd), width = 0.2, position = position_dodge(0.2)) +
+  facet_wrap(~ country) +
+  scale_color_manual(values = colors) +
+  scale_shape_manual(values = shapes) +
+  scale_linetype_manual(values = linetypes) +
+  labs(title = "Average Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Average Mean Reaction Time (s)",
+       color = "Congruence",
+       linetype = "Congruence",
+       shape = "Congruence") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "bottom"
+  )
+
+mag_sum_plot
+ggsave("Figures/plot.png", mag_sum_plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+mag_rt_effects <- mag_rt_summary %>%
+  select(-avg_n_correct, -sd, -avg_error_rate) |>
+  pivot_wider(names_from = Dims,
+              values_from = avg_mean_rt)|>
+  mutate(facilitation = neutral - congruent,
+         interference = neutral - incongruent,
+         stroop = incongruent - congruent)|>
+  pivot_longer(cols = c("facilitation", "interference", "stroop"),
+              names_to = "Effects",
+               values_to = "Effect_value") |>
+  group_by(country, numDistance, Effects) %>%
+  summarize(mean_rt = mean(Effect_value, na.rm = TRUE))
+
+
+```
+
+The Effects in mag comparison
+
+```{r}
+# Define labels for the effects
+effect_labels <- c("Facilitation\n(Neutral - Congruent)", 
+                   "Interference\n(Neutral - Incongruent)", 
+                   "Stroop\n(Incongruent - Congruent)")
+
+# Plotting the bar plot
+mag_effects_plot <- ggplot(mag_rt_effects, aes(x = Effects, y = Effect_value, fill = country)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_grid(numDistance ~ ., scales = "free") +
+  labs(title = "Effects of Facilitation, Interference, and Stroop by Numerical Distance",
+       x = "Effects",
+       y = "Effect Value",
+       fill = "Country") +
+  scale_fill_manual(values = country_colors) +
+  scale_x_discrete(labels = effect_labels) +  # Change x-axis labels
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10))
+  )
+
+mag_effects_plot
+```
+
+```{r}
+
+mag_plots <- ggarrange(mag_sum_plot, mag_effects_plot, 
+                       labels = c("A", "B"),
+                       ncol = 1, nrow = 2,
+                       widths = c(1, 1.4))
+
+mag_plots
+ggsave("Figures/mag_comparison_plots.png", mag_plots, width = 8, 
+       height = 9, units = "in", dpi = 300)
+```
+
+##### ANOVA test
+
+```{r}
+library(afex)
+library(emmeans)
+
+# Convert factors to appropriate data types
+mag_stroop$Dims <- factor(mag_stroop$Dims, levels = c("neutral", "congruent", "incongruent"))
+mag_stroop$numDistance <- factor(mag_stroop$numDistance)
+
+# Run ANOVA
+anova_result <- aov_ez("participant", "mean_rt_correct", mag_stroop, 
+                       between = "country", 
+                       within = c("Dims", "numDistance"))
+
+# post-hoc
+emmeans_country <- emmeans(anova_result, ~ country)
+pairs(emmeans_country)
+
+emmean_dims <- emmeans(anova_result, ~ Dims)
+pairs(emmean_dims)
+
+emmean_distance <- emmeans(anova_result, ~ numDistance)
+pairs(emmean_distance)
+```
+
+ANOVA result
+
+```{r}
+
+# Print ANOVA results
+knitr::kable(nice(anova_result))
+```
+
+#### Plot for mag
+
+```{r}
+
+mag_stroop <- merged_stroop |>
+  dplyr::filter(stroopCond == "magnitude") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()|>
+  group_by(country, numDistance, Dims)|>
+  summarize(avg_n_correct = mean(n_corr), 
+            avg_error_rate = mean(error_rate, na.rm = TRUE),
+            avg_mean_rt = mean(mean_rt_correct, na.rm = TRUE),
+            sd = sd(mean_rt_correct, na.rm = TRUE))|>
+  arrange(numDistance)
+
+ggplot(mag_stroop, aes(x = numDistance, y = avg_mean_rt, 
+                        shape = Dims,
+                       color = Dims,
+                        linetype = Dims)) +
+  geom_line() +
+  geom_point(size = 3, aes(color = Dims)) +
+  labs(title = "Reaction Time by Distance and Congruency",
+       x = "Distance",
+       y = "Reaction Time (s)",
+       color = "Congruency",
+       linetype = "Congruency",
+       shape = "Congruency") +
+  scale_color_manual(values = c("Neutral" = "black", 
+                                "Congruent" = "blue", 
+                                "Incongruent" = "red")) +
+  scale_linetype_manual(values = c("Neutral" = "solid", 
+                                   "Congruent" = "dashed", 
+                                   "Incongruent" = "dotted"))
+
+
+```
+
+### Physical size comparison
+
+First, summarize the rt and error rate for each participant by congruency (neutral, congruent, and incongreunt) and distance (1, 2, 5).
+
+```{r}
+
+# Explore the data pattern
+phy_stroop <- merged_stroop |>
+  dplyr::filter(stroopCond == "physical") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+  dplyr::filter(Dims != "neutral") |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()
+
+library(ggplot2)
+
+# Create the plot
+ggplot(phy_stroop, aes(x = numDistance, y = mean_rt_correct, color = Dims)) +
+  geom_point() +
+  geom_line(aes(group = interaction(participant, Dims))) +
+  facet_wrap(~ country) +
+  labs(title = "Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Mean Reaction Time (Correct Trials)",
+       color = "Congruence") +
+  theme_minimal()
+```
+
+The summary plot for physical comparison
+
+```{r}
+## ------------------------- RT -------------------------
+
+phy_rt_summary <- merged_stroop |>
+  dplyr::filter(stroopCond == "physical") |>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         numDistance = as.factor(numDistance),
+         Dims = as.factor(Dims),
+         error = 1 - stroopResp.corr) |>
+    dplyr::filter(Dims != "neutral") |>
+  group_by(participant, country, numDistance, Dims) %>%
+  summarize(n_corr = sum(stroopResp.corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(stroopResp.rt[stroopResp.corr == 1]),
+            sd_rt_correct = sd(stroopResp.rt[stroopResp.corr == 1]))|>
+  ungroup()|>
+  group_by(country, numDistance, Dims)|>
+  summarize(avg_n_correct = mean(n_corr), 
+            avg_error_rate = mean(error_rate, na.rm = TRUE),
+            avg_mean_rt = mean(mean_rt_correct, na.rm = TRUE),
+            sd = sd(mean_rt_correct, na.rm = TRUE))
+```
+
+Summary plot (bar and line)
+
+```{r}
+
+# Create the barplot
+ggplot(phy_rt_summary, aes(x = numDistance, y = avg_mean_rt, fill = Dims)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_errorbar(aes(ymin = avg_mean_rt - sd, ymax = avg_mean_rt + sd),
+                position = position_dodge(0.9), width = 0.25) +
+  facet_wrap(~ country) +
+  labs(title = "Average Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Average Mean Reaction Time (s)",
+       fill = "Congruence") +
+  theme_minimal()
+
+
+# Create the line plot
+# Define colors for each congruence level
+colors <- c("neutral" = "black", "congruent" = "dodgerblue", "incongruent" = "#FF0000")
+shapes <- c("neutral" = 16, "congruent" = 17, "incongruent" = 18)  # Different shapes for congruence levels
+linetypes <- c("neutral" = "solid", "congruent" = "dashed", "incongruent" = "dotted")  # Different line types
+
+# Create the line plot with the specified colors and shapes
+phy_sum_plot <- ggplot(phy_rt_summary, aes(x = numDistance, 
+                                       y = avg_mean_rt, 
+                                       group = Dims, linetype = Dims, shape = Dims, color = Dims)) +
+  geom_line(position = position_dodge(0.2), size = 1) +
+  geom_point(position = position_dodge(0.2), size = 3) +
+  geom_errorbar(aes(ymin = avg_mean_rt - sd, ymax = avg_mean_rt + sd), width = 0.2, position = position_dodge(0.2)) +
+  facet_wrap(~ country) +
+  scale_color_manual(values = colors) +
+  scale_shape_manual(values = shapes) +
+  scale_linetype_manual(values = linetypes) +
+  labs(title = "Average Mean Reaction Time by Numerical Distance and Congruence",
+       x = "Numerical Distance",
+       y = "Average Mean Reaction Time (s)",
+       color = "Congruence",
+       linetype = "Congruence",
+       shape = "Congruence") +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10)),
+    legend.position = "bottom"
+  )
+
+phy_sum_plot
+ggsave("Figures/plot_physicalStroop.png", phy_sum_plot, width = 8, height = 6, dpi = 300)
+```
+
+```{r}
+phy_rt_effects <- phy_rt_summary %>%
+  select(-avg_n_correct, -sd, -avg_error_rate) |>
+  pivot_wider(names_from = Dims,
+              values_from = avg_mean_rt)|>
+  mutate(stroop = incongruent - congruent)|>
+  pivot_longer(cols = c("stroop"),
+              names_to = "Effects",
+               values_to = "Effect_value")
+
+```
+
+The Effects in mag comparison
+
+```{r}
+
+phy_effects_plot <- ggplot(phy_rt_effects, aes(x = numDistance, y = Effect_value, fill = country)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.9)) +
+  labs(title = "Stroop Effects by Numerical Distance",
+       x = "Numerical Distance",
+       y = "Stroop Effect (Incongruent - Congruent)",
+       fill = "Country") +
+  scale_fill_manual(values = country_colors) +
+  theme_minimal() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold"),
+    axis.title.x = element_text(margin = margin(t = 10)),
+    axis.title.y = element_text(margin = margin(r = 10))
+  )
+
+phy_effects_plot
+```
+
+both plots together
+
+```{r}
+
+phy_plots <- ggarrange(phy_sum_plot, phy_effects_plot, 
+                       labels = c("A", "B"),
+                       ncol = 1, nrow = 2,
+                       widths = c(1, 1.4))
+
+phy_plots
+ggsave("Figures/phy_comparison_plots.png", phy_plots, width = 8, 
+       height = 9, units = "in", dpi = 300)
+```
+
+##### ANOVA test
+
+```{r}
+library(afex)
+library(emmeans)
+
+# Convert factors to appropriate data types
+phy_stroop$Dims <- factor(phy_stroop$Dims, levels = c("congruent", "incongruent"))
+phy_stroop$numDistance <- factor(phy_stroop$numDistance)
+
+# Run ANOVA
+phyanova_result <- aov_ez("participant", "mean_rt_correct", phy_stroop, 
+                       between = "country", 
+                       within = c("Dims", "numDistance"))
+
+
+```
+
+ANOVA result
+
+```{r}
+
+# Print ANOVA results
+knitr::kable(nice(phyanova_result))
+```
+
+#### Post-hoc
+
+```{r}
+
+# post-hoc
+phyemmeans_country <- emmeans(phyanova_result, ~ country)
+pairs(phyemmeans_country)
+
+phyemmean_dims <- emmeans(phyanova_result, ~ Dims)
+pairs(phyemmean_dims)
+
+phyemmean_distance <- emmeans(phyanova_result, ~ numDistance)
+pairs(phyemmean_distance)
+
+interaction2 <- emmeans(phyanova_result, "Dims", by = "numDistance")
+pairs(interaction2)
+```
+
+### Data
+
+```{r}
+#| message: false
+
+# RAW data
+mult_msia <- read_csv("derivative/veri_trials_msia.csv")|>
+  mutate(country = "Malaysia")
+
+mult_bu <- read_csv("derivative/veri_trials_BU.csv") |>
+  mutate(country = "UK")
+
+# Merged data
+merged_mult <- bind_rows(mult_msia, mult_bu) |>
+  write_csv("derivative/merged_mult_trials.csv")
+```
+
+### Multiplication Verification Task
+
+```{r}
+size_levels <- c("small-sized", "large-sized")  
+country_levels <- c("Malaysia", "UK") 
+
+# Explore the data pattern
+mult_df <- merged_mult |>
+  dplyr::filter(mult_type == "lure") |>
+  dplyr::filter(veriStim_resp.corr == 1) |>
+  rename(corr = veriStim_resp.corr,
+         rt = veriStim_resp.rt)|>
+  mutate(participant = as.factor(participant),
+         country = factor(country, levels = country_levels),
+         rt = as.numeric(rt),
+         corr = as.numeric(corr),
+         error_distance = as.factor(error_distance),
+         interferenceScore = as.numeric(interferenceScore),
+         problemType = as.factor(problemType),
+         problemSize = factor(problemSize, levels = size_levels),
+         interferenceLevel = as.factor(interferenceLevel),
+         mult_problem = as.character(mult_problem),
+         error = 1 - corr,
+         log_rt = log(rt),
+         interferenceScore_z = scale(interferenceScore),
+         country_numeric = ifelse(country == "Malaysia", -1, 1),  # Assign -1 for Malaysia, 1 for UK
+         problemSize_numeric = ifelse(problemSize == "small-sized", -1, 1), #-1 is small-sized
+         country_numeric = as.factor(country_numeric),
+         problemSize_numeric = as.factor(problemSize_numeric))
+
+# Grouped scatterplot
+ggplot(mult_df, aes(x = problemSize, y = rt, fill = problemSize)) +
+  geom_boxplot() +
+  labs(x = "Problem Size",
+       y = "Reaction Time (RT)",
+       fill = "Problem Size") +
+  theme_minimal()
+
+
+
+```
+
+Plots
+
+```{r}
+mult_rt_summary <- mult_df |>
+  group_by(participant, country, problemSize, interferenceLevel) %>%
+  summarize(n_corr = sum(corr),
+            n_trials = n(),
+            error_rate = mean(error),
+            mean_rt_correct = mean(rt[corr == 1]),
+            sd_rt_correct = sd(rt[corr == 1]))|>
+  ungroup()
+```
+
+```{r}
+library(jtools)
+fiti <- lm(rt ~ interferenceLevel * problemSize * country, data = mult_rt_summary)
+
+# Interaction plot for each combination of problem size and country
+cat_plot(fiti, pred = "interferenceLevel", modx = c("problemSize", "country"))
+
+ggplot(mult_df, aes(x = interferenceScore, y = rt, color = country)) +
+  geom_point() +
+  facet_grid(problemSize ~ .) +
+  geom_smooth(method = "lm", se = FALSE) +
+  geom_jitter()+
+  labs(x = "Interference Score", y = "RT") +
+  ylim(0, 25)+
+  theme_minimal()
+
+
+
+```
+
+Summary
+
+```{r}
+
+
+```
+
+```{r}
+library(lme4)
+
+mm1 <- lmer(rt ~ interferenceScore * problemSize * country + 
+                     (interferenceScore + problemSize | participant) + 
+                     (country | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm2 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (interferenceScore + problemSize || participant) + 
+                     (country || mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm3 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (interferenceScore || participant) + 
+                     (country || mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm4 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (problemSize || participant) + 
+                     (country || mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm5 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (1| participant) + 
+                     (country | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm6 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (interferenceScore | participant) + 
+                     (1 | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm7 <- lmer(log_rt ~ interferenceScore_z * problemSize_numeric * country_numeric + 
+                     (problemSize_numeric | participant) + 
+                     (1| mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+mm8 <- lmer(log_rt ~ interferenceScore * problemSize * country + 
+                     (problemSize | participant) + 
+                     (country| mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+
+```
+
+Next check AIC and BIC for model mm5, and mm7
+
+```{r}
+# Compare AIC and BIC
+AIC(mm5, mm7)
+BIC(mm5, mm7)
+
+# Likelihood ratio test
+anova(mm5, mm7)
+
+# Inspect random effects
+summary(mm5)
+summary(mm7)
+```
+
+### Likelihood ratio test
+
+```{r}
+library(lmerTest)
+
+# Compare models LRT
+mm7_ltr <- lmer(log_rt ~ interferenceScore_z * problemSize_numeric * country_numeric + 
+                     (problemSize_numeric | participant) + 
+                     (1 | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                       maxIter = 1000)))
+
+# Fit the simpler nested model
+mm7_nested <- lmer(log_rt ~ interferenceScore_z * problemSize_numeric * country_numeric + 
+                             (1 | participant) + 
+                             (1 | mult_problem), data = mult_df,
+                           control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                                maxIter = 1000)))
+
+# Perform the likelihood ratio test
+anova(mm7_ltr, mm7_nested)
+
+summary(mm7_ltr)
+summary(mm7_nested)
+```
+
+```{r}
+library(marginaleffects)
+
+mm7 <- lmer(log_rt ~ interferenceScore_z * problemSize_numeric * country_numeric + 
+                     (problemSize_numeric | participant) + 
+                     (1 | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, 
+                                                        maxIter = 1000)))
+
+mm7_me <- marginaleffects(mm7, variables = c("problemSize_numeric", "country_numeric"), 
+                          newdata = mult_df)
+
+# Summary of marginal means
+summary(mm7_me)
+
+# Perform pairwise comparisons
+pairwise_contrasts <- comparisons(mm7, variables = c("problemSize_numeric", "country_numeric"), newdata = mult_df)
+
+# Summary of pairwise comparisons
+summary(pairwise_contrasts)
+```
+
+```{r}
+# Perform post-hoc tests for the interaction interferenceScore:problemSize:country
+# Define the contrast of interest
+contrast_of_interest <- list(interferenceScore = 2, 
+                              problemSize = "small-sized", 
+                              country = "UK")
+
+# Perform the post-hoc test for the specified contrast
+contrast(emmeans_results, 
+         list(contrast_of_interest),
+         adjust = "tukey")
+```
+
+```{r}
+
+joint_tests(lmer_model, by = c("problemSize", "country"))
+
+emmeans(lmer_model, c("problemSize", "country"), by = c("interferenceScore"))
+```
+
+```{r}
+emmeans_results <- emmeans(mm7_ltr, ~ problemSize_numeric:country_numeric, pbkrtest.limit = 27434)
+
+# Summary of marginal means
+summary(emmeans_results)
+
+```
+
+```{r}
+library(lme4)
+library(emmeans)
+library(ggplot2)
+
+# Fit the mixed-effects model
+lmer_model <- lmer(rt ~ interferenceScore * problemSize * country + 
+                   (1 | participant) + 
+                   (country | mult_problem), data = mult_df,
+                   control = lmerControl(optCtrl = list(maxfun = 1e10, maxIter = 1000)))
+
+# Calculate estimated marginal means
+em1 <- emmeans(lmer_model, ~ problemSize | country)
+
+# Plot the estimated marginal means
+plot(em1)
+
+# Calculate pairwise comparisons
+pairs_em1 <- pairs(em1)
+
+# Plot pairwise comparisons
+plot(pairs_em1)
+
+# Convert emmeans object to data frame for ggplot2
+em1_df <- as.data.frame(em1)
+
+# Create customized plot with ggplot2
+ggplot(em1_df, aes(x = problemSize, y = emmean, color = country, group = country)) +
+  geom_point(size = 3) +
+  geom_line() +
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.1) +
+  labs(x = "Problem Size", y = "Estimated Marginal Mean RT", title = "EMMs of RT by Problem Size and Country") +
+  theme_minimal()
+
+```

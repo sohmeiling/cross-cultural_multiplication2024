@@ -1,0 +1,575 @@
+StartDate,EndDate,Status,IPAddress,Progress,Duration (in seconds),Finished,RecordedDate,ResponseId,RecipientLastName,RecipientFirstName,RecipientEmail,ExternalReference,LocationLatitude,LocationLongitude,DistributionChannel,UserLanguage,consent,participantID,email,nationality,nationality_4_TEXT,timer1_First Click,timer1_Last Click,timer1_Page Submit,timer1_Click Count,dob_1,dob_2,dob_3,gender,maritalstatus,ethnicity_1,ethnicity_2,ethnicity_3,ethnicity_4,ethnicity_5,ethnicity_6,eduLevel,employment,major,handedness,Medicalhistory,medicalHistory2,developmentHist,developmentHist2,nativelanguage,nativelanguage_28_TEXT,lingualAbility,multilingual_1,multilingual_1_TEXT,multilingual_2,multilingual_2_TEXT,multilingual_3,multilingual_3_TEXT,multilingual_4,multilingual_4_TEXT,multilingual_5,multilingual_5_TEXT,multilingual_6,multilingual_6_TEXT,multilingual_7,multilingual_7_TEXT,multilingual_8,multilingual_8_TEXT,multilingual_9,multilingual_9_TEXT,multilingual_10,multilingual_10_TEXT,mathlanguage_1,mathlanguage_2,mathlanguage_3,multiplylanguage,schooltype_1,schooltype_2,schooltype_3,difficultiesmath,learnmultiplytable,peercomparison,peercomparison2,rateownfluency_1,dyslexia,mathanxious,examanxious,memory,otherDifficulty,otherDifficulty_1_TEXT,ParentsEdu,income,SC0,id,group
+Start Date,End Date,Response Type,IP Address,Progress,Duration (in seconds),Finished,Recorded Date,Response ID,Recipient Last Name,Recipient First Name,Recipient Email,External Data Reference,Location Latitude,Location Longitude,Distribution Channel,User Language,"I confirm that I agree to participate in the research study titled: Cognitive Functions Underlying the Multiplication Fluency
+
+ 
+
+☑️ I confirm that I have read and understood the participant information sheet and have been given the opportunity to ask questions and discuss this study. I have received satisfactory answers to my questions.
+
+☑️ I understand that my participation is voluntary and that I am free to withdraw at any time without giving a reason and without my medical care or legal rights being affected
+
+☑️ I understand that even if I withdraw from the above study, the data collected from me will be used in analysing the results of the trial, unless I specifically withdraw consent for this.
+
+☑️ In case of withdrawn consent, no new information will be collected or added to existing data, and I can request that all previously retained samples to be destroyed to prevent further analysis.
+
+☑️ I consent to the storage, including electronic, of personal information for the purposes of this study. I understand that any information that could identify me will be kept strictly confidential and that no personal information will be included in the study report or other publication.
+
+☑️ By participating in this study, you are agreeing that the contact information provided may be entered into a directory for future contact. However, all response data are anonymous; we will merely contact you to ask if you are interested in future follow-up studies. 
+
+☑️I have read, understood the above information, and have the desire of my own free will to participate in this study.","Your student ID (e.g., sXXXXXXX)",Your email address,Nationality - Selected Choice,Nationality - Others - Text,Timing - First Click,Timing - Last Click,Timing - Page Submit,Timing - Click Count,Date of Birth - Month,Date of Birth - Day,Date of Birth - Year,What is your gender?,What is your marital status?,UK Ethnic Origin - White,UK Ethnic Origin - Black/African/Caribbean,"UK Ethnic Origin - Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",UK Ethnic Origin - Mixed two or more ethnic groups,UK Ethnic Origin - Other (Arab or any others),UK Ethnic Origin - Prefer not to say,What is the highest level of education you have completed?,What is your current employment status?,"If you are still studying, please describe your current major/anticipated major. You may indicate more than one if necessary.",Handedness (Dominant Hand),"Do you have any medical, psychiatric or neurological diagnosis?","Please indicate the medical, psychiatric or neurological diagnosis that you have received.",Have you ever experience any developmental impairment in childbirth or childhood?,Please indicate any developmental condition that has an impact on your brain development.,What is your native language? Pick one. - Selected Choice,What is your native language? Pick one. - Others - Text,"Do you speak, write, read, or listen in another
+language?","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 1","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 1 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 2","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 2 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 3","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 3 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 4","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 4 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 5","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 5 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 6","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 6 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 7","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 7 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 8","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 8 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 9","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 9 - Text","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 10","Please indicate the other languages that you know and the level of proficiency. You can write down as many languages as you know (note, you do not need to use all the 10 sliders).
+ 
+
+Reading - 25%
+
+Speaking - 25%
+
+Listening - 25%
+
+Writing -25%
+
+ 
+
+To move the cursor, hold the bar and slide to left or right. 
+
+ 
+
+Please note that 0=not proficient at all and 100=highly proficient. - Language 10 - Text","Please indicate the language that you used when you
+learn Mathematics in school - Primary School (Grade 1-6)","Please indicate the language that you used when you
+learn Mathematics in school - Lower Secondary School (Grade 7-9)","Please indicate the language that you used when you
+learn Mathematics in school - Upper Secondary School (Grade 10-12)","What was the language used
+when you learnt multiplication tables (times tables)?","What type of school did you
+attend?
+E.g.: State schools (i.e., public school), special schools, faith schools, free schools, boarding schools, private schools, etc. - Primary School (Grade 1-6)","What type of school did you
+attend?
+E.g.: State schools (i.e., public school), special schools, faith schools, free schools, boarding schools, private schools, etc. - Lower Secondary School (Grade 7-9)","What type of school did you
+attend?
+E.g.: State schools (i.e., public school), special schools, faith schools, free schools, boarding schools, private schools, etc. - Upper Secondary School (Grade 10-12)","Have you ever experienced
+any difficulties learning mathematics in school?",Do you consider that your process of learning multiplication tables (times table) as normal?,"Compared to your same age
+peers, do you think that you spent more time on learning the multiplication
+table (times table)?","Do you think that your same
+age peers know/master the multiplication table better than you?","On a scale of 0-10, with 0
+equals to no proficiency to 10 being highly proficient, where would you rate
+yourself on the level of mastery for multiplication table? - 0","Have you ever had any reading
+problem (e.g., dyslexia)?","Have you ever feel anxious
+when learning mathematics?","Have you ever feel anxious
+during examinations?","Do you consider yourself to
+spend more time in memorizing information literally (e.g., songs, sayings, and
+poetry) in comparison to others?","Apart of Mathematics
+learning difficulties, do you have difficulties in other area (e.g., face
+recognition, memory, etc.)? If yes, please indicate the type of difficulty. - Selected Choice","Apart of Mathematics
+learning difficulties, do you have difficulties in other area (e.g., face
+recognition, memory, etc.)? If yes, please indicate the type of difficulty. - Yes - Text",Did either of your parents graduate from college?,Gross annual household income in British Pounds,Score,id,group
+"{""ImportId"":""startDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""endDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""status""}","{""ImportId"":""ipAddress""}","{""ImportId"":""progress""}","{""ImportId"":""duration""}","{""ImportId"":""finished""}","{""ImportId"":""recordedDate"",""timeZone"":""Asia/Hong_Kong""}","{""ImportId"":""_recordId""}","{""ImportId"":""recipientLastName""}","{""ImportId"":""recipientFirstName""}","{""ImportId"":""recipientEmail""}","{""ImportId"":""externalDataReference""}","{""ImportId"":""locationLatitude""}","{""ImportId"":""locationLongitude""}","{""ImportId"":""distributionChannel""}","{""ImportId"":""userLanguage""}","{""ImportId"":""QID124772036""}","{""ImportId"":""QID124772008_TEXT""}","{""ImportId"":""QID60_TEXT""}","{""ImportId"":""QID124772031""}","{""ImportId"":""QID124772031_4_TEXT""}","{""ImportId"":""QID124772040_FIRST_CLICK""}","{""ImportId"":""QID124772040_LAST_CLICK""}","{""ImportId"":""QID124772040_PAGE_SUBMIT""}","{""ImportId"":""QID124772040_CLICK_COUNT""}","{""ImportId"":""QID124772009_1""}","{""ImportId"":""QID124772009_2""}","{""ImportId"":""QID124772009_3""}","{""ImportId"":""QID124772035""}","{""ImportId"":""QID124772039""}","{""ImportId"":""QID66"",""choiceId"":""1""}","{""ImportId"":""QID66"",""choiceId"":""2""}","{""ImportId"":""QID66"",""choiceId"":""3""}","{""ImportId"":""QID66"",""choiceId"":""4""}","{""ImportId"":""QID66"",""choiceId"":""5""}","{""ImportId"":""QID66"",""choiceId"":""6""}","{""ImportId"":""QID67""}","{""ImportId"":""QID124772038""}","{""ImportId"":""QID124772032_TEXT""}","{""ImportId"":""QID124772010""}","{""ImportId"":""QID124772011""}","{""ImportId"":""QID124772012_TEXT""}","{""ImportId"":""QID124772013""}","{""ImportId"":""QID124772014_TEXT""}","{""ImportId"":""QID124772015""}","{""ImportId"":""QID124772015_28_TEXT""}","{""ImportId"":""QID124772016""}","{""ImportId"":""QID124772017_1""}","{""ImportId"":""QID124772017_1_TEXT""}","{""ImportId"":""QID124772017_2""}","{""ImportId"":""QID124772017_2_TEXT""}","{""ImportId"":""QID124772017_3""}","{""ImportId"":""QID124772017_3_TEXT""}","{""ImportId"":""QID124772017_4""}","{""ImportId"":""QID124772017_4_TEXT""}","{""ImportId"":""QID124772017_5""}","{""ImportId"":""QID124772017_5_TEXT""}","{""ImportId"":""QID124772017_6""}","{""ImportId"":""QID124772017_6_TEXT""}","{""ImportId"":""QID124772017_7""}","{""ImportId"":""QID124772017_7_TEXT""}","{""ImportId"":""QID124772017_8""}","{""ImportId"":""QID124772017_8_TEXT""}","{""ImportId"":""QID124772017_9""}","{""ImportId"":""QID124772017_9_TEXT""}","{""ImportId"":""QID124772017_10""}","{""ImportId"":""QID124772017_10_TEXT""}","{""ImportId"":""QID124772018_1""}","{""ImportId"":""QID124772018_2""}","{""ImportId"":""QID124772018_3""}","{""ImportId"":""QID124772019_TEXT""}","{""ImportId"":""QID124772020_1""}","{""ImportId"":""QID124772020_2""}","{""ImportId"":""QID124772020_3""}","{""ImportId"":""QID124772021""}","{""ImportId"":""QID124772022""}","{""ImportId"":""QID124772023""}","{""ImportId"":""QID124772024""}","{""ImportId"":""QID124772025_1""}","{""ImportId"":""QID124772026""}","{""ImportId"":""QID124772027""}","{""ImportId"":""QID124772028""}","{""ImportId"":""QID124772029""}","{""ImportId"":""QID124772030""}","{""ImportId"":""QID124772030_1_TEXT""}","{""ImportId"":""QID124772034""}","{""ImportId"":""QID124772041""}","{""ImportId"":""SC_bOwVwmU4oT4PmrX""}","{""ImportId"":""id""}","{""ImportId"":""group""}"
+23/12/2023 17:29,23/12/2023 17:33,IP Address,77.101.232.217,100,197,TRUE,23/12/2023 17:33,R_1zB0gyz7BhBdgew,,,,,50.4189,-4.0647,anonymous,EN,Yes,s5504432,s5504432@bournemouth.ac.uk,UK,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,2,19240,
+21/12/2023 18:14,21/12/2023 18:16,IP Address,150.214.58.169,7,121,FALSE,28/12/2023 18:16,R_59KT59xYc357xhD,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,%SURVEY_CODE%,
+19/12/2023 23:59,21/12/2023 21:19,IP Address,150.214.58.169,7,163195,FALSE,28/12/2023 21:19,R_24HiGTjabkI6mm5,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,17722,
+03/01/2024 2:46,03/01/2024 3:05,IP Address,86.19.125.245,100,1157,TRUE,03/01/2024 3:05,R_1esrE93RjkeAafr,,,,,50.7654,-1.9063,anonymous,EN,Yes,s5551742,s5551742@bournemouth.ac.uk,UK,,,,,,September,27,2001,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,Yes,Coeliacs disease,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Grammar School,Grammar School,No,Yes,Yes,No,7.5,No,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",11,19136,ABC
+03/01/2024 23:20,03/01/2024 23:35,IP Address,81.101.23.203,100,944,TRUE,03/01/2024 23:36,R_8iIldl0TdQmE9Ff,,,,,50.8345,-0.186,anonymous,EN,Yes,s5646398,s5646398@bournemouth.ac.uk,UK,,,,,,June,23,2004,Female,Single (never married),,,"Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",,,,Some University but no degree,Student,Psychology major,Right,No,,No,,Others,Bengali,Yes,90,Bengali,0,,0,,0,,0,,0,,0,,0,,0,,0,,English,English,English,English,State,State,State,No,Yes,No,Yes,6,No,No,Yes,No,No,,No,"Less than 20,000 pounds",8,20074,ACB
+26/01/2024 3:04,26/01/2024 3:11,IP Address,86.132.134.156,100,444,TRUE,26/01/2024 3:11,R_2lsiTiNslAIGgbd,,,,,51.2604,-1.0825,anonymous,EN,Yes,s5611351,s5611351@bournemouth.ac.uk,UK,,,,,,March,17,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology Undergraduate Degree,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,Public School,Public School,Public School ,Yes,Yes,No,No,8.5,No,No,Yes,No,No,,,"60,000-99,999 pounds",11,19873,BCA
+26/01/2024 3:14,26/01/2024 3:18,IP Address,86.132.134.156,100,231,TRUE,26/01/2024 3:18,R_5IRxXoP5oWZA1PP,,,,,51.2604,-1.0825,anonymous,EN,Yes,s5611351,s5611351@bournemouth.ac.uk,UK,,,,,,March,17,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology Undergraduate Degree,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Public School,Public School,Yes,Yes,No,No,8.5,No,No,Yes,No,No,,,"60,000-99,999 pounds",11,19873,BAC
+27/01/2024 2:06,27/01/2024 2:09,IP Address,31.205.201.217,100,213,TRUE,27/01/2024 2:09,R_1PiyF3nE0erj6Fz,,,,,51.5113,-0.2714,anonymous,EN,Yes,s5647100,s5647100@bournemouth.ac.uk,UK,,,,,,December,1,2004,Female,Single (never married),White,,,,,,Vocational or Similar,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,No,No,7.5,No,Yes,Yes,Yes,No,,"Yes, mother only","20,000-39,999 pounds",11,20084,BAC
+27/01/2024 23:40,27/01/2024 23:45,IP Address,31.205.201.217,100,293,TRUE,27/01/2024 23:45,R_29c3ixcafffFzi1,,,,,51.5113,-0.2714,anonymous,EN,Yes,s5647100,s5647100@bournemouth.ac.uk,UK,,,,,,December,1,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,BSc Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Public School,Public School,No,Yes,No,No,7,No,Yes,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",10,20084,CBA
+28/01/2024 17:32,28/01/2024 17:46,IP Address,86.26.229.36,100,832,TRUE,28/01/2024 17:46,R_2qyU9YuhknbLNHx,,,,,50.7654,-1.9063,anonymous,EN,Yes,s5543255,s5543255@bournemouth.ac.uk,Europe,,,,,,February,20,1987,Female,Single (never married),White,,,,,,University Bachelors Degree,Employed part time (up to 39 hours per week),Cognitive psychology,Right,No,,No,,Others,Bulgarian,Yes,60,English,,,,,,,,,,,,,,,,,,,Bulgarian,Bulgarian,Bulgarian,Bulgarian,State school,State school,State school,Yes,Yes,No,No,5.5,No,Yes,Yes,No,No,,No,"Less than 20,000 pounds",8,19238,BCA
+31/01/2024 1:28,31/01/2024 1:40,IP Address,109.175.195.110,100,683,TRUE,31/01/2024 1:40,R_3GVU4hbVOSD9YdR,,,,,50.745,-1.8524,anonymous,EN,Yes,s5641490,s5641490@Bournemouth.ac.uk,UK,,,,,,November,25,2001,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,faith private,faith private,Yes,No,Yes,Yes,3,Yes,Yes,Yes,Yes,Yes,memory ,No,"20,000-39,999 pounds",14,20208,BCA
+31/01/2024 5:53,31/01/2024 6:01,IP Address,109.175.195.105,100,449,TRUE,31/01/2024 6:01,R_2CQG6GjwTuPos2t,,,,,50.745,-1.8524,anonymous,EN,Yes,s5641490,s5641490@Bournemouth.ac.uk,UK,,,,,,November,25,2001,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,faith private,faith private,Yes,No,Yes,Yes,3,Yes,Yes,Yes,Yes,Yes,memory,No,"20,000-39,999 pounds",14,20208,ABC
+01/02/2024 17:23,01/02/2024 17:34,IP Address,31.205.212.44,100,697,TRUE,01/02/2024 17:34,R_4uVh2FOF97pOAST,,,,,50.745,-1.8524,anonymous,EN,Yes,s5620989,s5620989@bournemouth.ac.uk,UK,,,,,,June,26,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,state schools,state schools,state schools,No,Yes,No,Yes,4.5,No,Yes,No,Yes,No,,,"40,000-59,999 pounds",12,19984,ACB
+01/02/2024 18:31,01/02/2024 18:36,IP Address,194.80.64.50,100,314,TRUE,01/02/2024 18:36,R_48BRTu7TllHdcde,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5418116,ejtanner@virginmedia.com,UK,,,,,,September,18,1999,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English ,English ,state school,state school ,state school ,Yes,Yes,No,No,9,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",9,18824,ACB
+01/02/2024 19:30,01/02/2024 19:38,IP Address,86.8.185.32,100,439,TRUE,01/02/2024 19:38,R_7c2Cpi9nkMFAuIv,,,,,50.731,-1.953,anonymous,EN,Yes,001161384,millieblackwell166@icloud.com,UK,,,,,,November,22,2002,Female,Single (never married),White,,,,,,Completed Secondary School,Employed part time (up to 39 hours per week),Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,Yes,No,7,No,No,No,Yes,No,,"Yes, mother only","40,000-59,999 pounds",10,19377,CBA
+02/02/2024 18:45,02/02/2024 18:54,IP Address,86.178.17.255,100,527,TRUE,02/02/2024 18:54,R_6pYWbbSu7GjCWzI,,,,,50.9469,-1.4112,anonymous,EN,Yes,s5610289,s5610289@bournemouth.ac.uk,UK,,,,,,October,18,2003,Female,Single (never married),White,,,,,,Vocational or Similar,Unable to work,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public ,private ,private ,Yes,No,Yes,Yes,8,Yes,Yes,Yes,No,No,,"Yes, father only","20,000-39,999 pounds",14,19855,BCA
+02/02/2024 18:48,02/02/2024 18:55,IP Address,84.65.87.161,100,449,TRUE,02/02/2024 18:55,R_2LYXSWQz0Hu6oaU,,,,,51.4648,-0.0373,anonymous,EN,Yes,s5647146,s5647146@bournemouth.ac.uk,UK,,,,,,November,1,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,public scool,Yes,Yes,No,No,7.5,No,No,Yes,Yes,No,,No,"20,000-39,999 pounds",8,20085,BAC
+02/02/2024 18:56,02/02/2024 19:18,IP Address,31.205.4.221,100,1270,TRUE,02/02/2024 19:18,R_3naWTyTnLtiB7nX,,,,,50.745,-1.8524,anonymous,EN,Yes,s5612429,s5612429@bournemouth.ac.uk,UK,,,,,,September,29,2004,Female,Single (never married),White,,,,,,Some University but no degree,Unemployed and currently looking for work,Cyberpsychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English,English,public school,public school,public school,No,Yes,Yes,No,7,No,Yes,Yes,Yes,No,,,"60,000-99,999 pounds",13,19884,ABC
+02/02/2024 19:56,02/02/2024 20:03,IP Address,86.18.212.209,100,403,TRUE,02/02/2024 20:03,R_51NVnWgN7tApOzD,,,,,50.731,-1.953,anonymous,EN,Yes,S5311292,S5311292@bournemouth.ac.uk,UK,,,,,,October,13,2000,Female,Single (never married),White,,,,,,Vocational or Similar,Employed part time (up to 39 hours per week),psychology with counselling,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English ,free school,public school,college,Yes,Yes,No,No,4.5,No,Yes,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",9,18745,BAC
+02/02/2024 20:01,02/02/2024 20:10,IP Address,194.80.64.50,100,526,TRUE,02/02/2024 20:10,R_5HzgoL6Ko3BNdNF,,,,,50.7519,-1.8706,anonymous,EN,Yes,S5612978,s5612978@bournemouth.ac.uk,UK,,,,,,January,15,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Counselling,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,Yes,No,8,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",9,19890,ACB
+02/02/2024 20:16,02/02/2024 20:34,IP Address,86.11.71.240,100,1123,TRUE,02/02/2024 20:34,R_2aFZf0cP0IGCtCE,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5429958,s5429958@bournemouth.ac.uk,UK,,,,,,November,17,1999,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with counselling ,Left,Yes,PTSD,No,,English,,Yes,25,french ,,,,,,,,,,,,,,,,,,,english ,english ,english ,english ,public ,public ,public ,Yes,Yes,Yes,No,9,Yes,Yes,Yes,Yes,Yes,memory ,No,"Less than 20,000 pounds",13,19475,CAB
+02/02/2024 20:39,02/02/2024 20:50,IP Address,194.80.64.51,100,671,TRUE,02/02/2024 20:50,R_23DT5I38ZZhIm2Z,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5618947,s5618947@bournemouth.ac.uk,UK,,,,,,June,20,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english ,english ,english ,english ,private ,public ,private,Yes,Yes,Yes,Yes,6,No,No,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",10,19966,CAB
+02/02/2024 20:58,02/02/2024 21:07,IP Address,31.205.201.200,100,534,TRUE,02/02/2024 21:07,R_7jTos0acSedhGfL,,,,,50.745,-1.8524,anonymous,EN,Yes,s5607387,liyamathew088@gmail.com,UK,,,,,,April,12,2005,Female,"Married, or in a domestic partnership",,,"Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",,,,Some University but no degree,Student,bsc psychology with counselling,Right,No,,No,,Others,malayalam ,Yes,100,english,75,malayalam,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,No,No,8,No,Yes,Yes,Yes,No,,"Yes, mother only","60,000-99,999 pounds",12,19815,CAB
+02/02/2024 22:08,02/02/2024 22:15,IP Address,86.4.78.238,100,413,TRUE,02/02/2024 22:15,R_8IgXPN1M9czvGOw,,,,,50.7572,-1.8955,anonymous,EN,Yes,s5505525,s5505525@bournemouth.ac.uk,UK,,,,,,January,27,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State School,Grammar School,Grammar School,No,Yes,No,No,6.5,No,Yes,Yes,Yes,No,,,"More than 100,000 pounds",12,19506,BCA
+02/02/2024 22:11,02/02/2024 22:17,IP Address,31.205.36.110,100,369,TRUE,02/02/2024 22:17,R_4ZPTkBx5Sovkx6V,,,,,50.745,-1.8524,anonymous,EN,Yes,s5608965,ellyannfrost@gmail.com,UK,,,,,,November,24,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english/ arabic,english,english,english / sometimes arabic,international school largely english,english,english,Yes,Yes,No,Yes,4,No,Yes,Yes,No,No,,No,"60,000-99,999 pounds",9,19842,ACB
+02/02/2024 23:27,02/02/2024 23:41,IP Address,109.175.195.77,100,832,TRUE,02/02/2024 23:41,R_5JCafRwxUn22IVi,,,,,50.745,-1.8524,anonymous,EN,Yes,s5621797,s5621797@bournemouth.ac.uk,UK,,,,,,June,17,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,Yes,6,No,No,Yes,Yes,No,,No,"40,000-59,999 pounds",8,19992,ACB
+02/02/2024 23:44,02/02/2024 23:47,IP Address,62.255.15.82,100,205,TRUE,02/02/2024 23:47,R_2eiG82w9hMIfkOd,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5506305,s5506305@bournemouth.ac.uk,UK,,,,,,December,1,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State,State,State,No,Yes,Yes,Yes,7.5,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",9,19233,ABC
+02/02/2024 23:48,02/02/2024 23:51,IP Address,62.255.15.82,100,166,TRUE,02/02/2024 23:51,R_2Bz5FLJSKSETNKh,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5506305,s5506305@bournemouth.ac.uk,UK,,,,,,December,1,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,No,Yes,Yes,Yes,7.5,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",9,19233,ACB
+03/02/2024 0:15,03/02/2024 0:24,IP Address,62.255.15.82,100,560,TRUE,03/02/2024 0:24,R_8pMgQBKDaCRS2Oi,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5504300,s5504300@bournemouth.ac.uk,UK,,,,,,June,9,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,state school,state school,state school,No,Yes,No,No,8.5,No,Yes,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",8,19317,BAC
+03/02/2024 2:33,03/02/2024 2:38,IP Address,31.205.36.56,100,321,TRUE,03/02/2024 2:38,R_2ByXupPZk72n0n0,,,,,50.745,-1.8524,anonymous,EN,Yes,s5601263,meganlilyhornby@hotmail.co.uk,UK,,,,,,July,31,2003,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Right,No,,Yes,"N/A (Hip displaysia, not brain development)",English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Private,State/ Public,State/ Public,Yes,Yes,Yes,Yes,6,No,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",13,19767,CBA
+03/02/2024 4:18,03/02/2024 4:31,IP Address,2.217.149.202,100,799,TRUE,03/02/2024 4:31,R_1fwWxgVbF1oaPm5,,,,,51.6485,-0.7801,anonymous,EN,Yes,5510781,s5510781@bournemouth.ac.uk,UK,,,,,,November,24,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,Yes,Yes,Yes,Yes,6.5,No,Yes,Yes,Yes,No,,"Yes, mother only","60,000-99,999 pounds",14,19250,BCA
+03/02/2024 19:02,03/02/2024 19:12,IP Address,5.66.230.197,100,596,TRUE,03/02/2024 19:12,R_2omGgGQnkjmFmkp,,,,,50.9469,-1.4112,anonymous,EN,Yes,s5509915,s5509915@bournemouth.ac.uk,UK,,,,,,June,22,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,Yes,Spinal muscular atrophy,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school/home school,Public school,Yes,Yes,No,Yes,7,No,Yes,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",12,19268,BCA
+03/02/2024 20:19,03/02/2024 20:30,IP Address,81.135.58.22,100,644,TRUE,03/02/2024 20:30,R_2qP3mzbAbyJe8n0,,,,,51.4708,-2.0822,anonymous,EN,Yes,s5432703,s5432703@bournemouth.ac.uk,UK,,,,,,August,16,2002,Male,Single (never married),,,,Mixed two or more ethnic groups,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English ,English ,public school,public school,public school,No,Yes,No,No,8,No,No,Yes,No,No,,"Yes, mother only","60,000-99,999 pounds",8,19694,CAB
+04/02/2024 0:38,04/02/2024 0:49,IP Address,86.24.241.168,100,673,TRUE,04/02/2024 0:49,R_7qgXKo4Wy389iqy,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5510081,hayleydsb@gmail.com,UK,,,,,,January,17,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,Englsih,faith school,State school,State school,No,Yes,No,Yes,7,No,No,Yes,No,No,,,"20,000-39,999 pounds",11,19152,ACB
+04/02/2024 1:26,04/02/2024 1:38,IP Address,81.157.10.230,100,682,TRUE,04/02/2024 1:38,R_3F8h3mgzrJM4SxH,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5523025,s5523025@bournemouth.ac.uk,UK,,,,,,February,5,2004,Male,Single (never married),White,,,,,,Completed Secondary School,Student,BS,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,international school (private),international school (private),"international school (private, religious)",Yes,Yes,Yes,Yes,7,No,Yes,No,No,No,,"Yes, both parents","40,000-59,999 pounds",8,19542,ACB
+04/02/2024 6:17,04/02/2024 6:21,IP Address,86.170.133.161,100,231,TRUE,04/02/2024 6:21,R_2e2pfFGTO0Uu1dq,,,,,51.4708,-2.0822,anonymous,EN,Yes,s5415193,S5415193@bournemouth.ac.uk,UK,,,,,,June,28,2003,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with Counselling,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public school,public school,public school,No,Yes,No,Yes,8,No,Yes,Yes,No,No,,"Yes, both parents","40,000-59,999 pounds",8,18721,BCA
+04/02/2024 7:13,04/02/2024 7:24,IP Address,82.15.231.80,100,664,TRUE,04/02/2024 7:24,R_4Egpmqs8IHWLtcI,,,,,50.7334,-1.9246,anonymous,EN,Yes,5511258,s5511258@bournemouth.ac.uk,UK,,,,,,September,13,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English,English,English,state school,state school,state school,No,Yes,No,Yes,6.5,No,No,Yes,Yes,No,,"Yes, father only","60,000-99,999 pounds",10,19205,CAB
+04/02/2024 20:23,04/02/2024 20:36,IP Address,86.27.205.217,100,766,TRUE,04/02/2024 20:36,R_7ffgz5WxwOFjBSt,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5506064,jaidenlynch315@gmail.com,UK,,,,,,March,16,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public schoool,public school,public school,Yes,No,Yes,Yes,5,No,Yes,Yes,Yes,Yes,memory,No,"20,000-39,999 pounds",13,19431,BCA
+05/02/2024 1:13,05/02/2024 1:32,IP Address,87.74.228.97,100,1120,TRUE,05/02/2024 1:32,R_2ydfsmtv27FN2i6,,,,,51.5076,-2.6407,anonymous,EN,Yes,s5505687,scarlettbeck03@gmail.com,UK,,,,,,March,9,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with counselling,Right,Yes,"IBS, PTSD, Anaemic ",No,,English,,No,,,,,,,,,,,,,,,,,,,,,ENGLISH,ENGLISH,ENGLISH,ENGLISH,PUBLIC SCHOOL,PUBLIC SCHOOL,PUBLIC SCHOOL,No,Yes,No,No,8,No,No,Yes,Yes,No,,"Yes, both parents","Less than 20,000 pounds",9,19374,BAC
+05/02/2024 1:25,05/02/2024 1:38,IP Address,92.233.225.15,100,803,TRUE,05/02/2024 1:38,R_1HUOSDOUtLGJIZO,,,,,51.3188,-2.2034,anonymous,EN,Yes,s5550581,s5550581@bournemouth.ac.uk,UK,,,,,,December,4,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,state,state,state,No,Yes,No,Yes,7,No,No,Yes,No,No,,No,"40,000-59,999 pounds",7,19274,BAC
+05/02/2024 2:22,05/02/2024 2:33,IP Address,31.205.3.133,100,684,TRUE,05/02/2024 2:33,R_2iXP0pDDC9WNWM1,,,,,50.745,-1.8524,anonymous,EN,Yes,s5417256,s5417256@bournemouth.ac.uk,UK,,,,,,April,18,2003,Female,Single (never married),,,,,Other (Arab or any others),,Some University but no degree,Student,psychology ,Right,No,,No,,English,,Yes,75,russian ,25,farsi ,,,,,,,,,,,,,,,,,English,English,English ,English ,public ,public ,public ,Yes,Yes,No,No,7.5,No,Yes,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",10,19267,BCA
+05/02/2024 2:47,05/02/2024 2:55,IP Address,31.205.201.210,100,483,TRUE,05/02/2024 2:55,R_1loUU9PYvKg7NrG,,,,,50.745,-1.8524,anonymous,EN,Yes,s5602510,s5602510@bournemouth.ac.uk,UK,,,,,,December,3,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Public School,Public School,Yes,No,Yes,Yes,3.5,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",11,19771,BCA
+05/02/2024 5:00,05/02/2024 5:18,IP Address,109.175.195.108,100,1068,TRUE,05/02/2024 5:18,R_7X1gUKTYZXWPRrz,,,,,50.745,-1.8524,anonymous,EN,Yes,s5623614,s5623614@bournemouth.ac.uk,UK,,,,,,August,12,2002,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology bsc,Left,Yes,depression,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,No,Yes,5,No,Yes,Yes,No,No,,No,"Less than 20,000 pounds",8,20012,CAB
+05/02/2024 5:19,05/02/2024 5:22,IP Address,86.20.208.75,100,201,TRUE,05/02/2024 5:22,R_7D7mgpuzSke75zT,,,,,50.7654,-1.9063,anonymous,EN,Yes,S5508249,max.goubert@icloud.com,UK,,,,,,December,31,2002,Male,Single (never married),White,,,,,,Some University but no degree,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State,State,State,Yes,Yes,No,No,10,No,No,No,No,No,,"Yes, mother only","60,000-99,999 pounds",8,19210,CAB
+05/02/2024 5:25,05/02/2024 5:28,IP Address,86.20.208.75,100,207,TRUE,05/02/2024 5:28,R_55tQUefrsp6Q1EF,,,,,50.7654,-1.9063,anonymous,EN,,,max.goubert@icloud.com,UK,,,,,,December,31,2002,Male,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,No,Yes,No,No,8,No,Yes,Yes,No,No,,"Yes, mother only","60,000-99,999 pounds",8,19210,ABC
+05/02/2024 8:10,05/02/2024 8:20,IP Address,82.4.221.47,100,596,TRUE,05/02/2024 8:20,R_2H2CuqiOfJdDFFT,,,,,50.7334,-1.9246,anonymous,EN,Yes,S5407274,s5407274@bournemouth.ac.uk,UK,,,,,,March,4,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology (BSc) Hons,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public,public,Public,No,Yes,Yes,No,7,No,No,Yes,Yes,No,,"Yes, both parents","More than 100,000 pounds",9,19273,BAC
+26/01/2024 2:25,29/01/2024 18:21,IP Address,86.17.73.221,93,316545,FALSE,05/02/2024 18:21,R_7vcB1c8A1exzyPD,,,,,,,anonymous,EN,Yes,s5524763,s5524763@bournemouth.ac.uk,UK,,,,,,May,31,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,State school,State school,State school,No,Yes,No,Yes,7,No,Yes,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",9,19185,ABC
+05/02/2024 20:14,05/02/2024 20:21,IP Address,86.4.78.238,100,384,TRUE,05/02/2024 20:21,R_8sLKbGfTsSIMxB7,,,,,50.7572,-1.8955,anonymous,EN,Yes,s5401567,s5401567@bournemouth.ac.uk,UK,,,,,,December,9,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation,Left,No,,No,,English,,Yes,35,spanish,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,No,Yes,No,Yes,7.5,No,No,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",8,19494,BCA
+05/02/2024 20:02,05/02/2024 20:27,IP Address,31.205.36.56,100,1476,TRUE,05/02/2024 20:27,R_8GXuBE0jsaP0pb3,,,,,50.745,-1.8524,anonymous,EN,Yes,s5612262,freyalogan2005@icloud.com,UK,,,,,,July,9,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,No,Yes,Yes,Yes,4.5,No,Yes,Yes,Yes,No,,No,"40,000-59,999 pounds",10,19882,ACB
+05/02/2024 20:30,05/02/2024 20:37,IP Address,31.205.211.222,100,473,TRUE,05/02/2024 20:38,R_5FDjbbXBaUbwXee,,,,,50.7177,-2.0008,anonymous,EN,Yes,s5617292,amydeleven@gmail.com,UK,,,,,,November,6,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Public School,Public School,No,Yes,No,No,8,No,No,Yes,No,No,,,"Less than 20,000 pounds",10,19946,ABC
+05/02/2024 20:40,05/02/2024 20:46,IP Address,31.205.36.67,100,366,TRUE,05/02/2024 20:46,R_2pQf66ejdV0sftk,,,,,50.745,-1.8524,anonymous,EN,Yes,s5606798,s6606798@bournemouth.ac.uk,UK,,,,,,December,7,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology With Counselling Undergraduate,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,No,7.5,No,Yes,Yes,Yes,No,,"Yes, father only","Less than 20,000 pounds",10,19808,BCA
+05/02/2024 21:32,05/02/2024 21:40,IP Address,86.8.225.228,100,514,TRUE,05/02/2024 21:41,R_2DI6ydyWnq6U1kX,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5511304,s5511304@bournemouth.ac.uk,UK,,,,,,July,19,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,Yes,Yes,No,Yes,8.5,No,Yes,Yes,Yes,No,,"Yes, father only","Less than 20,000 pounds",12,19146,CBA
+05/02/2024 21:16,05/02/2024 21:49,IP Address,194.80.64.50,100,1945,TRUE,05/02/2024 21:49,R_7ErK9koUoBKiE6N,,,,,50.7519,-1.8706,anonymous,EN,Yes,5507115,s5507115@bournemouth.ac.uk,Europe,,,,,,December,5,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,,Right,No,,Yes,childhood anxiety disorder ,Polish,,Yes,75,polish,,,,,,,,,,,,,,,,,,,polish,English,English,English,private school,private school,private school,Yes,No,Yes,Yes,6,Yes,Yes,Yes,Yes,Yes,,"Yes, both parents","20,000-39,999 pounds",16,19318,BAC
+05/02/2024 21:46,05/02/2024 21:52,IP Address,31.205.4.230,100,371,TRUE,05/02/2024 21:52,R_8liQCC5nFAaKnfk,,,,,50.745,-1.8524,anonymous,EN,Yes,s5623775,jessica2596@icloud.com,UK,,,,,,July,21,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology and counselling,Right,Yes,Borderline personality disorder,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,No,No,7.5,No,No,Yes,No,No,,No,"20,000-39,999 pounds",7,20013,BCA
+05/02/2024 21:48,05/02/2024 21:55,IP Address,86.7.239.155,100,434,TRUE,05/02/2024 21:55,R_2ygVWWdV2w2ntQd,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5540867,s5540867@bournemouth.ac.uk,UK,,,,,,November,25,2001,Female,Single (never married),White,,,,,,Vocational or Similar,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,english,public school,public school,public school,No,Yes,No,Yes,5,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",9,19193,CAB
+05/02/2024 22:24,05/02/2024 22:31,IP Address,31.205.36.80,100,426,TRUE,05/02/2024 22:31,R_14plKP6IdHhxs0W,,,,,50.745,-1.8524,anonymous,EN,Yes,s5608517,caraneve@icloud.com,UK,,,,,,May,23,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state/ sixth form,No,Yes,No,No,7,No,Yes,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",8,19833,ACB
+05/02/2024 22:28,05/02/2024 22:38,IP Address,31.205.201.199,100,576,TRUE,05/02/2024 22:38,R_8F2Q2Fr9IxHV5DD,,,,,50.745,-1.8524,anonymous,EN,Yes,s5621714,s5621714@bournemouth.ac.uk,UK,,,,,,September,15,2003,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,Grammar school,Grammar school,Yes,Yes,No,Yes,8,No,No,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",11,19990,BCA
+05/02/2024 22:52,05/02/2024 22:59,IP Address,194.80.64.251,100,453,TRUE,05/02/2024 22:59,R_2he4kgyKBEesJr3,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5608114,s5608114@bournemouth.ac.uk,UK,,,,,,May,19,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Employed part time (up to 39 hours per week),psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,5,7,10,english,public,public,public,No,No,No,No,7,No,No,Yes,No,No,,No,"60,000-99,999 pounds",7,19829,BAC
+05/02/2024 23:17,05/02/2024 23:21,IP Address,82.132.245.196,100,227,TRUE,05/02/2024 23:21,R_2BaZUhUhK6Yj7r8,,,,,52.4867,-1.8989,anonymous,EN,Yes,s5519818,s551918@bournemouth.ac.uk,UK,,,,,,December,31,2003,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english ,english,public,public,public,No,Yes,No,No,7.5,Yes,No,No,Yes,No,,"Yes, father only","More than 100,000 pounds",9,19505,ABC
+06/02/2024 1:08,06/02/2024 1:14,IP Address,31.205.3.150,100,367,TRUE,06/02/2024 1:14,R_7k4xbnSO0nvsbNe,,,,,50.745,-1.8524,anonymous,EN,Yes,s5514549,s5514549@bournemouth.ac.uk,UK,,,,,,March,24,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,state,state,state,No,Yes,No,No,8,No,No,Yes,No,No,,No,"20,000-39,999 pounds",6,19179,CAB
+06/02/2024 23:11,06/02/2024 23:19,IP Address,31.205.36.58,100,521,TRUE,06/02/2024 23:19,R_4EyDrQQJ7fNXC2w,,,,,50.745,-1.8524,anonymous,EN,Yes,s5639741,s5639741@bournemouth.ac.uk,Europe,,,,,,October,17,2004,Female,Single (never married),White,,,,,,Vocational or Similar,Student,Psychology,Right,No,,No,,English,,Yes,80,Polish,,,,,,,0,,,,,,0,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,No,5,No,No,Yes,Yes,No,,No,"40,000-59,999 pounds",7,20041,CAB
+07/02/2024 0:09,07/02/2024 0:28,IP Address,51.194.240.30,100,1147,TRUE,07/02/2024 0:28,R_7BunFydoq5U0yzv,,,,,50.9661,-1.3348,anonymous,EN,Yes,s5521755,s5521755@bournemouth.ac.uk,Others,South African,,,,,July,3,2003,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology with forensic investigation,Right,No,,No,,English,,Yes,50,French,,,,,,,,,,,,,,,,,,,English,English,English,English,International school,International school,International school,No,Yes,No,No,7,No,No,Yes,No,No,,"Yes, father only","40,000-59,999 pounds",8,19503,BCA
+07/02/2024 2:45,07/02/2024 2:58,IP Address,62.255.15.82,100,738,TRUE,07/02/2024 2:58,R_87HZxZ5veZwLH7i,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5519129,chanelle.evans026@gmail.com,UK,,,,,,January,26,2002,Female,Single (never married),White,,,,,,Prefer not to say,Student,Bachelors degree ,Right,No,,No,,English,,Yes,100,English ,15,Spanish,,,,,,,,,,,,,,,,,English,English,English,English,English,English,English,Yes,Yes,No,Yes,7.5,No,No,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",12,19199,CAB
+07/02/2024 2:45,07/02/2024 3:02,IP Address,62.255.15.82,100,1050,TRUE,07/02/2024 3:02,R_84hGr6wglrSgDK1,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5511283,s5511283@bournemouth.ac.uk,UK,,,,,,December,14,2003,Female,Single (never married),,,"Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",,,,Prefer not to say,Student,"Bachelors degree, Psychology",Right,No,,No,,English,,Yes,100,English,25,French,0,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public schools,No,Yes,No,Yes,6.5,No,No,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",11,19234,ACB
+05/02/2024 22:12,07/02/2024 3:36,IP Address,86.5.66.15,100,105827,TRUE,07/02/2024 3:36,R_5aYbSJdkBDZrmDu,,,,,50.7177,-2.0008,anonymous,EN,Yes,s5505122,s5505122@bournemouth.ac.uk,UK,,,,,,September,23,2003,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,No,9,No,No,Yes,Yes,No,,No,"Less than 20,000 pounds",7,19135,BCA
+07/02/2024 6:19,07/02/2024 6:33,IP Address,86.24.140.32,100,803,TRUE,07/02/2024 6:33,R_1wcoCxCKOe6Qak1,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5523203,s5523203@bournemouth.ac.uk,UK,,,,,,September,25,2002,Male,Single (never married),White,,,,,,University Bachelors Degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,grammar school,grammar school,No,Yes,No,No,9,No,Yes,Yes,Yes,No,,"Yes, mother only","20,000-39,999 pounds",10,19355,BCA
+07/02/2024 3:26,07/02/2024 6:49,IP Address,94.2.6.106,100,12193,TRUE,07/02/2024 6:49,R_3q2ZLxqaMajhEiC,,,,,50.9166,-1.2678,anonymous,EN,Yes,s5548629,s5548629@bournemouth.ac.uk,UK,,,,,,November,18,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,Christian School ,State school,State school ,No,Yes,No,Yes,6.5,No,Yes,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",11,19294,CAB
+07/02/2024 6:45,07/02/2024 6:49,IP Address,86.19.140.197,100,277,TRUE,07/02/2024 6:49,R_4majltHf4cBCKeJ,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5507731,s5507731@bournemouth.ac.uk,UK,,,,,,October,8,2003,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English ,state school,state school,state school,No,Yes,No,No,7,No,No,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",8,19310,ACB
+07/02/2024 6:46,07/02/2024 6:53,IP Address,31.205.212.21,100,460,TRUE,07/02/2024 6:53,R_71armppWP1o4Xi0,,,,,51.8659,-2.2059,anonymous,EN,Yes,s5548506,s5548506@bournemouth.ac.uk,UK,,,,,,September,4,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English ,English ,State,State,State,No,Yes,No,No,8,No,Yes,Yes,Yes,No,,No,"40,000-59,999 pounds",8,19760,CBA
+07/02/2024 6:06,07/02/2024 7:29,IP Address,86.21.250.117,100,4979,TRUE,07/02/2024 7:29,R_8IatuQNSYK0LFvo,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5403460,s5403460@bournemouth.ac.uk,UK,,,,,,April,10,2003,Non-binary/ third gender,Single (never married),White,,,,,,Some University but no degree,Unable to work,Psychology,Right,Yes,"Autism, depression, anxiety",No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,Private school,Private school,No,Yes,No,No,6,Yes,Yes,Yes,No,Yes,"Languages, writing","Yes, father only","Less than 20,000 pounds",11,19206,BAC
+07/02/2024 14:57,07/02/2024 15:15,IP Address,92.3.140.231,100,1087,TRUE,07/02/2024 15:15,R_2cYZ9HXIhf08uFt,,,,,50.9051,-1.3655,anonymous,EN,Yes,s5430686,mcaminon97@gmail.com,Europe,,,,,,October,28,1997,Female,Single (never married),White,,,,,,Completed Secondary School,Employed full time (40 or more hours per week),psychology ,Right,No,,No,,Spanish,,Yes,80,english,,,,,,,,,,,,,,,,,,,spanish,spanish,spanish,spanish,private school,private school,state school ,Yes,Yes,No,No,6.5,No,Yes,Yes,No,No,,"Yes, father only","40,000-59,999 pounds",10,19029,BCA
+07/02/2024 17:47,07/02/2024 17:54,IP Address,109.175.195.105,100,403,TRUE,07/02/2024 17:54,R_4oFpGbNhZIdu0EB,,,,,50.745,-1.8524,anonymous,EN,Yes,s5611120,laurenevans8@virginmedia.com,UK,,,,,,May,10,2005,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Completed Secondary School,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,private school,Yes,No,Yes,Yes,3,Yes,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",14,19867,CAB
+07/02/2024 18:29,07/02/2024 18:37,IP Address,90.240.18.250,100,440,TRUE,07/02/2024 18:37,R_1YgKQK8MWdlf6Ru,,,,,52.4867,-1.8989,anonymous,EN,Yes,s5077364,s5077364@bournemouth.ac.uk,UK,,,,,,December,16,1983,Male,"Married, or in a domestic partnership",White,,,,,,Some University but no degree,Student,Psychology with Counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English ,English ,State School,State School,State School,No,Yes,No,Yes,8,Yes,No,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",9,19423,ABC
+07/02/2024 20:06,07/02/2024 20:14,IP Address,194.80.64.50,100,432,TRUE,07/02/2024 20:14,R_5DeD1aXN9uvS93O,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5607362,s5607362@bournemouth.ac.uk,UK,,,,,,June,13,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with counselling ,Right,No,,No,,English,,Yes,45,French ,10,Spanish ,,,,,,,,,,,,,,,,,English,English,English,English,public,public,public,No,Yes,No,Yes,7,No,Yes,Yes,No,No,,No,"60,000-99,999 pounds",9,19814,ABC
+07/02/2024 20:19,07/02/2024 20:23,IP Address,31.205.201.196,100,201,TRUE,07/02/2024 20:23,R_86APRUZ61s3j74l,,,,,50.745,-1.8524,anonymous,EN,Yes,s5607989,s5607989@bournemouth.ac.uk,UK,,,,,,June,5,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,Yes,Yes,No,Yes,6.5,No,Yes,Yes,No,No,,No,"More than 100,000 pounds",9,19826,CAB
+07/02/2024 20:23,07/02/2024 20:36,IP Address,78.150.189.4,100,820,TRUE,07/02/2024 20:36,R_75npyRy9DRdSLx7,,,,,50.9051,-1.3655,anonymous,EN,Yes,s5548622,s5548622@bournemouth.ac.uk,UK,,,,,,May,29,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,Boarding school,Boarding school ,No,Yes,No,Yes,6,No,Yes,Yes,Yes,No,,"Yes, both parents","Less than 20,000 pounds",10,19354,CBA
+07/02/2024 20:59,07/02/2024 21:07,IP Address,86.5.64.82,100,472,TRUE,07/02/2024 21:07,R_2vITfrGQyM1Ow01,,,,,50.7177,-2.0008,anonymous,EN,Yes,s5646224,s5646224@bournemouth.ac.uk,UK,,,,,,August,2,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Counselling,Right,Yes,Anxiety and OCD,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,No,No,8,No,No,Yes,No,No,,No,"Less than 20,000 pounds",7,20067,BCA
+07/02/2024 22:53,07/02/2024 23:06,IP Address,31.205.36.117,100,788,TRUE,07/02/2024 23:06,R_8lXp0ZOKSPCEa8F,,,,,50.745,-1.8524,anonymous,EN,Yes,s5618353,s5618353@bournemouth.ac.uk,UK,,,,,,January,13,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Employed part time (up to 39 hours per week),Psychology,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public school,public school,public school,No,Yes,No,No,9,No,No,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",7,19961,BCA
+07/02/2024 23:48,07/02/2024 23:57,IP Address,90.199.214.34,100,522,TRUE,07/02/2024 23:57,R_3mtebyNx9bVyfqp,,,,,50.8784,-1.8749,anonymous,EN,Yes,s5537514,s5537514@bournemouth.ac.uk,Europe,,,,,,August,6,1996,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology,Right,No,,No,,Others,Estonian,Yes,90,english,20,russian,,,,,,,,,,,,,,,,,estonian,estonian,estonian,estonian,public school,public school,public school,Yes,Yes,No,No,6,No,Yes,Yes,No,No,,"Yes, both parents","Less than 20,000 pounds",9,19631,CBA
+08/02/2024 5:38,08/02/2024 5:46,IP Address,2.122.139.57,100,454,TRUE,08/02/2024 5:46,R_7Q4IIEF1u8J2Nod,,,,,50.8696,-1.3091,anonymous,EN,Yes,5535800,s5535800@bournemouth.ac.uk,UK,,,,,,November,26,1998,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,Yes,Diagnosed in 2016 with Generalised Anxiety Disorder that is still on-going. ,No,,English,,Yes,50,French,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,Public School,Public School,Yes,Yes,Yes,Yes,4.5,No,Yes,Yes,Yes,No,,No,"40,000-59,999 pounds",13,19326,ABC
+08/02/2024 6:17,08/02/2024 6:30,IP Address,82.21.156.175,100,767,TRUE,08/02/2024 6:30,R_2sTLwdFVsbbEIEm,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5502592,s5502592@bournemouth.ac.uk,UK,,,,,,January,7,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,Yes,"borderline personality didorder, epilepsy",No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,No,Yes,No,No,9.5,No,No,Yes,No,No,,No,"40,000-59,999 pounds",7,19127,BAC
+08/02/2024 17:03,08/02/2024 17:07,IP Address,194.80.64.51,100,197,TRUE,08/02/2024 17:07,R_2YXgOzXwKnj2hTH,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5608114,s5608114@bournemouth.ac.uk,UK,,,,,,May,19,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,pass,7,10,english,public,public,public,No,Yes,No,No,7,No,No,No,Yes,No,,No,"60,000-99,999 pounds",6,19829,BAC
+01/02/2024 17:21,01/02/2024 17:22,IP Address,194.80.64.51,7,37,FALSE,08/02/2024 17:22,R_7euzSSWkwj4UPeN,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19229,
+08/02/2024 17:23,08/02/2024 17:28,IP Address,104.28.40.133,100,321,TRUE,08/02/2024 17:28,R_7lY4HeFAtjrHED6,,,,,51.5088,-0.093,anonymous,EN,Yes,S5527227,S5527227@bournemouth.ac.uk,UK,,,,,,October,13,2002,Non-binary/ third gender,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology with forensics ,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school (moved 8 times),Public school,Public school,No,Yes,Yes,Yes,9,No,Yes,Yes,Yes,Yes,Memory,No,"Less than 20,000 pounds",9,19521,ACB
+08/02/2024 17:33,08/02/2024 17:40,IP Address,194.80.64.50,100,408,TRUE,08/02/2024 17:40,R_8TYTPgWcg9yoXVs,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5507458,s5507458@bournemouth.ac.uk,UK,,,,,,June,2,2004,Female,Single (never married),,,"Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",,,,Vocational or Similar,Student,Psychology with Forensic Investigation,Right,Yes,Anxiety and Depression,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,Yes,6,No,No,Yes,Yes,Yes,memory,,"Less than 20,000 pounds",14,19493,CBA
+08/02/2024 19:17,08/02/2024 19:25,IP Address,82.6.158.43,100,503,TRUE,08/02/2024 19:25,R_5ySUmea7mXUyKnD,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5408183,s5408183@bournemouth.ac.uk,UK,,,,,,February,27,2003,Male,Single (never married),White,,,,,,Completed Secondary School,Student,psychology with counselling,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,Yes,Yes,Yes,No,7,Yes,No,Yes,Yes,Yes,"dyslexia, adhd","Yes, both parents","20,000-39,999 pounds",10,18826,ACB
+08/02/2024 19:27,08/02/2024 19:33,IP Address,94.2.6.106,100,411,TRUE,08/02/2024 19:33,R_6IPOoPWCXd83FJl,,,,,50.9166,-1.2678,anonymous,EN,Yes,s5512050,georgiathompson324@gmail.com,UK,,,,,,February,3,2004,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,No,Yes,8.5,Yes,No,Yes,No,No,,No,"Less than 20,000 pounds",8,19543,CAB
+08/02/2024 19:19,08/02/2024 19:42,IP Address,90.255.78.190,100,1364,TRUE,08/02/2024 19:42,R_2Hcu83rWJ5xOMjg,,,,,51.4878,-2.6246,anonymous,EN,Yes,s5611961,s5611961@bournemouth.ac.uk,Others,Brazilian ,,,,,June,5,2003,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Vocational or Similar,Employed part time (up to 39 hours per week),Psychology,Right,No,,No,,Portugese,,Yes,25,Italian,20,Spanish,100,English,,,,,,,,,,,,,,,Portuguese,Portuguese,Portuguese,Portuguese,Private school,Private school,Private school,No,Yes,No,No,10,No,No,Yes,Yes,No,,No,"40,000-59,999 pounds",7,19880,BCA
+08/02/2024 19:46,08/02/2024 19:54,IP Address,194.80.64.51,100,523,TRUE,08/02/2024 19:54,R_5j6x0BjIG8aoNZA,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5515488,s5515488@bournemouth.ac.uk,UK,,,,,,May,18,2004,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English ,English,Public,Public,Public,No,Yes,Yes,No,9.5,No,No,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",8,19137,BAC
+08/02/2024 19:51,08/02/2024 19:57,IP Address,86.27.232.106,100,376,TRUE,08/02/2024 19:57,R_2TuWM0Xq7DO8nOV,,,,,50.7654,-1.9063,anonymous,EN,Yes,s5619763,caitlin.l.baxter@gmail.com,Europe,,,,,,October,15,2003,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,learning centre,Yes,Yes,Yes,Yes,8,No,No,Yes,Yes,No,,"Yes, father only","20,000-39,999 pounds",11,19974,BAC
+08/02/2024 21:14,08/02/2024 21:20,IP Address,194.80.64.50,100,388,TRUE,08/02/2024 21:20,R_5JsExQKL6kgNsLa,,,,,50.7153,-1.8719,anonymous,EN,Yes,S5517441,S5517441@bournemouth.ac.uk,UK,,,,,,October,21,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,Yes,No,Yes,Yes,5,No,Yes,Yes,No,No,,"Yes, father only","60,000-99,999 pounds",13,19281,CAB
+08/02/2024 22:29,08/02/2024 22:39,IP Address,194.80.64.50,100,594,TRUE,08/02/2024 22:39,R_236UERJ4z1tCjvg,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5409987,s5409987@bournemouth.ac.uk,UK,,,,,,March,31,2003,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology,Right,Yes,ASD,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state ,state,state,No,Yes,Yes,No,5,No,Yes,Yes,No,No,,"Yes, father only","40,000-59,999 pounds",11,19125,BAC
+08/02/2024 22:21,08/02/2024 23:01,IP Address,194.80.64.51,100,2381,TRUE,08/02/2024 23:01,R_6Cmh47LT9SkAlkR,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5620031,s5620031@bournemouth.ac.uk,UK,,,,,,October,26,2003,Male,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation ,Left,Yes,Aspergers and ADHD,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English ,English,English,English,English ,Yes,No,No,Yes,4,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",10,19977,ACB
+09/02/2024 2:10,09/02/2024 2:17,IP Address,31.94.2.149,100,389,TRUE,09/02/2024 2:17,R_69dhTCDU6ePfZ8t,,,,,51.4623,-2.5502,anonymous,EN,Yes,s5421235,jasmine.radford@hotmail.co.uk,UK,,,,,,January,24,2001,Female,Single (never married),White,,,,,,Some University but no degree,Employed full time (40 or more hours per week),Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,Yes,Yes,6,No,No,Yes,No,No,,"Yes, both parents","20,000-39,999 pounds",9,19308,CBA
+09/02/2024 7:29,09/02/2024 7:36,IP Address,5.151.91.105,100,407,TRUE,09/02/2024 7:36,R_1gp86PxjaRiFwHd,,,,,50.745,-1.8524,anonymous,EN,Yes,5509124,s5509124@bournemouth.ac.uk,UK,,,,,,January,16,2004,Non-binary/ third gender,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation,Right,Yes,"PTSD, ADHD, ASD ",No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,International private ,International private,Private boarding ,No,Yes,No,No,7,No,Yes,Yes,No,Yes,Face recognition,"Yes, mother only","40,000-59,999 pounds",11,19550,BCA
+02/02/2024 17:55,02/02/2024 17:55,IP Address,109.175.195.76,5,10,FALSE,09/02/2024 17:55,R_6r0lIMzPrhvbfR2,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19815,
+09/02/2024 19:32,09/02/2024 19:38,IP Address,51.198.54.238,100,374,TRUE,09/02/2024 19:38,R_28IJqkk0n71kfNn,,,,,50.9051,-1.3655,anonymous,EN,Yes,s5504328,s5504328@bournemouth.ac.uk,Others,american,,,,,February,22,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Bsc (Hons) Psychology with Forensic Investigation,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,American public school,American public school,American Public school,Yes,No,Yes,Yes,5,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",10,19517,BCA
+09/02/2024 23:28,09/02/2024 23:35,IP Address,51.194.240.30,100,427,TRUE,09/02/2024 23:35,R_28ArWVEwV3WaE9o,,,,,50.9661,-1.3348,anonymous,EN,Yes,s5506470,loisroulson@gmail.com,UK,,,,,,March,31,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,state school,state school,state school,Yes,No,Yes,Yes,4,No,Yes,Yes,No,Yes,"Sense of direction, ability to follow directions, ability to cognitively estimate measurements (e.g. 4 kilometres)",No,"20,000-39,999 pounds",12,19533,CBA
+09/02/2024 23:45,09/02/2024 23:48,IP Address,51.146.223.109,100,189,TRUE,09/02/2024 23:48,R_8E9Zd9BO5F7nw48,,,,,50.9469,-1.4112,anonymous,EN,Yes,s5527227,s5527227@bournemouth.ac.uk,UK,,,,,,October,13,2002,Non-binary/ third gender,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology with forensic investigation ,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,enlish,public,public,public,No,Yes,Yes,No,6.5,No,Yes,Yes,Yes,Yes,memory,No,"Less than 20,000 pounds",8,19521,BCA
+03/02/2024 1:12,03/02/2024 1:13,IP Address,86.27.207.149,5,76,FALSE,10/02/2024 1:13,R_8FKee89cOhRoSU0,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19152,
+10/02/2024 1:54,10/02/2024 2:00,IP Address,5.151.177.153,100,308,TRUE,10/02/2024 2:00,R_3GzBnBt4uFhmH8B,,,,,50.745,-1.8524,anonymous,EN,Yes,s5423558,emilygreavess@hotmail.com,UK,,,,,,October,27,2001,Female,Single (never married),White,,,,,,Vocational or Similar,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public school,public school,public school,No,Yes,No,Yes,5,No,Yes,Yes,No,No,,No,"Less than 20,000 pounds",8,18601,CBA
+10/02/2024 3:30,10/02/2024 3:36,IP Address,86.13.101.166,100,349,TRUE,10/02/2024 3:36,R_2OMIDSxUD6ku2kw,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5511312,s5511312@bournemouth.ac.uk,UK,,,,,,March,27,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with forensic investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,english,english,english,faith schools,state schools,state schools,Yes,Yes,Yes,Yes,4,No,Yes,Yes,Yes,No,,"Yes, mother only","60,000-99,999 pounds",14,19525,CAB
+10/02/2024 7:39,10/02/2024 7:46,IP Address,31.205.201.220,100,415,TRUE,10/02/2024 7:46,R_3OUCWfJZbUmHBwv,,,,,50.745,-1.8524,anonymous,EN,Yes,s5609209,tomspear005@gmail.com,UK,,,,,,February,26,2005,Male,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with counselling,Right,Yes,OCD,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public/independent after year 4,Independent,Independent,No,Yes,Yes,No,9,No,Yes,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",10,19844,CBA
+10/02/2024 20:55,10/02/2024 21:04,IP Address,81.103.45.136,100,544,TRUE,10/02/2024 21:04,R_5FRsxsOVM733Wei,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5526632,s5526632@bournemouth.ac.uk,UK,,,,,,August,31,2003,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology with Forensic investigation,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,Public ,Public ,Public ,Yes,Yes,No,No,7,No,Yes,Yes,Yes,No,,"Yes, father only","60,000-99,999 pounds",10,19489,ACB
+11/02/2024 0:17,11/02/2024 0:28,IP Address,84.9.87.247,100,637,TRUE,11/02/2024 0:28,R_2NFGjL0oLnQbniX,,,,,51.5026,-0.066,anonymous,EN,Yes,s5317479,s5317479@bournemouth.ac.uk,UK,,,,,,October,19,2001,Female,Single (never married),,,"Asian (Indian, Pakistani, Bangladeshi, Chinese, any other Asian background)",,,,Some University but no degree,Student,Psychology with counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,No,Yes,4.5,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",9,20231,ABC
+11/02/2024 0:50,11/02/2024 0:54,IP Address,31.205.36.69,100,234,TRUE,11/02/2024 0:54,R_231YiEmQJp7Fipd,,,,,50.745,-1.8524,anonymous,EN,Yes,S5603691,S5603691@bournemouth.ac.uk,UK,,,,,,August,8,2005,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,Yes,75,Greek,,,,,,,,,,,,,,,,,,,English,English,English,English,Public,Public,Public ,Yes,Yes,Yes,Yes,6,No,Yes,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",13,19777,BCA
+11/02/2024 1:27,11/02/2024 1:33,IP Address,82.18.88.209,100,339,TRUE,11/02/2024 1:33,R_4k2inyC6MnuUAzT,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5505197,s5505197@bournemouth.ac.uk,UK,,,,,,June,29,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State schools,State schools,State schools,No,Yes,No,No,7,No,No,Yes,Yes,No,,"Yes, both parents","More than 100,000 pounds",8,19269,ACB
+11/02/2024 3:11,11/02/2024 3:16,IP Address,31.205.36.80,100,314,TRUE,11/02/2024 3:16,R_6f2BFEoGVMBWRUb,,,,,50.745,-1.8524,anonymous,EN,Yes,s5610250,s5610250@bournemouth.ac.uk,UK,,,,,,April,7,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,public school and college,Yes,Yes,No,Yes,5.5,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",10,19854,CAB
+11/02/2024 4:27,11/02/2024 4:35,IP Address,194.80.64.20,100,470,TRUE,11/02/2024 4:35,R_2PKOOI4B4Wnh2LF,,,,,50.7153,-1.8719,anonymous,EN,Yes,S5615106,S5615106@bouthmouth.ac.uk,UK,,,,,,May,29,2004,Female,Single (never married),White,,,,,,Some University but no degree,Unemployed and currently looking for work,psychology ,Left,Yes,social anxiety,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school ,No,Yes,No,No,8,Yes,No,Yes,No,No,,,"40,000-59,999 pounds",11,19912,BAC
+11/02/2024 14:34,11/02/2024 14:46,IP Address,31.205.201.215,100,663,TRUE,11/02/2024 14:46,R_4CcWMGxGCNdn54T,,,,,50.745,-1.8524,anonymous,EN,Yes,s5616184,s5616184@bournemouth.ac.uk,UK,,,,,,April,17,2004,Non-binary/ third gender,Single (never married),White,,,,,,Completed Secondary School,Student,BSc (Hons) Cyberpsychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,No,Yes,5,No,Yes,Yes,No,Yes,Memory,"Yes, both parents","40,000-59,999 pounds",9,19928,BCA
+11/02/2024 19:34,11/02/2024 19:40,IP Address,31.205.36.116,100,405,TRUE,11/02/2024 19:40,R_2n7yFQd6bzIfS5u,,,,,50.745,-1.8524,anonymous,EN,Yes,s5615735,s5615735@bournemouth.ac.uk,UK,,,,,,December,31,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with forensic investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school (grammar),state school (grammar),No,Yes,No,No,10,No,No,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",7,19924,BAC
+11/02/2024 20:50,11/02/2024 20:54,IP Address,86.30.215.95,100,234,TRUE,11/02/2024 20:54,R_2fEcxVRG2ORY7h3,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5502700,ameliapinner2003@icloud.com,UK,,,,,,September,9,2003,Female,Single (never married),White,,,,,,"Graduate or professional degree (MA, MS, MBA, PhD, JD, MD, DDS)",Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,No,Yes,No,No,8,No,Yes,Yes,Yes,No,,No,"60,000-99,999 pounds",8,19298,CBA
+11/02/2024 21:40,11/02/2024 21:56,IP Address,31.205.36.150,100,936,TRUE,11/02/2024 21:56,R_6D1MF92E7v09vu9,,,,,50.745,-1.8524,anonymous,EN,Yes,s5646027,TSMSmith47@outlook.com,UK,,,,,,January,19,2005,Male,Single (never married),White,,,,,,Some University but no degree,Unemployed and currently looking for work,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Private,Private,Private (10-11) Public (12-13),No,Yes,No,No,8.5,No,No,Yes,No,No,,"Yes, both parents","More than 100,000 pounds",6,20055,CBA
+11/02/2024 22:49,11/02/2024 22:53,IP Address,31.205.212.59,100,274,TRUE,11/02/2024 22:53,R_3SGNasQ7aLTwwmu,,,,,50.745,-1.8524,anonymous,EN,Yes,561671,isla.mac710@gmail.com,UK,,,,,,October,7,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,5,6,7,english,state,private,private,No,Yes,No,Yes,5.5,No,Yes,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",11,19938,CBA
+11/02/2024 22:48,11/02/2024 22:57,IP Address,176.250.45.165,100,549,TRUE,11/02/2024 22:57,R_1jHsTmRuvEMs8Wi,,,,,50.6781,-1.2441,anonymous,EN,Yes,S5518646,s5518646@bournemouth.ac.uk,UK,,,,,,October,18,2002,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology with Counselling,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,No,No,9.5,No,No,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",9,19402,CBA
+12/02/2024 0:31,12/02/2024 0:37,IP Address,86.10.160.108,100,399,TRUE,12/02/2024 0:37,R_1JINaB3dE3RRIWe,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5520840,s5520840@bournemouth.ac.uk,UK,,,,,,July,16,2004,Female,Single (never married),,,,,Other (Arab or any others),,Some University but no degree,Student,Psychology,Right,No,,No,,Arabic,,Yes,100,English,,,,,,,,,,,,,,,,,,,English,English,English,English,State,State,State,No,Yes,No,No,8.5,No,No,Yes,No,No,,"Yes, both parents","Less than 20,000 pounds",8,19263,ACB
+12/02/2024 1:46,12/02/2024 1:54,IP Address,31.205.36.69,100,519,TRUE,12/02/2024 1:54,R_7H2QFbwTKsxaJvb,,,,,50.745,-1.8524,anonymous,EN,Yes,S5603691,S5603691@bournemouth.ac.uk,UK,,,,,,August,8,2005,Female,Single (never married),,,,,Other (Arab or any others),,Some University but no degree,Student,Psychology,Right,No,,No,,English,,Yes,75,Greek,,,,,,,,,,,,,,,,,,,English,English,English,English,State,State,State,Yes,Yes,Yes,Yes,6,No,Yes,Yes,No,No,,"Yes, both parents","40,000-59,999 pounds",12,19777,CAB
+12/02/2024 1:48,12/02/2024 1:55,IP Address,45.155.109.140,100,396,TRUE,12/02/2024 1:55,R_2cekMcjvDUZJ9Ie,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5513321,s5513321@bornemouth.ac.uk,UK,,,,,,January,30,2004,Male,Single (never married),White,,,,,,Completed Secondary School,Employed part time (up to 39 hours per week),Psychology W Counselling,Right,No,,No,,English,,Yes,15,Portuguese,,,,,,,,,,,,,,,,,,,English,English,English,English,Faith school,Faith school,Faith school,No,Yes,No,No,9,No,No,Yes,Yes,No,,,"20,000-39,999 pounds",11,19721,CAB
+12/02/2024 1:56,12/02/2024 2:03,IP Address,31.205.36.79,100,416,TRUE,12/02/2024 2:03,R_2dtVKUC3jI73uAN,,,,,50.745,-1.8524,anonymous,EN,Yes,s5614702,s5614702@bournemouth.ac.uk,UK,,,,,,July,11,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,No,Yes,No,Yes,5,No,No,Yes,No,No,,"Yes, father only","20,000-39,999 pounds",9,19901,CBA
+12/02/2024 2:35,12/02/2024 2:40,IP Address,109.175.195.107,100,352,TRUE,12/02/2024 2:40,R_4LYO1PMYUqo5ahz,,,,,50.745,-1.8524,anonymous,EN,Yes,s5641490,s5641490@Bournemouth.ac.uk,UK,,,,,,November,25,2001,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,faith private,faith private,Yes,No,Yes,Yes,2,Yes,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",13,20208,CAB
+12/02/2024 5:21,12/02/2024 5:30,IP Address,31.205.212.23,100,520,TRUE,12/02/2024 5:30,R_1COZ6JKEEAoq7Y0,,,,,51.8659,-2.2059,anonymous,EN,Yes,s5607721,rohanyoung16@outlook.com,UK,,,,,,August,31,2005,Male,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English,English,State school,State school,State school,No,Yes,Yes,Yes,7,No,No,Yes,No,No,,"Yes, mother only","60,000-99,999 pounds",10,19821,CAB
+05/02/2024 20:15,05/02/2024 20:19,IP Address,82.69.82.14,98,250,FALSE,12/02/2024 20:19,R_8GBlqatb7tzVe6E,,,,,,,anonymous,EN,Yes,s5519119,s5519119@bournemouth.ac.uk,UK,,,,,,April,21,2004,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,state,state,state,No,Yes,Yes,No,8,No,No,Yes,No,No,,"Yes, both parents","60,000-99,999 pounds",8,19338,CAB
+13/02/2024 6:19,13/02/2024 6:27,IP Address,90.242.189.59,100,488,TRUE,13/02/2024 6:27,R_2JOCy51TdqG8Bf8,,,,,52.0307,-0.7862,anonymous,EN,Yes,19492,s5524407@bournemouth.ac.uk,UK,,,,,,June,13,2004,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology with forensic investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,English ,English,English,public,public,public,Yes,Yes,No,Yes,9,No,Yes,Yes,Yes,No,,"Yes, mother only","60,000-99,999 pounds",13,19492,ACB
+13/02/2024 7:44,13/02/2024 7:48,IP Address,217.39.241.122,100,278,TRUE,13/02/2024 7:48,R_2adL4aNOF2MQg7L,,,,,51.1003,-1.8785,anonymous,EN,Yes,s5511926,s5511926@bournemouth.ac.uk,UK,,,,,,May,8,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,Yes,No,Yes,Yes,4,No,Yes,No,Yes,No,,No,"20,000-39,999 pounds",11,19276,ABC
+13/02/2024 16:05,13/02/2024 16:11,IP Address,31.205.201.201,100,409,TRUE,13/02/2024 16:12,R_3rcaM8jSgRJz9Ay,,,,,50.745,-1.8524,anonymous,EN,Yes,s5642454,s5642454@bournemouth.ac.uk,UK,,,,,,October,27,2003,Male,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,Yes,Autism,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Church of England/academy,Public,Public,Yes,Yes,Yes,No,8,No,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",11,20046,BAC
+13/02/2024 16:15,13/02/2024 16:21,IP Address,31.205.201.201,100,380,TRUE,13/02/2024 16:21,R_5iUxAZCtfNrQHQd,,,,,50.745,-1.8524,anonymous,EN,Yes,s5642454,s5642454@bournemouth.ac.uk,UK,,,,,,October,27,2003,Male,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,faith/ academy,public,public,Yes,Yes,Yes,Yes,7,No,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",11,20046,BCA
+13/02/2024 17:26,13/02/2024 17:30,IP Address,86.9.30.107,100,254,TRUE,13/02/2024 17:30,R_3bIyl5vhMClNsQ2,,,,,51.602,-0.2269,anonymous,EN,Yes,s5418733,s5418733@bournemouth.ac.uk,UK,,,,,,June,23,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public,Public,Public,Yes,Yes,No,Yes,6,No,Yes,Yes,No,No,,No,"20,000-39,999 pounds",9,18532,ACB
+13/02/2024 17:43,13/02/2024 17:53,IP Address,86.4.78.238,100,592,TRUE,13/02/2024 17:53,R_7KZvKfj0pUZ3dQV,,,,,50.7572,-1.8955,anonymous,EN,Yes,s5415673,s5415673@bournemouth.ac.uk,UK,,,,,,July,17,2003,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Some University but no degree,Student,Psychology with forensic investigation,Right,Yes,"Dyslexia
+ulcerative colitis",No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,No,Yes,Yes,5,Yes,No,Yes,Yes,Yes,memory,No,"Less than 20,000 pounds",13,19480,CAB
+13/02/2024 18:09,13/02/2024 18:14,IP Address,5.151.177.153,100,296,TRUE,13/02/2024 18:14,R_3QkaJtNgXAk8IaB,,,,,50.745,-1.8524,anonymous,EN,Yes,s5509185,harryhelyar03@gmail.com,UK,,,,,,October,8,2003,Male,Single (never married),White,,,,,,Completed Secondary School,Student,bachelors degree,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public,public,public,No,Yes,No,No,8,No,No,Yes,Yes,No,,"Yes, mother only","60,000-99,999 pounds",9,19114,ABC
+13/02/2024 18:02,13/02/2024 18:20,IP Address,92.30.47.157,100,1089,TRUE,13/02/2024 18:20,R_2KgwFNg2yzm2pUt,,,,,51.0633,-2.4045,anonymous,EN,Yes,s5309953,s5309953@bournemouth.ac.uk,UK,,,,,,October,4,2001,Male,Single (never married),White,,,,,,University Bachelors Degree,Student,,Right,No,,No,,English,,Yes,60,Swedish,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,Public school ,Public school ,Public school ,No,Yes,Yes,No,8,No,No,Yes,No,No,,"Yes, both parents","40,000-59,999 pounds",8,17765,CAB
+13/02/2024 19:15,13/02/2024 19:22,IP Address,194.80.64.51,100,420,TRUE,13/02/2024 19:22,R_7sXskg9cy3P9xhh,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5619816,ruby.may.matthews321@icloud.com,UK,,,,,,April,14,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English ,English,state,state,state,No,Yes,No,No,8.5,No,No,No,No,No,,No,"40,000-59,999 pounds",5,19975,BCA
+13/02/2024 22:13,13/02/2024 22:20,IP Address,31.94.18.187,100,408,TRUE,13/02/2024 22:20,R_29X6vGDUWcZncC5,,,,,51.4743,-0.0928,anonymous,EN,Yes,s5507297,paigesmith004@outlook.com,UK,,,,,,April,17,2004,Female,Single (never married),White,,,,,,Vocational or Similar,Student,psychology with counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English ,English ,English ,state school ,state school,state school ,No,Yes,No,Yes,4,No,No,Yes,Yes,No,,No,"40,000-59,999 pounds",8,19461,CBA
+13/02/2024 22:43,13/02/2024 22:49,IP Address,82.18.154.0,100,384,TRUE,13/02/2024 22:49,R_2J70G5sYIZC4MJX,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5519382,mjhenry27@gmail.com,UK,,,,,,August,27,2004,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Completed Secondary School,Student,psychology with counselling,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,Yes,Yes,No,Yes,6,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",8,19412,ACB
+07/02/2024 2:20,07/02/2024 2:20,IP Address,86.19.140.197,5,31,FALSE,14/02/2024 2:20,R_2Oo8J5PxUTec3zu,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19310,
+14/02/2024 8:15,14/02/2024 8:22,IP Address,31.205.211.223,100,402,TRUE,14/02/2024 8:22,R_8JLa27Ke1et2PWU,,,,,50.7177,-2.0008,anonymous,EN,Yes,s5607587,dillonsteer120@gmail.com,UK,,,,,,December,10,2004,Male,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with forensic investigation,Right,Yes,Autism Spectrum Disorder and Developmental Coordination Disorder,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Faith School,Public School,Public School,Yes,Yes,Yes,Yes,9.5,No,No,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",11,19817,ABC
+14/02/2024 5:09,14/02/2024 9:00,IP Address,31.205.36.87,100,13856,TRUE,14/02/2024 9:00,R_5jT2lFQRVApp5Ft,,,,,50.745,-1.8524,anonymous,EN,Yes,s5607611,s5607611@bournemouth.ac.uk,UK,,,,,,March,6,2003,Male,Single (never married),White,,,,,,Some University but no degree,Student,Bsc Hons Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public,Public,Public,No,Yes,No,No,6.5,No,No,Yes,No,No,,No,"40,000-59,999 pounds",5,19818,BCA
+07/02/2024 17:44,07/02/2024 17:45,IP Address,109.175.195.107,5,54,FALSE,14/02/2024 17:45,R_81j3QREFPKTT7do,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19867,
+15/02/2024 1:47,15/02/2024 2:08,IP Address,45.155.109.140,100,1295,TRUE,15/02/2024 2:08,R_6upPIk8cgqnEDt0,,,,,50.7519,-1.8706,anonymous,EN,Yes,5434830,s5434830@bournemouth.ac.uk,UK,,,,,,March,26,2003,Female,Single (never married),,Black/African/Caribbean,,,,,Some University but no degree,Student,Psychology,Right,Yes,ADHD,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,Yes,No,Yes,Yes,4,No,Yes,Yes,Yes,No,,"Yes, both parents","Less than 20,000 pounds",14,18510,BAC
+15/02/2024 15:03,15/02/2024 15:15,IP Address,109.175.195.74,100,749,TRUE,15/02/2024 15:15,R_4rCjEudyetEpt61,,,,,50.745,-1.8524,anonymous,EN,Yes,s5611021,s5611021@bournemouth.ac.uk,UK,,,,,,March,21,2005,Male,Single (never married),,Black/African/Caribbean,,,,,Some University but no degree,Unemployed and currently looking for work,Psychology ,Right,No,,No,,English,,Yes,65,Tigrinya,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,No,9.5,No,No,Yes,No,No,,,"20,000-39,999 pounds",10,19865,CAB
+15/02/2024 19:18,15/02/2024 19:28,IP Address,82.4.29.245,100,576,TRUE,15/02/2024 19:28,R_4qCl13615kPsYwx,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5520059,s5520059@bournemouth.ac.uk,UK,,,,,,February,10,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Catholic state school,Catholic state school,Catholic state school,No,Yes,No,No,7,No,Yes,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",9,19164,BAC
+15/02/2024 20:38,15/02/2024 20:44,IP Address,62.255.15.82,100,338,TRUE,15/02/2024 20:44,R_22n6ByRzZT3yfD5,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5507259,s5507259@bournemouth.ac.uk,UK,,,,,,April,21,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,state ,state,state,No,Yes,No,No,9,No,No,No,No,No,,No,"40,000-59,999 pounds",5,19188,CAB
+08/02/2024 21:27,08/02/2024 21:27,IP Address,194.80.64.50,5,23,FALSE,15/02/2024 21:27,R_5fZ4xGjswJC2dIU,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19318,
+15/02/2024 22:06,15/02/2024 22:18,IP Address,31.205.36.74,100,671,TRUE,15/02/2024 22:18,R_2lRmllEM3U6XYlP,,,,,50.745,-1.8524,anonymous,EN,Yes,s5605964,s5605964@bournemouth.ac.uk,UK,,,,,,April,17,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology and counselling,Right,No,,No,,Portugese,,Yes,100,English,80,Portuguese,,,,,,,,,,,,,,,,,English,English,English,English,State school,Faith school,Faith school,Yes,No,Yes,Yes,6.5,No,Yes,Yes,No,No,,"Yes, mother only","More than 100,000 pounds",15,19800,CBA
+16/02/2024 2:23,16/02/2024 2:32,IP Address,86.8.181.13,100,558,TRUE,16/02/2024 2:32,R_63rrZ0yRuoLn71F,,,,,50.7334,-1.9246,anonymous,EN,Yes,S5509698,S5509698@bournemouth.ac.uk,UK,,,,,,December,24,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with forensic investigation ,Right,Yes,Dyslexia and NF type 1,No,,English,,Yes,30,Spanish ,50,French,,,,,,,,,,,,,,,,,English ,English ,English ,English,Public ,Public ,Public ,Yes,Yes,Yes,Yes,6,Yes,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",14,19532,ACB
+16/02/2024 2:44,16/02/2024 2:48,IP Address,82.30.41.201,100,222,TRUE,16/02/2024 2:48,R_4wuf0eE6TCnl2Lu,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5504401,reesewh22@gmail.com,UK,,,,,,July,22,2003,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,Yes,Yes,No,Yes,5,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",9,19363,ACB
+15/02/2024 20:07,16/02/2024 3:21,IP Address,31.205.3.158,100,26028,TRUE,16/02/2024 3:21,R_5dKEkMn3NrcUwIi,,,,,50.745,-1.8524,anonymous,EN,Yes,S5519515,S5519515@bournemouth.ac.uk,UK,,,,,,April,13,2004,Female,Single (never married),White,,,,,,Vocational or Similar,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,No,Yes,6,No,No,Yes,Yes,No,,"Yes, father only","60,000-99,999 pounds",10,19116,ABC
+16/02/2024 1:36,16/02/2024 3:59,IP Address,86.8.185.32,100,8583,TRUE,16/02/2024 3:59,R_3HOHXfmiZxPnRUi,,,,,50.7334,-1.9246,anonymous,EN,Yes,001161384,millieblackwell166@icloud.com,UK,,,,,,November,22,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,state school,state school,state school,No,Yes,Yes,Yes,5,No,No,No,Yes,No,,"Yes, mother only","40,000-59,999 pounds",11,19377,ABC
+16/02/2024 5:24,16/02/2024 5:32,IP Address,31.205.212.48,100,478,TRUE,16/02/2024 5:32,R_1S3Pb8DQR3rwD5v,,,,,50.745,-1.8524,anonymous,EN,Yes,s5515743,s5515743@bournemouth.ac.uk,UK,,,,,,March,31,2004,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Completed Secondary School,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,public school,Yes,Yes,No,Yes,2,No,Yes,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",11,19726,CBA
+16/02/2024 5:31,16/02/2024 5:47,IP Address,86.167.206.208,100,998,TRUE,16/02/2024 5:47,R_6mX9vzhuMJBHau0,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5548524,s5548524@bournemouth.ac.uk,UK,,,,,,September,22,2003,Male,Single (never married),,,,Mixed two or more ethnic groups,,,Completed Secondary School,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,englsih,english,english,public,grammar,grammar,No,Yes,No,No,8.5,No,No,Yes,Yes,No,,"Yes, mother only","Less than 20,000 pounds",9,19124,ACB
+16/02/2024 19:58,16/02/2024 20:02,IP Address,194.80.64.51,100,232,TRUE,16/02/2024 20:02,R_2LQc6N09kXMfbUt,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5421284,s5421284@bournemouth.ac.uk,UK,,,,,,August,12,2003,Male,Single (never married),,Black/African/Caribbean,,,,,Some University but no degree,Student,Psychology with Forensic Investigation ,Right,No,,No,,English,,Yes,100,English ,100,French ,,,,,,,,,,,,,,,,,English ,English ,English ,English ,English ,English ,English,No,Yes,No,Yes,7,No,No,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",10,19641,CBA
+16/02/2024 22:58,16/02/2024 23:03,IP Address,86.19.206.239,100,300,TRUE,16/02/2024 23:03,R_7COvFTTbjCWcyAD,,,,,50.7519,-1.8706,anonymous,EN,Yes,5507771,s5507771@bournemouth.ac.uk,UK,,,,,,January,11,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State School,State School,State School,No,Yes,No,No,6,No,Yes,Yes,No,No,,,"40,000-59,999 pounds",11,19180,BAC
+16/02/2024 23:44,16/02/2024 23:47,IP Address,194.80.64.251,100,180,TRUE,16/02/2024 23:47,R_6XbatRmdhPw0pjA,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5421284,s5421284@bournemouth.ac.uk,UK,,,,,,August,12,2003,Male,Single (never married),,Black/African/Caribbean,,,,,Some University but no degree,Student,Psychology with Forensic Investigation ,Right,No,,No,,English,,Yes,100,English,100,French ,,,,,,,,,,,,,,,,,English,English,English ,English ,Faith School ,Faith School ,Faith School ,No,Yes,Yes,Yes,8.5,No,No,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",11,19641,BAC
+17/02/2024 0:46,17/02/2024 0:57,IP Address,31.185.56.69,100,674,TRUE,17/02/2024 0:57,R_25ZsVmg9uJfvaAF,,,,,50.7519,-1.8706,anonymous,EN,Yes,5417603,s5417603@bournemouth.ac.uk,UK,,,,,,August,10,2002,Female,"Married, or in a domestic partnership",White,,,,,,Some University but no degree,Student,psychology,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state,state,state,Yes,Yes,No,Yes,4.5,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",9,19140,CAB
+17/02/2024 3:04,17/02/2024 3:16,IP Address,31.205.36.55,100,709,TRUE,17/02/2024 3:16,R_80NWzrzg8jxfgb5,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5603770,s5603770@bournemouth.ac.uk,UK,,,,,,October,16,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English,English,English,public school,public school,public school,No,Yes,No,Yes,5,No,Yes,Yes,No,No,,No,"40,000-59,999 pounds",8,19779,ACB
+17/02/2024 5:50,17/02/2024 6:02,IP Address,90.241.149.126,100,710,TRUE,17/02/2024 6:02,R_1pEhaVJJx4FlJjb,,,,,53.5082,-2.2648,anonymous,EN,Yes,s5614803,s5614803@bournemouth.ac.uk,UK,,,,,,January,16,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with counselling,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English,English,English,public school ,free school,free school,Yes,Yes,No,No,7.5,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",9,19904,BCA
+17/02/2024 7:24,17/02/2024 7:32,IP Address,82.15.11.122,100,467,TRUE,17/02/2024 7:32,R_22RYiFI2j2541zi,,,,,50.7519,-1.8706,anonymous,EN,Yes,S5615662,s5615662@bournemouth.ac.uk,Europe,,,,,,April,8,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Counselling,Right,No,,No,,English,,Yes,75,Portuguese,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Public school,Public school,No,Yes,Yes,No,10,No,No,Yes,No,Yes,Memory,"Yes, father only","40,000-59,999 pounds",10,19922,ACB
+11/02/2024 9:02,11/02/2024 9:09,IP Address,86.10.160.108,93,426,FALSE,18/02/2024 9:09,R_27k7qPeZ6ootlDY,,,,,,,anonymous,EN,Yes,s5520840,s5520840@bournemouth.ac.uk,UK,,,,,,July,16,2004,Female,Single (never married),,,,,Other (Arab or any others),,Some University but no degree,Student,Psychology,Right,No,,No,,Arabic,,Yes,100,English ,,,,,,,,,,,,,,,,,,,English,English,English,English,State schools,State schools,State school,No,Yes,No,No,9,No,No,No,No,No,,"Yes, both parents","Less than 20,000 pounds",7,19263,ACB
+13/02/2024 3:56,13/02/2024 3:56,IP Address,90.255.78.190,7,22,FALSE,20/02/2024 3:56,R_4IeKG3CWLhE6y8p,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19880,
+20/02/2024 21:18,20/02/2024 21:24,IP Address,62.255.15.82,100,369,TRUE,20/02/2024 21:24,R_6tivi1rz8tahntD,,,,,50.7153,-1.8719,anonymous,EN,Yes,s5411311,s5411311@bournemouth.ac.uk,UK,,,,,,November,29,2002,Female,Single (never married),,,,Mixed two or more ethnic groups,,,Vocational or Similar,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State School,State School,State School,No,Yes,No,No,8,No,No,Yes,No,No,,No,"20,000-39,999 pounds",6,19178,BAC
+20/02/2024 21:32,20/02/2024 21:40,IP Address,31.205.4.246,100,442,TRUE,20/02/2024 21:40,R_7JkPDSBuS51otTV,,,,,50.745,-1.8524,anonymous,EN,Yes,s5414151,s5414151@bournemouth.ac.uk,UK,,,,,,January,24,2003,Female,Single (never married),,,,,Other (Arab or any others),,Some University but no degree,Student,Psychology,Right,No,,No,,Others,Turkish,Yes,95,Turkish,,,,,,,,,,,,,,,,,,,Turkish,Turkish and English,English,Turkish,Private,Private,Public,Yes,Yes,Yes,Yes,6,No,Yes,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",13,19691,CBA
+20/02/2024 21:39,20/02/2024 21:44,IP Address,167.98.155.173,100,301,TRUE,20/02/2024 21:44,R_7EmLNd5OCO0lrlK,,,,,51.4964,-0.1224,anonymous,EN,Yes,s5624965,s5624965@bournemouth.ac.uk,UK,,,,,,May,18,2005,Female,Single (never married),,,,,,Prefer not to say,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,No,Yes,Yes,No,8.5,No,No,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",9,20024,CBA
+11/02/2024 0:14,13/02/2024 22:11,IP Address,194.80.64.30,93,251858,FALSE,20/02/2024 22:11,R_5N8nxRaocwwuOXd,,,,,,,anonymous,EN,Yes,s5514521,isabellehillman04@gmail.com,UK,,,,,,January,2,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,public school,No,No,No,Yes,5.5,No,Yes,Yes,Yes,Yes,memory,No,"20,000-39,999 pounds",11,19724,BAC
+20/02/2024 22:13,20/02/2024 22:19,IP Address,31.205.212.11,100,382,TRUE,20/02/2024 22:19,R_5nfkAGCffQWm9h3,,,,,50.745,-1.8524,anonymous,EN,Yes,s5608533,brooke.macarthur@yahoo.co.uk,UK,,,,,,March,20,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with forensics ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public,public,public,No,Yes,No,Yes,5.5,No,Yes,No,No,No,,"Yes, father only","40,000-59,999 pounds",9,19835,CAB
+20/02/2024 22:21,20/02/2024 22:26,IP Address,31.205.4.204,100,336,TRUE,20/02/2024 22:26,R_6ee4tKwzJR1mwiB,,,,,50.745,-1.8524,anonymous,EN,Yes,S5617649,S5617649@bournemouth.ac.uk,UK,,,,,,May,13,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public ,Public,Public,Yes,Yes,Yes,Yes,7.5,No,No,Yes,Yes,No,,,"60,000-99,999 pounds",14,19951,CAB
+20/02/2024 22:09,20/02/2024 22:28,IP Address,31.205.4.220,100,1170,TRUE,20/02/2024 22:28,R_3xLbLV5cKyvZaxj,,,,,50.745,-1.8524,anonymous,EN,Yes,s5617649,s5617649@bournemouth.ac.uk,UK,,,,,,May,13,2004,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english ,english,english ,english,public,public,public,No,Yes,Yes,No,6.5,No,No,Yes,Yes,No,,,"60,000-99,999 pounds",12,19951,BCA
+20/02/2024 22:27,20/02/2024 22:42,IP Address,31.205.4.250,100,872,TRUE,20/02/2024 22:42,R_2KDALMz2lk3TmsF,,,,,50.745,-1.8524,anonymous,EN,Yes,s5614813,karinagcalado@gmail.com,Europe,,,,,,July,28,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with Forensic Investigation,Right,No,,No,,Portugese,,Yes,100,English,85,Portuguese ,,,,,,,,,,,,,,,,,English,English,English,English,State School,State School,State School,No,Yes,No,No,10,No,No,Yes,No,No,,No,"40,000-59,999 pounds",6,19905,ABC
+20/02/2024 23:15,20/02/2024 23:20,IP Address,2.218.227.125,100,255,TRUE,20/02/2024 23:20,R_69aNRFeds5x8jap,,,,,50.9051,-1.3655,anonymous,EN,Yes,s5518668,mikeylindsey9@gmail.com,UK,,,,,,November,5,2000,Male,Single (never married),White,,,,,,Some University but no degree,Employed full time (40 or more hours per week),psych,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,6,9,10,english,6,9,10,No,No,No,Yes,7,No,No,Yes,Yes,Yes,,"Yes, mother only","Less than 20,000 pounds",12,19245,BCA
+21/02/2024 0:17,21/02/2024 0:24,IP Address,86.22.110.173,100,432,TRUE,21/02/2024 0:24,R_16XBsiLH838jtoR,,,,,50.7654,-1.9063,anonymous,EN,Yes,s5407968,s5407968@bournemouth.ac.uk,UK,,,,,,December,2,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,Yes,65,Spanish,,,,,,,,,,,,,,,,,,,English,English,English,English,state,state,state,Yes,Yes,No,No,7.5,No,No,Yes,No,No,,"Yes, mother only","20,000-39,999 pounds",11,19196,ABC
+21/02/2024 0:42,21/02/2024 0:51,IP Address,86.8.185.32,100,526,TRUE,21/02/2024 0:51,R_7Wr63UGm7VaYSpX,,,,,50.7334,-1.9246,anonymous,EN,Yes,s5526100,harvey.cobb@hotmail.com,UK,,,,,,April,29,2003,Male,Single (never married),White,,,,,,Completed Secondary School,Student,psychology with counselling,Right,Yes,"severe depression, severe anxiety, ocd",No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,catholic school,catholic,No,Yes,Yes,Yes,5,No,Yes,Yes,Yes,No,,"Yes, both parents","40,000-59,999 pounds",11,19391,ABC
+21/02/2024 1:09,21/02/2024 1:18,IP Address,188.74.85.251,100,488,TRUE,21/02/2024 1:18,R_83s75PcsKAtvuKT,,,,,50.7873,-1.9838,anonymous,EN,Yes,S5550468,lilybelle1908@icloud.com,UK,,,,,,August,19,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,PSYCHOLOGY,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,ENGLISH,ENGLISH,ENGLISH,ENGLISH,PUBLIC SCHOOL,PUBLIC SCHOOL,PUBLIC SCHOOL,Yes,Yes,No,Yes,5.5,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",10,19456,CBA
+21/02/2024 2:21,21/02/2024 2:28,IP Address,109.175.195.107,100,403,TRUE,21/02/2024 2:28,R_52X9YfoagfJs25H,,,,,50.745,-1.8524,anonymous,EN,Yes,s5604730,s5604730@bournemouth.ac.uk,UK,,,,,,April,21,2005,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public School,State School,State School,No,Yes,No,Yes,6,No,No,Yes,Yes,No,,,"Less than 20,000 pounds",12,19790,ACB
+21/02/2024 4:42,21/02/2024 4:51,IP Address,90.255.195.184,100,532,TRUE,21/02/2024 4:51,R_6ePDhr7ThHkeCCi,,,,,51.0761,-2.3318,anonymous,EN,Yes,5601769,s5601769@bournemouth.ac.uk,UK,,,,,,February,3,2005,Female,Single (never married),White,,,,,,Completed Secondary School,Student,Psychology with Forensic Investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,Engliah,State School,State School,State School,Yes,Yes,No,No,8.5,No,Yes,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",11,19769,BCA
+21/02/2024 4:51,21/02/2024 5:00,IP Address,194.80.64.30,100,512,TRUE,21/02/2024 5:00,R_7JVl93kVlWdf8PL,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5646338,stanley.andreea@gmail.com,UK,,,,,,July,27,2002,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology and Counselling ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,public school,public school,public school,No,Yes,No,No,7.5,No,No,Yes,No,No,,No,"40,000-59,999 pounds",6,20073,ABC
+21/02/2024 17:20,21/02/2024 17:35,IP Address,86.132.139.214,100,880,TRUE,21/02/2024 17:35,R_1PGe65UsvU2IeIp,,,,,51.0581,-2.8686,anonymous,EN,Yes,s5416313,s5416313@bournemouth.ac.uk,UK,,,,,,July,17,1987,Male,"Married, or in a domestic partnership",White,,,,,,University Bachelors Degree,Employed part time (up to 39 hours per week),Psychology with Counselling,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public,public,piblic,Yes,Yes,No,Yes,4,No,Yes,Yes,Yes,No,,No,"Less than 20,000 pounds",9,19424,CBA
+21/02/2024 19:33,21/02/2024 19:46,IP Address,94.192.71.39,100,753,TRUE,21/02/2024 19:46,R_2KBL7uAj5FQa19q,,,,,50.8696,-1.3091,anonymous,EN,Yes,s5617281,s5617281@bournemouth.ac.uk,Europe,,,,,,May,13,1992,Female,"Married, or in a domestic partnership",White,,,,,,Completed Secondary School,Self-employed,Psychology,Right,No,,No,,Others,Bulgarian,Yes,90,English,30,Romanian,,,,,,,,,,,,,,,,,Bulgarian,Bulgarian,Bulgarian,Bulgarian,Public school,Public School,Public School,Yes,Yes,Yes,Yes,5,No,Yes,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",13,19945,ABC
+22/02/2024 1:34,22/02/2024 1:41,IP Address,86.27.130.207,100,442,TRUE,22/02/2024 1:41,R_2v6x2DyXeLHrw8p,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5418749,sydnikelsey@outlook.com,UK,,,,,,June,25,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology with forensic investigation,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English ,English,English ,English ,public ,public,public,Yes,Yes,No,No,7,No,Yes,Yes,No,No,,"Yes, both parents","Less than 20,000 pounds",9,18876,CBA
+22/02/2024 1:39,22/02/2024 1:48,IP Address,86.27.130.207,100,555,TRUE,22/02/2024 1:49,R_7IA8z8GOpmzAIGK,,,,,50.7519,-1.8706,anonymous,EN,Yes,s5415228,s5415228@bournemouth.ac.uk,UK,,,,,,May,30,2003,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology ,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,public school,public school,public school,No,Yes,No,No,7,No,No,Yes,No,No,,"Yes, father only","60,000-99,999 pounds",8,18887,BAC
+22/02/2024 18:38,22/02/2024 18:46,IP Address,5.69.178.96,100,481,TRUE,22/02/2024 18:46,R_2n0mfA6ASSBRDmF,,,,,51.5577,-1.7767,anonymous,EN,Yes,s5609763,s5609763@bournemouth.ac.uk,UK,,,,,,July,12,2003,Female,Single (never married),White,,,,,,Prefer not to say,Employed part time (up to 39 hours per week),degree,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English,English ,public school ,public school ,public school ,Yes,No,No,Yes,8,No,No,Yes,Yes,No,,"Yes, both parents","20,000-39,999 pounds",10,19849,ABC
+15/02/2024 19:58,15/02/2024 20:02,IP Address,194.80.64.50,93,257,FALSE,22/02/2024 20:02,R_2fL7RXu3LOdgRCF,,,,,,,anonymous,EN,Yes,s5506158,s5506158@bournemouth.ac.uk,UK,,,,,,February,4,2004,Male,Single (never married),White,,,,,,Some University but no degree,Student,Cyber psychology ,Left,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English ,English ,Faith school ,Faith school,Free school,Yes,Yes,Yes,Yes,5.5,No,Yes,Yes,Yes,No,,No,"40,000-59,999 pounds",9,19119,CBA
+22/02/2024 20:09,22/02/2024 20:15,IP Address,194.80.64.51,100,319,TRUE,22/02/2024 20:15,R_5UbiMRGKtUv9ERQ,,,,,50.7519,-1.8706,anonymous,EN,Yes,S5554174,S5554174@bournemouth.ac.uk,UK,,,,,,December,6,1999,Female,Single (never married),White,,,,,,Some University but no degree,Employed part time (up to 39 hours per week),psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English ,English ,English ,public,public,public grammar,No,Yes,Yes,Yes,6,Yes,Yes,Yes,Yes,No,,"Yes, father only","20,000-39,999 pounds",13,19617,ABC
+16/02/2024 0:14,16/02/2024 0:16,IP Address,5.151.177.154,56,146,FALSE,23/02/2024 0:16,R_2NEAQAV3iwAQsPV,,,,,,,anonymous,EN,Yes,s5423558,s5423558@bournemouth.ac.uk,UK,,,,,,October,27,2001,Female,Single (never married),White,,,,,,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,5,18601,ACB
+23/02/2024 1:26,23/02/2024 1:33,IP Address,109.175.195.105,100,442,TRUE,23/02/2024 1:33,R_1lAAh15gtddczXn,,,,,50.745,-1.8524,anonymous,EN,Yes,s5606398,s5606398@bournemouth.ac.uk,UK,,,,,,November,19,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,State school,State school,State school,No,Yes,Yes,No,6.5,No,Yes,Yes,No,No,,"Yes, mother only","40,000-59,999 pounds",11,19803,BAC
+23/02/2024 17:30,23/02/2024 18:14,IP Address,90.212.128.125,100,2644,TRUE,23/02/2024 18:14,R_2O94gOJPaQqN6jT,,,,,50.9051,-1.3655,anonymous,EN,Yes,s5507829,s5507829@bournemouth.ac.uk,UK,,,,,,May,2,1989,Female,"Married, or in a domestic partnership",White,,,,,,Some University but no degree,Student,psychology,Right,Yes,"ptsd, anxiety, depression",No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,Yes,No,Yes,Yes,5,No,Yes,Yes,Yes,No,,No,"20,000-39,999 pounds",13,19248,CAB
+16/02/2024 19:51,16/02/2024 19:59,IP Address,194.80.64.251,93,489,FALSE,23/02/2024 19:59,R_2hTfiTrC4UevJEt,,,,,,,anonymous,EN,Yes,s5421284,s5421284@bournemouth.ac.uk,UK,,,,,,August,12,2003,Male,Single (never married),,Black/African/Caribbean,,,,,Some University but no degree,Student,Psychology with Forensic Investigation,Right,No,,No,,English,,Yes,100,English ,100,French ,,,,,,,,,,,,,,,,,English,English,English ,English ,faith school ,faith school ,faith school ,No,Yes,Yes,Yes,7,No,No,Yes,Yes,No,,"Yes, father only","40,000-59,999 pounds",11,19641,ACB
+23/02/2024 22:43,23/02/2024 22:53,IP Address,31.205.3.141,100,580,TRUE,23/02/2024 22:53,R_7aLNQonrrlyxsKR,,,,,50.745,-1.8524,anonymous,EN,Yes,s5540015,s5540015@bournemouth.ac.uk,UK,,,,,,June,1,1996,Male,Single (never married),White,,,,,,Some University but no degree,Student,Psychology,Right,Yes,Depression & Anxiety,No,,English,,No,,,,,,,,,,,,,,,,,,,,,English,English,English,English,Public school,Private school,Public school,No,Yes,No,No,8.5,No,No,Yes,No,Yes,memory,"Yes, mother only","Less than 20,000 pounds",10,19757,ABC
+24/02/2024 6:20,24/02/2024 6:22,IP Address,90.222.122.59,100,150,TRUE,24/02/2024 6:22,R_8jcx3BNpVnlrYqU,,,,,51.3688,-0.4853,anonymous,EN,Yes,s5624965,s5624965@bournemouth.ac.uk,UK,,,,,,May,18,2005,Female,Single (never married),,,,,,Prefer not to say,Some University but no degree,Student,psychology,Right,No,,No,,English,,No,,,,,,,,,,,,,,,,,,,,,english,english,english,english,state school,state school,state school,No,Yes,Yes,No,7.5,No,No,Yes,Yes,No,,"Yes, both parents","60,000-99,999 pounds",9,20024,ABC
+20/02/2024 17:51,20/02/2024 18:17,IP Address,31.205.36.188,93,1572,FALSE,27/02/2024 18:17,R_8abQCV5blfX8RyW,,,,,,,anonymous,EN,Yes,s5646454,s5646454@bournemouth.ac.uk,UK,,,,,,October,8,2004,Female,Single (never married),White,,,,,,Some University but no degree,Student,Psychology with counselling,Right,Yes,anxiety,No,,English,,No,,,,,,,,,,,,,,,,,,,,,Buryfields,Mayhill,Amery Hill,English,public school,public school,public school,No,No,Yes,Yes,5,Yes,No,Yes,No,Yes,Face recognition and memory,"Yes, both parents","60,000-99,999 pounds",13,20076,CAB
+21/02/2024 2:19,21/02/2024 2:19,IP Address,109.175.195.106,5,28,FALSE,28/02/2024 2:19,R_2ON7zascBo7k6BO,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19790,
+21/02/2024 6:40,21/02/2024 6:40,IP Address,94.2.7.95,5,25,FALSE,28/02/2024 6:40,R_1eRJlJXxrVZyEN3,,,,,,,anonymous,EN,Yes,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,19875,

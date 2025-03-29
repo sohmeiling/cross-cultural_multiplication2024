@@ -1,0 +1,720 @@
+---
+title: "Multilevel - Magnitude & Size Comparison Task "
+format: html
+editor: visual
+---
+
+## Library
+
+```{r}
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(gtsummary)
+library(Hmisc)
+library(broom)
+library(lme4)
+library(lmerTest)
+library(emmeans)
+library(MuMIn)
+library(viridis) 
+```
+
+## Import Data
+
+```{r}
+#| message: false
+#files import
+stroop_msia <- read_csv("derivative/stroop_trials_msia.csv")|>
+  mutate(country = 'Malaysia')
+stroop_uk <- read_csv("derivative/stroop_trials_BU.csv")|>
+    mutate(country = 'UK')
+
+
+## Automatic Stroop Effect
+mag_stroop <- rbind(stroop_msia, stroop_uk)|>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         condition = as.factor(stroopCond),
+         problem = as.factor(displayProblem),
+        num_distance = as.factor(numDistance),
+         correctness = as.logical(stroopResp.corr),
+         congruency = as.factor(Dims),
+          rt = as.numeric(stroopResp.rt),
+         log_rt = log10(rt))|>
+  filter(condition == 'magnitude')|>
+  select(-group: -Dims)
+  #write_csv("CLEANED_DATA/mag_stroop.csv")
+
+size_stroop <- rbind(stroop_msia, stroop_uk)|>
+  mutate(participant = as.factor(participant),
+         country = as.factor(country),
+         condition = as.factor(stroopCond),
+         problem = as.factor(displayProblem),
+        num_distance = as.factor(numDistance),
+         correctness = as.logical(stroopResp.corr),
+         congruency = as.factor(Dims),
+          rt = as.numeric(stroopResp.rt),
+         log_rt = log10(rt))|>
+    filter(condition == 'physical')|>
+    filter(num_distance != 0)|>
+    select(-group: -Dims)
+    #write_csv("CLEANED_DATA/size_stroop.csv")
+
+mult_msia <- read_csv("derivative/veri_trials_msia.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'Malaysia',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+mult_uk <- read_csv("derivative/veri_trials_BU.csv", show_col_types = FALSE)|>
+  mutate(participant = as.factor(participant),
+         country = 'UK',
+         correctness = as.logical(veriStim_resp.corr),
+         rt = as.numeric(veriStim_resp.rt),
+         problem_type = as.factor(problemType),
+         size = as.factor(problemSize),
+         interference = as.factor(interferenceLevel),
+         interference_score = as.numeric(interferenceScore),
+         error_distance = as.numeric(error_distance),
+         problem = as.factor(mult_problem),
+         log_rt = log10(rt))
+
+demo_msia <- read_csv("derivative/combined_summary_msia.csv")|>
+  mutate(participant = as.factor(participant))
+
+demo_uk <- read_csv("derivative/combined_summary_UK.csv")|>
+  mutate(participant = as.factor(participant))
+
+demo_df <- rbind(demo_msia, demo_uk) |>
+  select(participant, median_typing, average_ds, mean_vpt, n_fluency)|>
+  mutate(typing_centered = median_typing - mean(median_typing, na.rm = TRUE),
+         verbal_stm_centered = average_ds - mean(average_ds, na.rm = TRUE),
+         visual_stm_centered = mean_vpt - mean(mean_vpt, na.rm = TRUE),
+         fluency_centered = n_fluency - mean(n_fluency, na.rm = TRUE))|>
+  select(-median_typing: -n_fluency)|>
+  distinct(participant, .keep_all = TRUE)
+  #write_csv("CLEANED_DATA/combined_demo.csv")
+
+mult_df <- rbind(mult_msia, mult_uk)|>
+  write_csv("CLEANED_DATA/combined_mult.csv")
+```
+
+## Data structure
+
+```{r}
+
+size_stroop_df <- size_stroop|>
+  inner_join(demo_df, by = c('participant'), multiple = "all")|>
+  filter(correctness == TRUE)|>
+  mutate(country = factor(country))
+
+mag_stroop_df <- demo_df|>
+  inner_join(mag_stroop, by = c('participant'))|>
+  filter(correctness == TRUE)|>
+  mutate(country = factor(country))
+```
+
+## Multilevel - Magnitude
+
+### RT (Intentional Processing)
+
+#### Maximal model
+
+We start with maximal model.
+
+```{r}
+# start with max model with log-transformed RT
+
+
+model_mag1 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                     (1 + congruency * num_distance | participant) +
+                   (1 + congruency * num_distance | country) + 
+                   (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag1)
+
+```
+
+We ran into singularity/ model failed to converge. So, we need to decide which random effect to remove.
+
+```{r}
+isSingular(model_mag1)
+
+# View the variance-covariance matrix
+VarCorr(model_mag1)
+```
+
+#### Simplified model 2 (removal of random structure)
+
+```{r}
+
+model_mag2 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                          (1 + congruency * num_distance || participant) +
+                            (1 + congruency * num_distance || country) + 
+                            (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag2)
+
+```
+
+```{r}
+summary(model_mag2)$varcor 
+```
+
+#### Simplified model 3
+
+```{r}
+
+model_mag3 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                          (1 + congruency + num_distance || participant) +
+                            (1 + congruency + num_distance || country) + 
+                            (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag3)
+```
+
+#### Simplified model 4
+
+We proceed to simplify the model
+
+```{r}
+model_mag4 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                          (1 + congruency + num_distance || participant) +
+                            (1 + num_distance | country) + 
+                            (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag4)
+```
+
+#### Model 5
+
+```{r}
+
+model_mag5 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                          (1 + congruency + num_distance || participant) +
+                            (1 + congruency | country) + 
+                            (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag5)
+```
+
+#### Model 6
+
+Model 6 - remove congruency and num distance from country; remove num distance from participant random structure
+
+```{r}
+model_mag6 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                          (1 + congruency | participant) +
+                            (1  | country) + 
+                            (1| problem), 
+                   data = mag_stroop_df, 
+                   control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+summary(model_mag6)
+performance::check_collinearity(model_mag6)
+```
+
+Model 6 - as the final random structure and model
+
+### Model 6 - as final random structure
+
+```{r}
+anova(model_mag5, model_mag6)
+
+performance::model_performance(model_mag5)
+performance::model_performance(model_mag6)
+```
+
+Likelihood test indicated that the more parsimonious model, with less complicated random structure is a better fit.
+
+#### EMMs
+
+#### country × distance × fluency interaction
+
+```{r}
+emm_options(lmerTest.limit = 13645)
+
+# Load emmeans
+library(emmeans)
+
+# Calculate SD of fluency for meaningful levels
+sd_fluency <- sd(mag_stroop_df$fluency_centered)
+
+# For the country × distance × fluency interaction
+emm_country_dist_fluency <- emmeans(model_mag6,
+  ~ country | num_distance | fluency_centered,
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+# Get pairwise comparisons
+pairs(emm_country_dist_fluency)
+
+
+```
+
+#### distance × fluency interaction
+
+```{r}
+# Calculate SD of fluency for meaningful levels
+sd_fluency <- sd(mag_stroop_df$fluency_centered)
+
+
+# For the distance × fluency interaction
+emm_dist_fluency <- emmeans(model_mag6, 
+  ~ num_distance | fluency_centered, 
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+pairs(emm_dist_fluency)
+
+```
+
+#### congruency × distance × fluency interaction
+
+```{r}
+
+# For the congruency × distance × fluency interaction
+emm_cong_dist_fluency <- emmeans(model_mag6,
+  ~ congruency | num_distance | fluency_centered,
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+# You can get specific contrasts for each interaction:
+# For country differences at each distance and fluency level
+contrast(emm_cong_dist_fluency, method = "pairwise")
+
+
+
+# Save results to a file
+# Install if needed: install.packages("sjPlot")
+#library(sjPlot)
+#tab_model(model, file = "model_results.html")
+```
+
+#### EMM - Data Viz
+
+How interaction of fluency x num distance differ by country?
+
+```{r}
+
+# Define custom labels for fluency levels
+
+emm_df <- as.data.frame(emm_country_dist_fluency)
+
+
+country_dist_fluency <- ggplot(emm_df, aes(x = num_distance, y = emmean, color = factor(country))) +
+  geom_line(aes(group = country)) +  # Separate lines for each country
+  geom_point() +  # Add points for emphasis
+  facet_wrap(~ fluency_centered, labeller = labeller(fluency_centered = fluency_labels)) +  # Wrap by fluency with custom labels
+  labs(x = "Numerical Distance", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Country") +
+  scale_color_viridis_d(option = "viridis", end = 0.8) +  # Use viridis color scale
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+country_dist_fluency 
+ggsave("figures/country_distance_fluency.png", plot = country_dist_fluency, width = 10, height = 6, dpi = 300)
+
+```
+
+EMM - Data Viz
+
+How fluency affect changes at different congruency and distance?
+
+```{r}
+
+fluency_labels <- c(
+  "-9.78667411274561" = "Low Fluency",
+  "0" = "Mean Fluency",
+  "9.78667411274561" = "High Fluency"
+)
+
+# Convert the emmeans output to a data frame for plotting
+emm_df_cong <- as.data.frame(emm_cong_dist_fluency)
+
+
+# Ensure fluency_centered is treated as a factor for correct labeling
+cong_dist_fluency <- ggplot(emm_df_cong, aes(x = num_distance, y = emmean, color = factor(congruency))) +
+  geom_line(aes(group = congruency)) +  # Separate lines for fluency levels
+  geom_point() +  # Add points for emphasis
+  facet_wrap(~ fluency_centered) +  
+  labs(x = "Numerical Distance", 
+       y = "Estimated Marginal Means (log RT)", 
+       color = "Congruency") +
+  scale_color_viridis_d(option = "viridis", end = 0.8,  # Use viridis color scale
+                        labels = c("Congruent", "Incongruent", "Neutral")) +  # Custom legend labels
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+cong_dist_fluency
+ggsave("figures/cong_dist_fluency_NEW.png", plot = cong_dist_fluency, width = 10, height = 6, dpi = 300)
+```
+
+### Effect Size
+
+Calculate the r-squared
+
+```{r}
+library(MuMIn)
+# Calculate marginal and conditional R²
+r_squared <- r.squaredGLMM(model_mag5)
+print(r_squared)
+```
+
+Calculate cohen's f-squared
+
+```{r}
+# Extract marginal R²
+R2_marginal <- r_squared[1]  # The first value is the marginal R²
+
+# Calculate Cohen's f² for the fixed effects
+f2_fixed <- R2_marginal / (1 - R2_marginal)
+print(f2_fixed)
+
+```
+
+## Multilevel - Size
+
+### EDA
+
+```{r}
+
+library(dplyr)
+
+size_summary_df <- size_stroop_df |>
+  group_by(participant, num_distance, congruency)|>
+  summarise(n = n())
+
+size_df_noTie <- size_stroop_df |>
+  filter(num_distance != 0)|>
+  filter(!participant %in% c(19961, 20046, 10023))
+```
+
+### RT
+
+#### Maximal model
+
+```{r}
+
+model_size1 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                     (1 + congruency * num_distance | participant) +
+                   (1 + congruency * num_distance | country) + 
+                   (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size1)
+summary(model_size1)$varcor
+```
+
+#### Model 2
+
+```{r}
+model_size2 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                     (1 + congruency * num_distance || participant) +
+                   (1 + congruency + num_distance || country) + 
+                   (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size2)
+summary(model_size2)$varcor
+```
+
+#### Model 3
+
+```{r}
+model_size3 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered +
+                     (1 + congruency + num_distance || participant) +
+                   (1 | country) + 
+                   (1| problem), 
+                   data = size_df_noTie, 
+                   control = lmerControl(optimizer = "bobyqa", 
+                                         optCtrl = list(maxfun = 2e5)))
+
+summary(model_size3)
+summary(model_size3)$varcor
+performance::check_collinearity(model_size3)
+```
+
+Note.
+
+#### Model 4
+
+```{r}
+
+model_size4 <- lmer(log_rt ~ country * congruency * fluency_centered * num_distance +
+                            (1 + country + congruency | participant) + 
+                            (1| problem), 
+                            data = size_df_noTie, 
+                            control = lmerControl(optimizer = "bobyqa", 
+                                                  optCtrl = list(maxfun = 2e5)))
+
+summary(model_size4)
+performance::model_performance(model_size4)
+```
+
+#### Model 5
+
+```{r}
+model_size5 <- lmer(log_rt ~ country * congruency * num_distance + 
+                               country * fluency_centered + 
+                               congruency * fluency_centered + 
+                               num_distance * fluency_centered +
+                               (1 + congruency | participant) + 
+                               (1 | country) + 
+                               (1 | problem), 
+                               data = size_df_noTie, 
+                               control = lmerControl(optimizer = "bobyqa", 
+                                                     optCtrl = list(maxfun = 2e5)))
+
+
+summary(model_size5)
+```
+
+#### Model 6
+
+```{r}
+null_model <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered + 
+                               (1  | participant) + 
+                               (1 | problem), 
+                               data = size_df_noTie, 
+                               control = lmerControl(optimizer = "bobyqa", 
+                                                     optCtrl = list(maxfun = 2e5)))
+
+
+model_size6 <- lmer(log_rt ~ country * congruency * num_distance * fluency_centered + 
+                               (1 + congruency | participant) + 
+                               (1 | problem), 
+                               data = size_df_noTie, 
+                               control = lmerControl(optimizer = "bobyqa", 
+                                                     optCtrl = list(maxfun = 2e5)))
+
+summary(model_size6)
+anova(null_model, model_size6)
+```
+
+#### Model 7
+
+```{r}
+model_size7 <- lmer(log_rt ~ country * congruency * num_distance + 
+                           congruency * num_distance * fluency_centered + 
+                           country * fluency_centered + 
+                           (1 | participant) + 
+                           (1 | country) + 
+                           (1 | problem), 
+                           data = size_df_noTie, 
+                           control = lmerControl(optimizer = "bobyqa", optCtrl = list(maxfun = 2e5)))
+
+
+summary(model_size7)
+
+```
+
+#### Model comparison
+
+```{r}
+anova(model_size4, model_size5)
+```
+
+### Estimated Marginal Means
+
+congruency x numerical distance
+
+```{r}
+emm_options(pbkrtest.limit = 9112)
+
+# Specifying fluency-centered at -1 SD, mean (0), and +1 SD for fluency
+fluency_vals <- c(-1, 0, 1)  
+
+# Estimated marginal means for congruency
+emmeans_congruency <- emmeans(model_size6, ~ congruency)
+print(emmeans_congruency)
+pairs(emmeans_congruency)
+
+# Estimated marginal means for fluency
+emmeans_fluency <- emmeans(model_size6, ~ fluency_centered, 
+                           at = list(fluency_centered = fluency_vals))
+print(emmeans_fluency)
+pairs(emmeans_fluency)
+
+# Interaction effects
+emmeans_congruency_numdist <- emmeans(model_size6, ~ congruency * num_distance)
+print(emmeans_congruency_numdist)
+
+# Pairwise comparisons
+pairs(emmeans_congruency_numdist)
+```
+
+### 4-way interactions
+
+```{r}
+# Define fluency levels at -1, 0, and +1 SD for the centered fluency variable
+fluency_vals <- c(-1, 0, 1)
+
+# Calculate emmeans for the three-way interaction (congruency x num_distance x fluency_centered) for Malaysia
+# Run emmeans for Malaysia only
+emmeans_malaysia <- emmeans(model_size6, 
+                            ~ congruency * num_distance * fluency_centered | country,
+                            at = list(fluency_centered = fluency_vals))
+
+# Extract emmeans results for Malaysia
+print(emmeans_malaysia)
+pairs(emmeans_malaysia)
+
+
+```
+
+### Data Viz
+
+```{r}
+# Map fluency levels to descriptive labels in the data frame
+emm_df$fluency_level <- factor(emm_df$fluency_centered, levels = fluency_vals, labels = c("Low", "Average", "High"))
+
+emm_df <- as.data.frame(emmeans_malaysia)
+
+# Create the interaction plot
+emm_congruency_dist_fluency <- ggplot(emm_df, aes(x = num_distance, y = emmean, 
+                   color = congruency, linetype = as.factor(fluency_centered), group = interaction(congruency, fluency_centered))) +
+  geom_line() +  # Line plot for trends
+  geom_point(size = 3) +  # Points for each estimated marginal mean
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.2) +  # Error bars
+  labs(x = "Numerical Distance", 
+       y = "Log-Transformed Response Time (RT)", color = "Congruency", 
+       linetype = "Fluency Level") +
+  theme_minimal() +
+  facet_wrap(~country)+  # Facet by country
+    theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at top
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+
+emm_congruency_dist_fluency <- ggplot(emm_df, aes(x = num_distance, y = emmean, 
+                   color = congruency, linetype = fluency_level, group = interaction(congruency, fluency_level))) +
+  geom_line() +  # Line plot for trends
+  geom_point(size = 3) +  # Points for each estimated marginal mean
+  geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), width = 0.2) +  # Error bars
+  labs(x = "Numerical Distance", 
+       y = "Log-Transformed Response Time (RT)", color = "Congruency", 
+       linetype = "Fluency Level") +
+  theme_minimal() +
+  facet_wrap(~country) +  # Facet by country
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+emm_congruency_dist_fluency
+ggsave("figures/emm_congruency_dist_fluency.png", plot = emm_congruency_dist_fluency, width = 10, height = 6)
+```
+
+bar plot
+
+```{r}
+
+size_interaction <- ggplot(size_df_noTie, aes(x = congruency, y = (10^log_rt) * 1000, fill = factor(num_distance))) +  # Convert to milliseconds
+  stat_summary(fun = mean, geom = "bar", position = position_dodge(), color = "black", width = 0.6) +  # Black outlines for bars
+  stat_summary(fun.data = mean_se, geom = "errorbar", position = position_dodge(width = 0.6), width = 0.2, color = "black") +  # Error bars
+  scale_fill_manual(values = c(  "lightblue", "gray70", "gray30"), 
+                    labels = c("Distance 1", "Distance 2", "Distance 5")) +  # Grayscale colors
+  labs(x = "Congruency", y = "Response Time (ms)", fill = "Numerical Distance") +
+  theme_classic(base_size = 12) +  # Simple, clean theme
+  theme(
+    text = element_text(family = "sans"),  # Sans-serif font
+    plot.title = element_text(hjust = 0.5, face = "bold"),  # Center-align title
+    axis.title = element_text(face = "bold"),  # Bold axis titles
+    legend.title = element_text(face = "bold"),  # Bold legend title
+    legend.position = "bottom",  # Legend at bottom
+    legend.background = element_blank(),  # Remove legend background
+    legend.key = element_blank(),  # Remove legend key background
+    axis.line = element_line(color = "black"),  # Axis lines
+    panel.grid = element_blank()  # Remove gridlines
+  ) +
+  scale_y_continuous(labels = scales::comma)
+
+size_interaction
+
+ggsave("figures/size_interaction.png", plot = size_interaction, height = 6, width = 10)
+```
+
+### 4-way interaction
+
+country, congruency, numerical distance of 5, and fluency
+
+```{r}
+# Calculate SD of fluency for meaningful levels
+sd_fluency <- sd(mag_stroop_df$fluency_centered)
+
+# For the country × distance × fluency interaction
+emm_country_dist_fluency <- emmeans(model_mag6,
+  ~ country | num_distance | fluency_centered,
+  at = list(fluency_centered = c(-sd_fluency, 0, sd_fluency)),
+  lmer.df = "satterthwaite")
+
+# Get pairwise comparisons
+pairs(emm_country_dist_fluency)
+```

@@ -1,0 +1,404 @@
+---
+title: "Untitled"
+format: html
+editor: visual
+---
+
+## Import data
+
+1.  Raw data from Pavlovia (N = 139 BU students)
+2.  Demographics data from Qualtrics (BU students)
+
+```{r}
+library(tidyverse)
+```
+
+### Raw data from Pavlovia (N = 139 BU students)
+
+```{r}
+
+data_dir <- "RAW_DATA_BU"
+
+csv_files <- list.files(path = data_dir, pattern = "\\.csv$", full.names = TRUE)
+
+# Read and combine CSV files, column types to character
+combined_data <- csv_files %>%
+  map_dfr(~ read_csv(.x, col_types = cols(.default = "c")), .id = "source") %>%
+  mutate(dob = as.Date(`DOB (DD/MM/YEAR)`, format = "%d/%m/%Y"),
+         vptCorrect = as.logical(vptCorrect))
+
+library(lubridate)
+
+nationality = c("British", "british", "British", "BRITISH", "British/ Portuguese", "England", 
+                       "english", "English", "UK", "United Kingdom", "white", "White", 
+                       "White - British", "white british", "White British", 
+                "Brisith", "Briitish")
+
+language = c("english", "English", "ENGLISH")
+
+participant_info <- combined_data %>%
+  dplyr::select(participant, group, `DOB (DD/MM/YEAR)`, Age, Nationality,
+                `Language you learned multiplication table`, date, frameRate) %>%
+  distinct() %>%
+  mutate(Nationality = case_when(
+    Nationality %in% nationality ~ "UK", TRUE ~ Nationality)) %>%
+  dplyr::filter(Nationality == "UK") %>%
+  rename(dob = `DOB (DD/MM/YEAR)`) %>%
+  rename(lang_mult = `Language you learned multiplication table`) %>%
+    mutate(lang_mult = case_when(
+    lang_mult %in% language ~ "English", TRUE ~ lang_mult)) %>%
+  rename(age = Age) %>%
+    mutate(date = ymd_hms(date), 
+           dob = dmy(dob), 
+           age = as.numeric(interval(dob, date) / dyears(1)))%>% 
+  write_csv("derivative/participant_info_UK.csv")
+  
+```
+
+## Qualtrics Data (UK)
+
+```{r}
+
+selected_cols <- c("ethnicity_1", "ethnicity_2", "ethnicity_3", "ethnicity_4",
+                   "ethnicity_5", "ethnicity_6")
+
+cols_to_pivot <- c("multilingual_1", "multilingual_1_TEXT", 
+                   "multilingual_2", "multilingual_2_TEXT",
+                   "multilingual_3", "multilingual_3_TEXT", 
+                   "multilingual_4", "multilingual_4_TEXT",
+                   "multilingual_5", "multilingual_5_TEXT", 
+                   "multilingual_6", "multilingual_6_TEXT",
+                   "multilingual_7", "multilingual_7_TEXT", 
+                   "multilingual_8", "multilingual_8_TEXT",
+                   "multilingual_9", "multilingual_9_TEXT", 
+                   "multilingual_10", "multilingual_10_TEXT")
+
+qualtrics_uk <- read_csv("RAW_Demo/qualtrics_demo_UK.csv") |> 
+  slice(3: n())|>
+  dplyr::select(id, nationality, gender, maritalstatus, eduLevel, 
+                ParentsEdu,	income,
+                ethnicity_1, ethnicity_2, ethnicity_3, 
+                ethnicity_4, ethnicity_5, ethnicity_6, 
+                employment, major, handedness, Medicalhistory, developmentHist, 
+                nativelanguage, lingualAbility, 
+                multilingual_1, multilingual_1_TEXT, multilingual_2, multilingual_2_TEXT,
+multilingual_3, multilingual_3_TEXT, multilingual_4, multilingual_4_TEXT,
+multilingual_5, multilingual_5_TEXT, multilingual_6, multilingual_6_TEXT,
+multilingual_7, multilingual_7_TEXT, multilingual_8, multilingual_8_TEXT,
+multilingual_9, multilingual_9_TEXT, multilingual_10, multilingual_10_TEXT,
+                mathlanguage_1, multiplylanguage, schooltype_1, 
+                difficultiesmath, learnmultiplytable, peercomparison, 
+                peercomparison2, rateownfluency_1,
+                dyslexia,	mathanxious,	examanxious,	memory) |>
+  rename(participant = id) |>
+  pivot_longer(cols = all_of(selected_cols), 
+               names_to = "ethnicity_column", 
+               values_to = "ethnicity_value")|>
+  dplyr::filter(!is.na(ethnicity_value)) |>
+  dplyr::filter(nationality != "Others") |>
+  select(-ethnicity_column) |>
+  distinct(participant, .keep_all = TRUE) |>
+  mutate(mathlanguage_1 = case_when(
+    mathlanguage_1 %in% c("english", "English", "ENGLISH", 
+                          "5", "6", "english/ arabic", "Buryfields") ~ "English", 
+    TRUE ~ mathlanguage_1  
+  ))|>
+  mutate(multiplylanguage = case_when(
+    multiplylanguage %in% c("english", "English", "ENGLISH", "Englsih", "Engliah",
+                            "english / sometimes arabic") ~ "English",
+    TRUE ~ multiplylanguage  
+  )) |>
+  mutate(schooltype_1 = case_when(
+    schooltype_1 %in% c("Catholic state school", "Christian School",
+                        "Church of England/academy", "faith school", "Faith school",
+                        "Faith School", "faith schools") ~ "Faith",
+    TRUE ~ schooltype_1  
+  )) |>
+  mutate(schooltype_1 = case_when(
+    grepl("public", schooltype_1, ignore.case = TRUE) ~ "Public",
+    grepl("private", schooltype_1, ignore.case = TRUE) ~ "Private",
+    grepl("english", schooltype_1, ignore.case = TRUE) ~ "State",
+    grepl("state", schooltype_1, ignore.case = TRUE) ~ "State",
+    grepl("internation", schooltype_1, ignore.case = TRUE) ~ "International",
+    TRUE ~ schooltype_1
+    ))|>
+  mutate(major_relabel = case_when(
+    grepl("psych", major, ignore.case = TRUE) ~ "Psychology",
+    grepl("degree", major, ignore.case = TRUE) ~ "Psychology",
+    grepl("bs", major, ignore.case = TRUE) ~ "Psychology",
+    TRUE ~ major  
+  ))|>
+  write_csv("derivative/cleaned_demo_UK.csv")
+```
+
+## Typing Speed Task
+
+```{r}
+
+typing_df <- combined_data |>
+  dplyr::select(participant, group, typing_rt, typing_score, typing_response) |>
+  mutate(participant = as.character(participant),
+         group = as.character(group),
+          typing_rt = as.numeric(typing_rt),  
+         typing_score = as.integer(typing_score),
+         typing_response = as.character(typing_response))|>
+  filter(!is.na(typing_rt))|>
+  mutate(error_typing = ifelse(typing_score != 1, 1, 0)) |>
+  group_by(participant, group)|>
+  summarise(n_typing = sum(typing_score == 1),
+            median_typing = median(typing_rt[typing_score == 1]),
+            mean_typing = mean(typing_rt[typing_score == 1]),
+            acc_typing = n_typing/62*100,
+            error_rate_typing = mean(error_typing))|>
+  write_csv("derivative/typing_score_BU.csv")
+```
+
+## Multiplication Fluency Task (Typing)
+
+```{r}
+
+practice_prob = c("2 × 10 =", "1 × 7 =", "2 × 11 =")
+
+mult_df <- combined_data |>
+  dplyr::select(participant, group, fluency_rt, fluency_score, problem) |>
+    mutate(participant = as.character(participant),
+         group = as.character(group),
+          fluency_rt = as.numeric(fluency_rt),  
+         fluency_score = as.integer(fluency_score),
+         problem = as.character(problem))|>
+  filter(!is.na(problem))|>
+  filter(!problem %in% practice_prob)|>
+    group_by(participant, group)|>
+  summarise(n_fluency = sum(fluency_score == 1),
+            n_wrong = sum(fluency_score != 1),
+            acc_fluency = n_fluency / 60 * 100,
+            composite_fluency = ((n_fluency * 1) - (n_wrong * 0.5)) / 60 * 100,
+            median_fluency = median(fluency_rt[fluency_score == 1]),
+            mean_fluency = mean(fluency_rt[fluency_score == 1])) |> 
+  write_csv("derivative/fluency_score_BU.csv")
+
+
+# Calculate the mean fluency score
+mult_df$n_fluency <- as.numeric(mult_df$n_fluency)
+mean_fluency <- mean(mult_df$n_fluency)
+min_fluency <- min(mult_df$n_fluency)
+max_fluency <- max(mult_df$n_fluency)
+
+print(mean_fluency)
+print(min_fluency)
+print(max_fluency)
+```
+
+## VPT
+
+vpt score is the mean of last three correct blocks.
+
+```{r}
+
+vpt_df <- combined_data |>
+  dplyr::select(participant, group, vpt_rt, vptCorrect, noOfBlocks, trialType) |>
+    mutate(participant = as.character(participant),
+         group = as.character(group),
+          vpt_rt = as.numeric(vpt_rt),  
+         vptCorrect = as.logical(vptCorrect),
+         noOfBlocks = as.integer(noOfBlocks),
+         trialType = as.character(trialType))|>
+  filter(!is.na(trialType)) |>
+  filter(!trialType == "practice trial") |>
+  filter(vptCorrect == TRUE)|>
+  group_by(participant, group)|>
+  arrange(participant, desc(trialType)) |>
+  slice(1:3) |>
+  summarise(max_vpt = max(noOfBlocks),
+            mean_vpt = mean(noOfBlocks))|>
+  write_csv("derivative/vpt_score_BU.csv")
+    
+
+# Calculate the mean vpt score
+vpt_df$max_vpt <- as.numeric(vpt_df$max_vpt)
+vpt_df$mean_vpt <- as.numeric(vpt_df$mean_vpt)
+
+mean_vpt <- mean(vpt_df$mean_vpt)
+min_vpt <- min(vpt_df$mean_vpt)
+max_vpt <- max(vpt_df$mean_vpt)
+
+print(mean_vpt)
+print(min_vpt)
+print(max_vpt)
+```
+
+## Digit Span
+
+There are two scores for Digit Span: Egner and WAIS
+
+```{r}
+
+#Egner Score
+
+egner_df <- combined_data |>
+  dplyr::select(participant, group, audio_rt, DS_score, digitSpan, digits_audioStim, typeDS) |>
+   filter(typeDS == "EGNER") |>
+    mutate(participant = as.character(participant),
+         group = as.character(group),
+          audio_rt = as.numeric(audio_rt),  
+         DS_score = as.integer(DS_score),
+         digitSpan = as.integer(digitSpan),
+         digits_audioStim = as.character(digits_audioStim))|>
+  filter(DS_score == 1) |>
+  group_by(participant, group)|>
+  arrange(participant, desc(digitSpan)) |>
+  slice(1:3) |>
+  summarise(max_egner = max(digitSpan),
+            mean_egner = mean(digitSpan))|>
+  write_csv("derivative/egner_score_BU.csv")
+
+# WAIS score
+
+wais_df <- combined_data |>
+  dplyr::select(participant, group, audio_rt, DS_score, digitSpan, digits_audioStim, typeDS) |>
+   filter(typeDS == "WAIS") |>
+    mutate(participant = as.character(participant),
+         group = as.character(group),
+          audio_rt = as.numeric(audio_rt),  
+         DS_score = as.integer(DS_score),
+         digitSpan = as.integer(digitSpan),
+         digits_audioStim = as.character(digits_audioStim))|>
+  filter(DS_score == 1) |>
+  group_by(participant, group)|>
+  arrange(participant, desc(digitSpan)) |>
+  slice(1:3) |>
+  summarise(max_wais = max(digitSpan),
+            mean_wais = mean(digitSpan))|>
+  write_csv("derivative/wais_score_BU.csv")
+
+merged_ds <- left_join(egner_df, wais_df, by = c("participant", "group")) |>
+  write_csv("derivative/ds_summary_UK.csv")
+```
+
+## Stroop Comparison
+
+```{r}
+
+
+stroop_df <- combined_data |>
+  dplyr::select(participant, group, stroopResp.rt, stroopResp.corr, 
+                stroopCond, displayProblem, numDistance, Dims) |>
+  filter(!is.na(displayProblem)) |>
+   filter(stroopCond %in% c("physical", "magnitude")) |>
+    mutate(participant = as.character(participant),
+         group = as.character(group),
+          stroopResp.rt = as.numeric(stroopResp.rt),  
+         stroopResp.corr = as.integer(stroopResp.corr),
+         numDistance = as.integer(numDistance),
+         displayProblem = as.character(displayProblem),
+         Dims = as.character(Dims))|>
+  write_csv("derivative/stroop_trials_BU.csv")
+
+## -----------------------------------------------
+
+# physical Stooop - RT
+phy_distance_df <- stroop_df |>
+  filter(stroopCond == "physical") |>
+  filter(stroopResp.corr == 1) |>
+  mutate(trials_per_dist = if_else(numDistance == "0", 24, 16))|>
+  group_by(participant, group, numDistance, trials_per_dist) |>
+  summarise(n_trial = n(), 
+            mean_rt = mean(stroopResp.rt))|>
+  mutate(acc = (n_trial / trials_per_dist) * 100)|>
+  dplyr::select(-c(trials_per_dist, n_trial))|>
+    pivot_wider(names_from = numDistance,
+              values_from = c(mean_rt, acc),
+              names_prefix = "_P_")
+
+# physical Stooop
+phy_stroop_df <- stroop_df |>
+  filter(stroopCond == "physical") |>
+  filter(stroopResp.corr == 1)|>
+  mutate(trials_per_dist = if_else(numDistance == "0", 24, 16))|>
+  group_by(participant, group, Dims) |>
+  summarise(n_trial = n(), 
+            mean_rt = mean(stroopResp.rt),
+            acc = n_trial/24*100)|>
+  ungroup()|>
+  dplyr::select(-n_trial)|>
+  pivot_wider(names_from = Dims,
+              values_from = c(mean_rt, acc),
+              names_prefix = "_P_")
+
+## -----------------------------------------------
+
+# magnitude Stroop
+
+mag_distance_df <- stroop_df |>
+  filter(stroopCond == "magnitude") |>
+  filter(stroopResp.corr == 1) |>
+  group_by(participant, group, numDistance) |>
+  summarise(n_trial = n(), 
+            mean_rt = mean(stroopResp.rt),
+            acc = n_trial/24*100)|>
+  dplyr::select(-c(n_trial))|>
+    pivot_wider(names_from = numDistance,
+              values_from = c(mean_rt, acc),
+              names_prefix = "_M_")
+
+mag_stroop_df <- stroop_df |>
+  filter(stroopCond == "magnitude") |>
+  filter(stroopResp.corr == 1)|>
+  mutate(trials_per_dist = if_else(numDistance == "0", 24, 16))|>
+  group_by(participant, group, Dims) |>
+  summarise(n_trial = n(), 
+            mean_rt = mean(stroopResp.rt),
+            acc = n_trial/24*100)|>
+  ungroup()|>
+  dplyr::select(-n_trial)|>
+  pivot_wider(names_from = Dims,
+              values_from = c(mean_rt, acc),
+              names_prefix = "_M_")
+
+## -----------------------------------------------------------------------
+
+# UK
+merged_stroop <- left_join(phy_distance_df, phy_stroop_df, by = c("participant", "group")) |>
+  left_join(mag_distance_df, by = c("participant", "group")) |>
+  left_join(mag_stroop_df, by = c("participant", "group"))|>
+  write_csv("derivative/stroop_summary_UK.csv")
+
+
+```
+
+## Multiplication Verification Task
+
+```{r}
+
+veri_df <- combined_data |>
+  dplyr::select(participant, group, veriStim_resp.rt, veriStim_resp.corr, mult_type,
+         error_distance, interferenceScore, problemType, problemSize,
+         interferenceLevel, mult_problem) |>
+  filter(!is.na(mult_problem)) |>
+  filter(mult_type != "practice") |>
+  mutate(participant = as.character(participant),
+         group = as.character(group),
+         veriStim_resp.rt = as.numeric(veriStim_resp.rt),  
+         veriStim_resp.corr = as.integer(veriStim_resp.corr),
+         error_distance = as.integer(error_distance),
+         interferenceScore = as.integer(interferenceScore),
+         problemSize = as.character(problemSize),
+         problemType = as.character(problemType),
+         interferenceLevel = as.character(interferenceLevel),
+         mult_type = as.character(mult_type))|>
+  write_csv("derivative/veri_trials_BU.csv")
+
+veri_performance <- veri_df |>
+  filter(veriStim_resp.corr == 1) |>
+  group_by(participant, group, mult_type) |>
+  summarise(n_trial = n(), 
+            mean_rt = mean(veriStim_resp.rt)) |>
+  ungroup()|>
+  pivot_wider(names_from = mult_type,
+              values_from = c(n_trial, mean_rt),
+              names_sep = "_")|>
+  mutate(acc_veri = (n_trial_lure + n_trial_correct)/288 * 100)|>
+  mutate(veri_performance = mean_rt_lure - mean_rt_correct)|>
+  write_csv("derivative/veri_summary_UK.csv")
+  
+```
